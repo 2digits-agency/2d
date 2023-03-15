@@ -1,25 +1,47 @@
 {
-  "name": "2d",
+  "name": "@2digits/2d",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
-    "apps/*",
     "packages/*"
   ],
   "scripts": {
     "build": "turbo run build",
+    "clean": "find . -name node_modules -o -name .turbo -o -name dist -type d -prune | xargs rm -rf",
     "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
-  "devDependencies": {
-    "eslint-config-custom": "workspace:*",
-    "prettier": "latest",
-    "turbo": "latest"
+    "format": "bash -c 'prettier \"**/*\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --check'",
+    "format:fix": "bash -c 'prettier \"**/*\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --write'",
+    "lint": "turbo run lint && manypkg check",
+    "lint:fix": "turbo run lint -- --fix && manypkg fix",
+    "types": "turbo run types",
+    "publish": "changeset publish",
+    "release": "turbo run build && changeset publish"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18.0.0"
   },
-  "dependencies": {},
-  "packageManager": "pnpm@7.29.1"
+  "packageManager": "pnpm@7.29.3",
+  "manypkg": {
+    "ignoredRules": [
+      "INTERNAL_MISMATCH"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "@2digits"
+  },
+  "prettier": "@2digits/prettier-config",
+  "dependencies": {
+    "@2digits/eslint-config": "^0.1.1",
+    "@2digits/prettier-config": "^0.1.0",
+    "@2digits/tsconfig": "^0.0.1",
+    "@changesets/cli": "^2.26.0",
+    "@manypkg/cli": "^0.20.0",
+    "@types/node": "^18.15.3",
+    "eslint": "^8.36.0",
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@total-typescript/ts-reset": "^0.4.2"
+  }
 }
