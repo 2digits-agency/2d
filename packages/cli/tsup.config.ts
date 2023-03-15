@@ -10,6 +10,7 @@ export default defineConfig({
   format: ['esm', 'cjs'],
   entry: ['./src/index.ts', './src/bin.ts'],
   clean: true,
-  dts: true,
+  dts: false,
   name,
+  onSuccess: 'node ./dist/bin.js init',
 });

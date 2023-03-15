@@ -1,10 +1,11 @@
 #!/usr/bin/env node
-import { Command } from 'commander';
+import cli from './cli';
 
-import { argsParser } from './args';
+process.on('SIGINT', () => process.exit(0));
+process.on('SIGTERM', () => process.exit(0));
 
-export const a = new Command().name('2d');
-
-export default async function main() {
-  const {} = await argsParser;
+function main() {
+  cli.parse();
 }
+
+main();
