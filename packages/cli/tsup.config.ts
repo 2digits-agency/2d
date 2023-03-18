@@ -12,5 +12,5 @@ export default defineConfig({
   clean: true,
   dts: false,
   name,
-  onSuccess: 'node ./dist/bin.js init',
+  onSuccess: 'node ./dist/bin.js help',
 });
