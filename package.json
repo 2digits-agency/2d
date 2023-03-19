@@ -20,7 +20,7 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "packageManager": "pnpm@7.29.3",
+  "packageManager": "pnpm@7.30.0",
   "manypkg": {
     "ignoredRules": [
       "INTERNAL_MISMATCH"
@@ -36,12 +36,10 @@
     "@2digits/tsconfig": "^0.0.1",
     "@changesets/cli": "^2.26.0",
     "@manypkg/cli": "^0.20.0",
+    "@total-typescript/ts-reset": "^0.4.2",
     "@types/node": "^18.15.3",
     "eslint": "^8.36.0",
     "prettier": "^2.8.4",
-    "typescript": "^4.9.5"
-  },
-  "devDependencies": {
-    "@total-typescript/ts-reset": "^0.4.2"
+    "typescript": "^5.0.2"
   }
 }
