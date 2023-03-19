@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-import './cli';
+import { cli } from './cli';
+
+void cli.argv;

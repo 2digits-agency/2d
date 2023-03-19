@@ -1,5 +1,5 @@
-import cli from './cli';
+import { cli } from './cli';
 
 export default function main(...args: string[]) {
-  cli.parse(args, { from: 'user' });
+  return cli.parse(args, { from: 'user' });
 }
