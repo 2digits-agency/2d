@@ -4,8 +4,10 @@
   "description": "",
   "license": "MIT",
   "public": true,
-  "sideEffects": true,
   "packageManager": "pnpm@7.30.0",
+  "bin": {
+    "2d": "./dist/bin.mjs"
+  },
   "scripts": {
     "build": "unbuild",
     "stub": "unbuild --stub",
