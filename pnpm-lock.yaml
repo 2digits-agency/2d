@@ -30,13 +30,11 @@ importers:
     specifiers:
       '@2digits/tsconfig': ^0.0.1
       '@types/yargs': ^17.0.22
-      commander: ^10.0.0
       eslint: ^8.36.0
       typescript: ^5.0.2
       unbuild: ^1.1.2
       yargs: ^17.7.1
     dependencies:
-      commander: 10.0.0
       yargs: 17.7.1
     devDependencies:
       '@2digits/tsconfig': 0.0.1_typescript@5.0.2
@@ -1496,11 +1494,6 @@ packages:
 
   /color-name/1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
-
-  /commander/10.0.0:
-    resolution: {integrity: sha512-zS5PnTI22FIRM6ylNW8G4Ap0IEOyk62fhLSD0+uHRT9McRCLGpkVNvao4bjimpK/GShynyQkFFxHhwMcETmduA==}
-    engines: {node: '>=14'}
-    dev: false
 
   /commondir/1.0.1:
     resolution: {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==}

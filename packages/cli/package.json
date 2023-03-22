@@ -11,6 +11,7 @@
   "scripts": {
     "build": "unbuild",
     "stub": "unbuild --stub",
+    "dev": "node ./dist/bin.mjs",
     "lint": "eslint --ignore-path ../../.gitignore .",
     "types": "tsc --noEmit"
   },
@@ -36,7 +37,6 @@
     "unbuild": "^1.1.2"
   },
   "dependencies": {
-    "commander": "^10.0.0",
     "yargs": "^17.7.1"
   }
 }
