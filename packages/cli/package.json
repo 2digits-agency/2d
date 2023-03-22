@@ -31,7 +31,7 @@
   ],
   "devDependencies": {
     "@2digits/tsconfig": "^0.0.1",
-    "@types/yargs": "^17.0.22",
+    "@types/yargs": "^17.0.23",
     "eslint": "^8.36.0",
     "typescript": "^5.0.2",
     "unbuild": "^1.1.2"

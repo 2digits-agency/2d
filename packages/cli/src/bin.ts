@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 import { cli } from './cli';
 
-void cli.argv;
+void cli.wrap(cli.terminalWidth()).argv;

@@ -11,5 +11,4 @@ export const cli = yargs(hideBin(process.argv))
   .alias('h', 'help')
   .version()
   .alias('v', 'version')
-  .help()
-  .wrap(yargs.terminalWidth());
+  .help();
