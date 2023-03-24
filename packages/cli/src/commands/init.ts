@@ -36,11 +36,7 @@ async function cloneRepo(dirInRepo: string, path: string): Promise<void> {
 
 export const init = createCommand(['init [path]', 'i'], {
   describe: 'Initialize a new project',
-  async builder(args) {
-    const files = (await fetch('https://api.github.com/repos/V1RE/propr/contents').then((data) =>
-      data.json(),
-    )) as { name: string }[];
-
+  builder(args) {
     return args
       .positional('path', {
         type: 'string',
@@ -48,7 +44,7 @@ export const init = createCommand(['init [path]', 'i'], {
         normalize: true,
       })
       .option('module', {
-        choices: files.map((f) => f.name),
+        choices: ['trpc', 'stitches'] as const,
         describe: 'Modules to install',
         type: 'array',
         alias: 'm',
