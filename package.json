@@ -27,7 +27,13 @@
     ]
   },
   "eslintConfig": {
-    "extends": "@2digits"
+    "extends": "@2digits",
+    "rules": {
+      "unicorn/prefer-ternary": [
+        "error",
+        "only-single-line"
+      ]
+    }
   },
   "prettier": "@2digits/prettier-config",
   "dependencies": {
