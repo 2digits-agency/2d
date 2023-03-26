@@ -4,7 +4,7 @@
   "description": "",
   "license": "MIT",
   "public": true,
-  "packageManager": "pnpm@7.30.0",
+  "packageManager": "pnpm@7.30.3",
   "bin": {
     "2d": "./dist/bin.mjs"
   },
