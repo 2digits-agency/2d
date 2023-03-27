@@ -4,7 +4,7 @@
   "description": "",
   "license": "MIT",
   "public": true,
-  "packageManager": "pnpm@7.30.3",
+  "packageManager": "pnpm@8.2.0",
   "bin": {
     "2d": "./dist/bin.mjs"
   },
@@ -30,12 +30,12 @@
     "dist"
   ],
   "devDependencies": {
-    "@2digits/tsconfig": "^0.0.1",
+    "@2digits/tsconfig": "^0.1.0",
     "@types/fs-extra": "^11.0.1",
-    "@types/yargs": "^17.0.23",
-    "eslint": "^8.36.0",
-    "typescript": "^5.0.2",
-    "unbuild": "^1.1.2"
+    "@types/yargs": "^17.0.24",
+    "eslint": "^8.38.0",
+    "typescript": "^5.0.4",
+    "unbuild": "^1.2.1"
   },
   "dependencies": {
     "@clack/prompts": "^0.6.3",
