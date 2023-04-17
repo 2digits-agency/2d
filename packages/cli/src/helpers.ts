@@ -68,14 +68,27 @@ export function validate<TValue>(validator: z.ZodType<TValue>) {
   };
 }
 
-type Prompt<TOpts, TArg> = (opts: TOpts) => Promise<TArg | symbol>;
+export async function promptMissingArg<TArg, TPrompt, TSchema extends z.ZodType<TArg>>({
+  arg,
+  schema,
+  prompt,
+}: {
+  arg: TArg | undefined | null;
+  schema: TSchema;
+  prompt(): Promise<TPrompt | symbol>;
+}): Promise<z.infer<TSchema>> {
+  const result = await schema.spa(arg);
 
-export async function promptMissingArg<TArg, TOpts>(
-  arg: TArg | undefined | null,
-  prompt: Prompt<TOpts, TArg>,
-  options: TOpts,
-) {
-  if (arg != undefined) return arg;
+  if (result.success) {
+    p.log.success('Validated argument');
+    return result.data;
+  }
 
-  return checkCancel(prompt(options));
+  const promptData = await checkCancel(prompt());
+  const promptResult = await schema.spa(promptData);
+
+  if (promptResult.success) return promptResult.data;
+
+  p.log.error(promptResult.error.flatten().formErrors.join('\n'));
+  return promptMissingArg({ arg: promptData as unknown, schema, prompt });
 }

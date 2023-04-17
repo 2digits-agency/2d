@@ -1,4 +1,10 @@
 #!/usr/bin/env node
+import yargs from 'yargs';
+
 import { cli } from './cli';
 
-void cli.wrap(cli.terminalWidth()).argv;
+try {
+  void cli.wrap(cli.terminalWidth()).argv;
+} catch (error) {
+  yargs().exit(1, error as Error);
+}
