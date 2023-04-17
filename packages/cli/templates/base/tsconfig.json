@@ -1,0 +1,3 @@
+{
+  "extends": "@2digits/tsconfig/tsconfig.json"
+}

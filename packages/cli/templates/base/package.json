@@ -1,0 +1,49 @@
+{
+  "name": "@2digits/template",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "clean": "find . -name node_modules -o -name .turbo -o -name .next -o -name dist -type d -prune | xargs rm -rf",
+    "dev": "turbo run dev",
+    "format": "bash -c 'prettier \"**/*\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --check'",
+    "format:fix": "bash -c 'prettier \"**/*\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --write'",
+    "lint": "turbo lint && manypkg check",
+    "lint:fix": "turbo lint -- --fix && manypkg fix",
+    "plop": "plop",
+    "types": "turbo types && tsc --noEmit"
+  },
+  "dependencies": {
+    "@2digits/eslint-config": "^0.2.0",
+    "@2digits/prettier-config": "^0.2.0",
+    "@2digits/tsconfig": "^0.1.0",
+    "@manypkg/cli": "^0.20.0",
+    "@types/node": "^18.15.11",
+    "eslint": "^8.38.0",
+    "plop": "^3.1.2",
+    "prettier": "^2.8.7",
+    "turbo": "^1.9.1",
+    "typescript": "^5.0.4"
+  },
+  "packageManager": "pnpm@8.2.0",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "manypkg": {
+    "ignoredRules": [
+      "INTERNAL_MISMATCH"
+    ]
+  },
+  "pnpm": {
+    "neverBuiltDependencies": [
+      "core-js",
+      "core-js-compat",
+      "core-js-pure",
+      "cypress"
+    ]
+  },
+  "prettier": "@2digits/prettier-config",
+  "eslintConfig": {
+    "extends": "@2digits"
+  }
+}
