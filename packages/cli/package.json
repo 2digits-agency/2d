@@ -27,7 +27,8 @@
   "keywords": [],
   "author": "",
   "files": [
-    "dist"
+    "dist",
+    "templates"
   ],
   "devDependencies": {
     "@2digits/tsconfig": "^0.1.0",
