@@ -1,5 +1,7 @@
+import p from '@clack/prompts';
 import type { Argv } from 'yargs';
 import type { ArgumentsCamelCase as Args, CommandModule } from 'yargs';
+import type { z } from 'zod';
 
 export type Simplify<TType> = { [KeyType in keyof TType]: TType[KeyType] } & unknown;
 
@@ -40,4 +42,40 @@ export function createCommand<TCmd>(
     command,
     ...options,
   } satisfies CommandModule<unknown, TCmd>;
+}
+
+export async function checkCancel<TValue>(
+  value: TValue | Promise<TValue>,
+): Promise<Exclude<TValue, symbol>> {
+  const result = await value;
+  if (p.isCancel(result)) onCancel();
+
+  return result as Exclude<TValue, symbol>;
+}
+
+export function onCancel() {
+  p.cancel('Operation cancelled.');
+
+  // eslint-disable-next-line unicorn/no-process-exit
+  return process.exit(0);
+}
+
+export function validate<TValue>(validator: z.ZodType<TValue>) {
+  return function (value: TValue) {
+    const result = validator.safeParse(value);
+
+    return result.success ? undefined : result.error.flatten().formErrors.join('\n');
+  };
+}
+
+type Prompt<TOpts, TArg> = (opts: TOpts) => Promise<TArg | symbol>;
+
+export async function promptMissingArg<TArg, TOpts>(
+  arg: TArg | undefined | null,
+  prompt: Prompt<TOpts, TArg>,
+  options: TOpts,
+) {
+  if (arg != undefined) return arg;
+
+  return checkCancel(prompt(options));
 }
