@@ -20,7 +20,7 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "packageManager": "pnpm@8.2.0",
+  "packageManager": "pnpm@8.3.0",
   "manypkg": {
     "ignoredRules": [
       "INTERNAL_MISMATCH"
@@ -46,7 +46,7 @@
     "@types/node": "^18.15.11",
     "eslint": "^8.38.0",
     "prettier": "^2.8.7",
-    "turbo": "^1.9.2",
+    "turbo": "^1.9.3",
     "typescript": "^5.0.4"
   }
 }
