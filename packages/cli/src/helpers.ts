@@ -1,6 +1,7 @@
 import p from '@clack/prompts';
 import type { Argv } from 'yargs';
 import type { ArgumentsCamelCase as Args, CommandModule } from 'yargs';
+import type yargs from 'yargs';
 import type { z } from 'zod';
 
 export type Simplify<TType> = { [KeyType in keyof TType]: TType[KeyType] } & unknown;
@@ -68,27 +69,35 @@ export function validate<TValue>(validator: z.ZodType<TValue>) {
   };
 }
 
-export async function promptMissingArg<TArg, TPrompt, TSchema extends z.ZodType<TArg>>({
-  arg,
+export async function promptMissingArg<
+  TArgs,
+  TArgname extends keyof TArgs & string,
+  TArg extends TArgs[TArgname],
+  TPrompt extends TArg,
+  TSchema extends z.ZodType<TArg>,
+>({
   schema,
   prompt,
+  argName,
+  args,
 }: {
-  arg: TArg | undefined | null;
+  args: yargs.Arguments<TArgs>;
+  argName: TArgname;
   schema: TSchema;
   prompt(): Promise<TPrompt | symbol>;
 }): Promise<z.infer<TSchema>> {
-  const result = await schema.spa(arg);
+  const result = await schema.spa(args[argName]);
 
   if (result.success) {
     p.log.success('Validated argument');
     return result.data;
   }
 
-  const promptData = await checkCancel(prompt());
-  const promptResult = await schema.spa(promptData);
+  args[argName] = (await checkCancel(prompt())) as never;
+  const promptResult = await schema.spa(args[argName]);
 
   if (promptResult.success) return promptResult.data;
 
   p.log.error(promptResult.error.flatten().formErrors.join('\n'));
-  return promptMissingArg({ arg: promptData as unknown, schema, prompt });
+  return promptMissingArg({ argName, args, schema, prompt });
 }

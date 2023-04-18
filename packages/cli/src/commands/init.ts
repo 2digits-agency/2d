@@ -1,19 +1,22 @@
 import p from '@clack/prompts';
 import chalk from 'chalk';
 import fs from 'fs-extra';
+import mrm from 'mrm-core';
 import pathe from 'pathe';
 import type { Argv } from 'yargs';
 import { z } from 'zod';
 
-import { PKG_ROOT } from '../constants';
-import { createCommand, onCancel, promptMissingArg, validate } from '../helpers';
+import { createCommand, promptMissingArg, validate } from '../helpers';
+import { copyTemplate } from '../utils/templates';
 
-const modules = ['trpc', 'stitches'] as const;
+const moduleEnum = z.enum(['trpc', 'stitches']);
+
+const appModule = z.array(moduleEnum);
 
 interface InitArguments {
   name: string;
   path: string;
-  module: (typeof modules)[number][];
+  module: z.infer<typeof appModule>;
   install: boolean;
 }
 
@@ -25,8 +28,6 @@ const appName = z
   });
 
 const appPath = z.string().nonempty().refine(isEmpty, 'Directory has to be empty');
-
-const appModule = z.array(z.enum(modules));
 
 // Some existing files and directories can be safely ignored when checking if a directory is a valid project directory.
 // https://github.com/facebook/create-react-app/blob/d960b9e38c062584ff6cfb1a70e1512509a966e7/packages/create-react-app/createReactApp.js#L907-L934
@@ -64,7 +65,7 @@ export const init = createCommand(['init [path]', 'i'], {
         normalize: true,
       })
       .option('module', {
-        choices: modules,
+        choices: moduleEnum.options,
         describe: 'Modules to install',
         type: 'array',
         alias: 'm',
@@ -85,8 +86,9 @@ export const init = createCommand(['init [path]', 'i'], {
   async handler(args) {
     p.intro(chalk.bgHex('#762BFF').hex('#FFFFFF').bold(' 2d init '));
 
-    const path = await promptMissingArg({
-      arg: args.path,
+    const pathInput = await promptMissingArg({
+      args,
+      argName: 'path',
       schema: appPath,
       prompt() {
         return p.text({
@@ -97,8 +99,12 @@ export const init = createCommand(['init [path]', 'i'], {
       },
     });
 
+    /** Resolved path from current working directory */
+    const path = pathe.resolve(process.cwd(), pathInput);
+
     const name = await promptMissingArg({
-      arg: args.name,
+      args,
+      argName: 'name',
       schema: appName,
       prompt() {
         return p.text({
@@ -110,23 +116,27 @@ export const init = createCommand(['init [path]', 'i'], {
     });
 
     const module = await promptMissingArg({
-      arg: args.module,
+      args,
+      argName: 'module',
       schema: appModule,
       prompt() {
         return p.multiselect({
           message: 'Which modules do you want to install',
-          options: modules.map((module) => ({ label: module, value: module })),
+          options: moduleEnum.options.map((module) => ({ label: module, value: module })),
           required: false,
+          initialValues: [] as z.infer<typeof appModule>,
         });
       },
     });
 
     const install = await promptMissingArg({
-      arg: args.install,
+      args,
+      argName: 'install',
       schema: z.boolean(),
       prompt: () =>
         p.confirm({
           message: 'Install dependencies',
+          initialValue: true,
         }),
     });
 
@@ -134,31 +144,14 @@ export const init = createCommand(['init [path]', 'i'], {
 
     p.log.step('Scaffolding project...');
 
-    await scaffoldProject(initParams);
+    await copyTemplate('base', path);
+
+    if (install) {
+      mrm.install([], { pnpm: true });
+    }
 
     p.log.message('Installing dependencies...');
 
     p.outro('Done!');
   },
 });
-
-async function scaffoldProject(args: InitArguments) {
-  const spinner = p.spinner();
-
-  spinner.start(`Creating ${chalk.bold(args.name)} in ${chalk.bold(args.path)}...`);
-
-  try {
-    await fs.copy(pathe.join(PKG_ROOT, 'templates', 'base'), args.path);
-
-    spinner.stop(`Created ${chalk.bold(args.name)} in ${chalk.bold(args.path)}`);
-  } catch {
-    spinner.stop();
-
-    p.log.error(`Failed to create ${chalk.bold(args.name)} in ${chalk.bold(args.path)}`);
-
-    onCancel();
-  }
-  // Copy the template
-  // Install dependencies
-  // Create git repo
-}
