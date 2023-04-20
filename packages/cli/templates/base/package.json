@@ -18,14 +18,14 @@
     "@2digits/prettier-config": "^0.2.0",
     "@2digits/tsconfig": "^0.1.0",
     "@manypkg/cli": "^0.20.0",
-    "@types/node": "^18.15.11",
+    "@types/node": "^18.15.12",
     "eslint": "^8.38.0",
     "plop": "^3.1.2",
     "prettier": "^2.8.7",
     "turbo": "^1.9.3",
     "typescript": "^5.0.4"
   },
-  "packageManager": "pnpm@8.3.0",
+  "packageManager": "pnpm@8.3.1",
   "engines": {
     "node": ">=16.0.0"
   },
