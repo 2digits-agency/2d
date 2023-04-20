@@ -19,7 +19,7 @@ jobs:
       - name: 🏭 Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: lts
+          node-version: 'lts/*'
           cache: 'pnpm'
 
       - name: 📦 Install dependencies
