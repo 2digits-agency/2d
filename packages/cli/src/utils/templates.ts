@@ -2,12 +2,12 @@ import chalk from 'chalk';
 import { consola } from 'consola';
 import fs from 'fs-extra';
 import ignore from 'ignore';
-import ora from 'ora';
 import pathe from 'pathe';
 
 import base from '../../templates/base/package.json';
 import { PKG_ROOT } from '../constants';
 import { onCancel } from '../helpers';
+import { Spinner } from './log';
 
 export const templates = {
   base,
@@ -28,9 +28,11 @@ export async function copyTemplate(template: Template, path: string) {
     ig.add(ignoreContents.split('\n').filter((line) => ignore.isPathValid(line)));
   }
 
-  const spinner = ora({
-    text: `Copying ${chalk.bold(`${template} template`)} to ${chalk.bold(path)}...`,
-  }).start();
+  const spinner = new Spinner();
+
+  const destPath = pathe.relative(process.cwd(), path);
+
+  spinner.start(`Copying ${chalk.bold(`${template}`)} template to ${chalk.bold(destPath)}...`);
 
   try {
     await fs.copy(sourceDir, path, {
@@ -39,19 +41,16 @@ export async function copyTemplate(template: Template, path: string) {
 
         consola.debug('src: ' + src, 'dest: ' + dest);
 
-        spinner.suffixText = chalk.dim(relative);
+        spinner.suffixText = relative;
 
-        // return !(relative && ig.ignores(relative));
-        return true;
+        return !(relative && ig.ignores(relative));
       },
     });
 
-    spinner.succeed(
-      chalk.green(`Copied ${chalk.bold(`${template} template`)} to ${chalk.bold(path)}`),
-    );
+    spinner.success(`Copied ${chalk.bold(`${template} template`)} to ${chalk.bold(destPath)}`);
   } catch {
     spinner.fail(
-      chalk.red(`Failed to copy ${chalk.bold(`${template} template`)} to ${chalk.bold(path)}`),
+      chalk.red(`Failed to copy ${chalk.bold(`${template} template`)} to ${chalk.bold(destPath)}`),
     );
 
     onCancel();

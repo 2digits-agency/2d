@@ -1,4 +1,6 @@
 import p from '@clack/prompts';
+import chalk from 'chalk';
+import { formatWithOptions } from 'node:util';
 import type { Argv } from 'yargs';
 import type { ArgumentsCamelCase as Args, CommandModule } from 'yargs';
 import type yargs from 'yargs';
@@ -89,7 +91,13 @@ export async function promptMissingArg<
   const result = await schema.spa(args[argName]);
 
   if (result.success) {
-    p.log.success('Validated argument');
+    p.log.step(
+      formatWithOptions(
+        { colors: true },
+        `Using ${argName} from arguments\n${chalk.dim('%s')}`,
+        result.data,
+      ),
+    );
     return result.data;
   }
 

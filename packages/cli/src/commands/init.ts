@@ -1,12 +1,16 @@
 import p from '@clack/prompts';
 import chalk from 'chalk';
+import { consola } from 'consola';
 import fs from 'fs-extra';
-import mrm from 'mrm-core';
 import pathe from 'pathe';
+import link from 'terminal-link';
 import type { Argv } from 'yargs';
 import { z } from 'zod';
 
+import { bugs } from '../../package.json';
+import type packageJson from '../../templates/base/package.json';
 import { createCommand, promptMissingArg, validate } from '../helpers';
+import { installDependencies } from '../utils/dependencies';
 import { copyTemplate } from '../utils/templates';
 
 const moduleEnum = z.enum(['trpc', 'stitches']);
@@ -99,8 +103,7 @@ export const init = createCommand(['init [path]', 'i'], {
       },
     });
 
-    /** Resolved path from current working directory */
-    const path = pathe.resolve(process.cwd(), pathInput);
+    const path = pathe.resolve(pathInput);
 
     const name = await promptMissingArg({
       args,
@@ -129,6 +132,8 @@ export const init = createCommand(['init [path]', 'i'], {
       },
     });
 
+    consola.debug('module', module);
+
     const install = await promptMissingArg({
       args,
       argName: 'install',
@@ -140,18 +145,31 @@ export const init = createCommand(['init [path]', 'i'], {
         }),
     });
 
-    const initParams = { name, path, module, install } satisfies InitArguments;
-
     p.log.step('Scaffolding project...');
 
     await copyTemplate('base', path);
 
+    const pkgJsonPath = pathe.join(path, 'package.json');
+    const pkg = (await fs.readJson(pkgJsonPath)) as typeof packageJson;
+    pkg.name = name;
+    await fs.writeJson(pkgJsonPath, pkg, { spaces: 2 });
+
     if (install) {
-      mrm.install([], { pnpm: true });
+      await installDependencies(path);
     }
 
-    p.log.message('Installing dependencies...');
+    p.note(
+      `${chalk.bold(
+        `cd ${link(chalk.underline(path), `vscode://file/${path}`, { fallback: false })}`,
+      )}\n${chalk.bold('pnpm dev')}`,
+      'Next steps',
+    );
 
-    p.outro('Done!');
+    p.outro(
+      `If you encounter any problems, please open an issue on ${link(
+        chalk.hex('#762BFF').underline`Github`,
+        bugs.url,
+      )}`,
+    );
   },
 });
