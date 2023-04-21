@@ -5,6 +5,7 @@ import ignore from 'ignore';
 import pathe from 'pathe';
 
 import base from '../../public/templates/base/package.json';
+import web from '../../public/templates/web/apps/web/package.json';
 import { PKG_DIST } from '../constants';
 import { onCancel } from '../helpers';
 import { Spinner } from './log';
@@ -13,6 +14,7 @@ const consola = createConsola({ defaults: { tag: 'utils/templates' } });
 
 export const templates = {
   base,
+  web,
 } as const;
 
 export type Template = keyof typeof templates;

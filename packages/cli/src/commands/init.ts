@@ -8,7 +8,7 @@ import type { Argv } from 'yargs';
 import { z } from 'zod';
 
 import { bugs } from '../../package.json';
-import type packageJson from '../../templates/base/package.json';
+import type packageJson from '../../public/templates/base/package.json';
 import { createCommand, promptMissingArg, validate } from '../helpers';
 import { installDependencies } from '../utils/dependencies';
 import { copyTemplate } from '../utils/templates';
