@@ -20,28 +20,33 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "packageManager": "pnpm@7.29.3",
+  "packageManager": "pnpm@8.3.1",
   "manypkg": {
     "ignoredRules": [
       "INTERNAL_MISMATCH"
     ]
   },
   "eslintConfig": {
-    "extends": "@2digits"
+    "extends": "@2digits",
+    "rules": {
+      "unicorn/prefer-ternary": [
+        "error",
+        "only-single-line"
+      ]
+    }
   },
   "prettier": "@2digits/prettier-config",
   "dependencies": {
-    "@2digits/eslint-config": "^0.1.1",
-    "@2digits/prettier-config": "^0.1.0",
-    "@2digits/tsconfig": "^0.0.1",
-    "@changesets/cli": "^2.26.0",
+    "@2digits/eslint-config": "^0.2.0",
+    "@2digits/prettier-config": "^0.2.0",
+    "@2digits/tsconfig": "^0.1.0",
+    "@changesets/cli": "^2.26.1",
     "@manypkg/cli": "^0.20.0",
-    "@types/node": "^18.15.3",
-    "eslint": "^8.36.0",
-    "prettier": "^2.8.4",
-    "typescript": "^4.9.5"
-  },
-  "devDependencies": {
-    "@total-typescript/ts-reset": "^0.4.2"
+    "@total-typescript/ts-reset": "^0.4.2",
+    "@types/node": "^18.15.13",
+    "eslint": "^8.38.0",
+    "prettier": "^2.8.7",
+    "turbo": "^1.9.3",
+    "typescript": "^5.0.4"
   }
 }

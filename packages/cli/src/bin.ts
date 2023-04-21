@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-import { Command } from 'commander';
+import yargs from 'yargs';
 
-import { argsParser } from './args';
+import { cli } from './cli';
 
-export const a = new Command().name('2d');
-
-export default async function main() {
-  const {} = await argsParser;
+try {
+  void cli.wrap(cli.terminalWidth()).argv;
+} catch (error) {
+  yargs().exit(1, error as Error);
 }
