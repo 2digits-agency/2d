@@ -1,9 +1,7 @@
 import * as p from '@clack/prompts';
 import chalk from 'chalk';
 import { formatWithOptions } from 'node:util';
-import type { Argv } from 'yargs';
-import type { ArgumentsCamelCase as Args, CommandModule } from 'yargs';
-import type yargs from 'yargs';
+import type { Arguments, ArgumentsCamelCase, Argv, CommandModule } from 'yargs';
 import type { z } from 'zod';
 
 export type Simplify<TType> = { [KeyType in keyof TType]: TType[KeyType] } & unknown;
@@ -15,7 +13,7 @@ export interface CommandOptions<TCmd> {
   /** The description of the command or `false` if not described. */
   describe: string | false;
   /** The handler function to be called with the parsed arguments. */
-  handler(args: Args<Simplify<TCmd>>): void | Promise<void>;
+  handler(args: ArgumentsCamelCase<Simplify<TCmd>>): void | Promise<void>;
   /** An optional builder function to define command-specific arguments. */
   builder?: ((args: Argv) => Argv<TCmd>) | ((args: Argv) => Promise<Argv<TCmd>>);
   /** An optional flag or message to indicate if the command is deprecated. */
@@ -83,7 +81,7 @@ export async function promptMissingArg<
   argName,
   args,
 }: {
-  args: yargs.Arguments<TArgs>;
+  args: Arguments<TArgs>;
   argName: TArgname;
   schema: TSchema;
   prompt(): Promise<TPrompt | symbol>;
