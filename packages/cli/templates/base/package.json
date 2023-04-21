@@ -14,7 +14,7 @@
     "types": "turbo types && tsc --noEmit"
   },
   "dependencies": {
-    "@2digits/eslint-config": "^0.2.0",
+    "@2digits/eslint-config": "^0.2.1",
     "@2digits/prettier-config": "^0.2.0",
     "@2digits/tsconfig": "^0.1.0",
     "@manypkg/cli": "^0.20.0",
