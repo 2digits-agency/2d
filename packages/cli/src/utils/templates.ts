@@ -4,8 +4,8 @@ import fs from 'fs-extra';
 import ignore from 'ignore';
 import pathe from 'pathe';
 
-import base from '../../templates/base/package.json';
-import { PKG_ROOT } from '../constants';
+import base from '../../public/templates/base/package.json';
+import { PKG_DIST } from '../constants';
 import { onCancel } from '../helpers';
 import { Spinner } from './log';
 
@@ -18,7 +18,7 @@ export const templates = {
 export type Template = keyof typeof templates;
 
 export async function copyTemplate(template: Template, path: string) {
-  const sourceDir = pathe.join(PKG_ROOT, 'templates', template);
+  const sourceDir = pathe.join(PKG_DIST, 'templates', template);
 
   consola.debug('sourceDir', sourceDir);
 
@@ -48,6 +48,7 @@ export async function copyTemplate(template: Template, path: string) {
 
   try {
     await fs.copy(sourceDir, path, {
+      errorOnExist: true,
       filter(src, dest) {
         const relative = pathe.relative(sourceDir, src);
 
