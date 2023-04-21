@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import { consola } from 'consola';
+import { createConsola } from 'consola';
 import fs from 'fs-extra';
 import ignore from 'ignore';
 import pathe from 'pathe';
@@ -8,6 +8,8 @@ import base from '../../templates/base/package.json';
 import { PKG_ROOT } from '../constants';
 import { onCancel } from '../helpers';
 import { Spinner } from './log';
+
+const consola = createConsola({ defaults: { tag: 'utils/templates' } });
 
 export const templates = {
   base,
@@ -18,19 +20,29 @@ export type Template = keyof typeof templates;
 export async function copyTemplate(template: Template, path: string) {
   const sourceDir = pathe.join(PKG_ROOT, 'templates', template);
 
+  consola.debug('sourceDir', sourceDir);
+
   const ignoreFile = pathe.join(sourceDir, '.gitignore');
+
+  consola.debug('ignoreFile', ignoreFile);
 
   const ig = ignore();
 
   if (await fs.exists(ignoreFile)) {
     const ignoreContents = await fs.readFile(ignoreFile, { encoding: 'utf8' });
 
-    ig.add(ignoreContents.split('\n').filter((line) => ignore.isPathValid(line)));
+    const ignoreLines = ignoreContents.split('\n').filter((line) => ignore.isPathValid(line));
+
+    consola.debug('ignoreLines', ignoreLines);
+
+    ig.add(ignoreLines);
   }
 
   const spinner = new Spinner();
 
   const destPath = pathe.relative(process.cwd(), path);
+
+  consola.debug('destPath', destPath);
 
   spinner.start(`Copying ${chalk.bold(`${template}`)} template to ${chalk.bold(destPath)}...`);
 
@@ -39,7 +51,9 @@ export async function copyTemplate(template: Template, path: string) {
       filter(src, dest) {
         const relative = pathe.relative(sourceDir, src);
 
-        consola.debug('src: ' + src, 'dest: ' + dest);
+        consola.debug('filtering: ' + relative);
+        consola.trace('src: ' + src);
+        consola.trace('dest: ' + dest);
 
         spinner.suffixText = relative;
 
@@ -48,7 +62,9 @@ export async function copyTemplate(template: Template, path: string) {
     });
 
     spinner.success(`Copied ${chalk.bold(`${template} template`)} to ${chalk.bold(destPath)}`);
-  } catch {
+  } catch (error) {
+    consola.fatal(error);
+
     spinner.fail(
       chalk.red(`Failed to copy ${chalk.bold(`${template} template`)} to ${chalk.bold(destPath)}`),
     );
