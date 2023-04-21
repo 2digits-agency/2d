@@ -18,7 +18,7 @@
     "@2digits/prettier-config": "^0.2.0",
     "@2digits/tsconfig": "^0.1.0",
     "@manypkg/cli": "^0.20.0",
-    "@types/node": "^18.15.12",
+    "@types/node": "^18.15.13",
     "eslint": "^8.38.0",
     "plop": "^3.1.2",
     "prettier": "^2.8.7",
