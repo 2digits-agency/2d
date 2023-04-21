@@ -1,5 +1,11 @@
 # @2digits/cli
 
+## 0.1.1
+
+### Patch Changes
+
+- 8426406: Added debug logging and updated the build process
+
 ## 0.1.0
 
 ### Minor Changes
