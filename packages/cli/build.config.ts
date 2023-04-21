@@ -5,6 +5,6 @@ export default defineBuildConfig({
   clean: true,
   declaration: true,
   rollup: {
-    inlineDependencies: false,
+    inlineDependencies: true,
   },
 });

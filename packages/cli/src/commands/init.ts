@@ -1,4 +1,4 @@
-import p from '@clack/prompts';
+import * as p from '@clack/prompts';
 import chalk from 'chalk';
 import { consola } from 'consola';
 import fs from 'fs-extra';
