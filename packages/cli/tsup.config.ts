@@ -14,4 +14,5 @@ export default defineConfig({
   target: 'esnext',
   outDir: 'dist',
   publicDir: './public/',
+  ignoreWatch: ['**/.next/', '**/node_modules/'],
 });
