@@ -5,6 +5,9 @@ node_modules
 package-lock.json
 yarn.lock
 
+# tsup
+dist/
+
 # misc
 .DS_Store
 *.pem
@@ -24,3 +27,9 @@ yarn-error.log*
 
 # vercel cli
 .vercel
+
+# next.js
+.next/
+out/
+build
+next-env.d.ts

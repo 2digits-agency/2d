@@ -15,4 +15,8 @@ const config = {
   eslint: { ignoreDuringBuilds: true },
 };
 
-export default withSentryConfig(shouldAnalyze ? withBundleAnalyzer(config) : config);
+export default withSentryConfig(
+  shouldAnalyze ? withBundleAnalyzer(config) : config,
+  {},
+  { hideSourceMaps: true },
+);
