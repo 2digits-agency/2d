@@ -2,7 +2,7 @@ import chalk from 'chalk';
 import { createConsola } from 'consola';
 import { execa } from 'execa';
 
-import { Spinner } from './log';
+import { Spinner } from '@2digits/log';
 
 const consola = createConsola({ defaults: { tag: 'utils/dependencies' } });
 
