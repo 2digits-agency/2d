@@ -11,8 +11,10 @@
     "dev": "turbo run dev",
     "format": "bash -c 'prettier \"**/*\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --check'",
     "format:fix": "bash -c 'prettier \"**/*\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --write'",
-    "lint": "turbo run lint && manypkg check",
-    "lint:fix": "turbo run lint -- --fix && manypkg fix",
+    "lint": "turbo run lint:pkg lint",
+    "lint:fix": "turbo run lint:pkg:fix lint -- --fix",
+    "lint:pkg": "manypkg check",
+    "lint:pkg:fix": "manypkg fix",
     "types": "turbo run types",
     "publish": "changeset publish",
     "release": "turbo run build && changeset publish"
@@ -27,13 +29,7 @@
     ]
   },
   "eslintConfig": {
-    "extends": "@2digits",
-    "rules": {
-      "unicorn/prefer-ternary": [
-        "error",
-        "only-single-line"
-      ]
-    }
+    "extends": "@2digits"
   },
   "prettier": "@2digits/prettier-config",
   "dependencies": {
