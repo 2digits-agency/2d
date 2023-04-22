@@ -1,10 +1,10 @@
 {
-  "globalDependencies": ["**/.env", "tsconfig.json"],
+  "extends": ["//"],
   "pipeline": {
-    "build": { "dependsOn": ["^build"], "outputs": ["dist/**", "build/**"] },
-    "dev": { "cache": false, "persistent": true },
-    "lint": { "cache": false },
-    "lint-fix": { "cache": false },
-    "types": { "dependsOn": ["^types"], "cache": false }
+    "build": {},
+    "dev": {},
+    "lint": {},
+    "lint-fix": {},
+    "types": {}
   }
 }
