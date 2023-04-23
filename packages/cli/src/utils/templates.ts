@@ -5,8 +5,8 @@ import pathe from 'pathe';
 
 import { Spinner } from '@2digits/log';
 
-import base from '../../public/templates/base/package.json';
-import web from '../../public/templates/web/apps/web/package.json';
+import base from '../../templates/base/package.json';
+import web from '../../templates/web/apps/web/package.json';
 import { TEMPLATE_DIR } from '../constants';
 import { onCancel } from '../helpers';
 import { createIgnoreFilter } from './ignore';
@@ -27,7 +27,7 @@ export async function copyTemplate(template: Template, path: string) {
 
   consola.debug('sourceDir', sourceDir);
 
-  const templateIgnoreFile = pathe.join(sourceDir, '.gitignore');
+  const templateIgnoreFile = pathe.join(sourceDir, '_2d_.gitignore');
 
   const ignore = await createIgnoreFilter([rootIgnoreFile, templateIgnoreFile]);
 

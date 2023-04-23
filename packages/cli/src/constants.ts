@@ -7,4 +7,6 @@ const __filename = fileURLToPath(import.meta.url);
 
 export const PKG_DIST = pathe.dirname(__filename);
 
-export const TEMPLATE_DIR = pathe.join(PKG_DIST, 'templates');
+export const PKG_ROOT = pathe.join(PKG_DIST, '..');
+
+export const TEMPLATE_DIR = pathe.join(PKG_ROOT, 'templates');
