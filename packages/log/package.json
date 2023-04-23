@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "",
   "license": "MIT",
-  "public": true,
+  "public": false,
   "packageManager": "pnpm@8.3.1",
   "scripts": {
     "build": "tsup",
