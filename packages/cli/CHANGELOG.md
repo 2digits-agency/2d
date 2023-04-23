@@ -1,5 +1,11 @@
 # @2digits/cli
 
+## 0.2.1
+
+### Patch Changes
+
+- a642078: Fixed info logs back to debug logs
+
 ## 0.2.0
 
 ### Minor Changes
