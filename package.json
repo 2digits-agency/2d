@@ -2,9 +2,6 @@
   "name": "@2digits/2d",
   "version": "0.0.0",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "build": "turbo run build",
     "clean": "find . -name node_modules -o -name .turbo -o -name dist -o -name .next -type d -prune | xargs rm -rf",

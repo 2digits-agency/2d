@@ -26,7 +26,8 @@
   "keywords": [],
   "author": "",
   "files": [
-    "dist"
+    "dist",
+    "templates"
   ],
   "bugs": {
     "url": "https://github.com/2digits-agency/2d/issues/new"

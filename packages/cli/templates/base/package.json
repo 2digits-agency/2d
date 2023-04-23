@@ -2,17 +2,7 @@
   "name": "@mod/base",
   "version": "0.0.0",
   "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "clean": "find . -name node_modules -o -name .turbo -o -name .next -o -name dist -type d -prune | xargs rm -rf",
-    "dev": "turbo run dev",
-    "format": "bash -c 'prettier \"**/*\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --check'",
-    "format:fix": "bash -c 'prettier \"**/*\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --write'",
-    "lint": "turbo lint && manypkg check",
-    "lint:fix": "turbo lint -- --fix && manypkg fix",
-    "plop": "plop",
-    "types": "turbo types && tsc --noEmit"
-  },
+  "scripts": {},
   "dependencies": {
     "@2digits/eslint-config": "^0.2.1",
     "@2digits/prettier-config": "^0.2.0",
