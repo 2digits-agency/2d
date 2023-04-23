@@ -1,0 +1,10 @@
+{
+  "extends": ["//"],
+  "pipeline": {
+    "build": {},
+    "dev": {},
+    "lint": {},
+    "lint-fix": {},
+    "types": {}
+  }
+}

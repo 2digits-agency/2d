@@ -8,12 +8,13 @@ import type { Argv } from 'yargs';
 import { z } from 'zod';
 
 import { bugs } from '../../package.json';
-import type packageJson from '../../templates/base/package.json';
+import type packageJson from '../../public/templates/base/package.json';
 import { createCommand, promptMissingArg, validate } from '../helpers';
 import { installDependencies } from '../utils/dependencies';
+import { renamePlaceholders } from '../utils/rename';
 import { copyTemplate } from '../utils/templates';
 
-const moduleEnum = z.enum(['trpc', 'stitches']);
+const moduleEnum = z.enum(['web']);
 
 const appModule = z.array(moduleEnum);
 
@@ -148,6 +149,12 @@ export const init = createCommand(['init [path]', 'i'], {
     p.log.step('Scaffolding project...');
 
     await copyTemplate('base', path);
+
+    for (const mod of module) {
+      await copyTemplate(mod, path);
+    }
+
+    await renamePlaceholders(path);
 
     const pkgJsonPath = pathe.join(path, 'package.json');
     const pkg = (await fs.readJson(pkgJsonPath)) as typeof packageJson;

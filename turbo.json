@@ -1,8 +1,11 @@
 {
   "pipeline": {
     "build": { "dependsOn": ["^build"], "outputs": ["dist"] },
-    "lint": { "cache": false },
     "types": { "dependsOn": ["^types"], "cache": false },
-    "dev": { "persistent": true, "cache": false }
+    "dev": { "persistent": true, "cache": false },
+
+    "lint": { "cache": false },
+    "//#lint:pkg": { "cache": false },
+    "//#lint:pkg:fix": { "cache": false }
   }
 }

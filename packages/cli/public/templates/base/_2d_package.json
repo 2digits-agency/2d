@@ -1,5 +1,5 @@
 {
-  "name": "@2digits/base",
+  "name": "@mod/base",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -18,10 +18,10 @@
     "@2digits/prettier-config": "^0.2.0",
     "@2digits/tsconfig": "^0.1.1",
     "@manypkg/cli": "^0.20.0",
-    "@types/node": "^18.15.13",
-    "eslint": "^8.38.0",
+    "@types/node": "^18.16.0",
+    "eslint": "^8.39.0",
     "plop": "^3.1.2",
-    "prettier": "^2.8.7",
+    "prettier": "^2.8.8",
     "turbo": "^1.9.3",
     "typescript": "^5.0.4"
   },
@@ -30,17 +30,10 @@
     "node": ">=18.0.0"
   },
   "manypkg": {
-    "ignoredRules": [
-      "INTERNAL_MISMATCH"
-    ]
+    "ignoredRules": ["INTERNAL_MISMATCH"]
   },
   "pnpm": {
-    "neverBuiltDependencies": [
-      "core-js",
-      "core-js-compat",
-      "core-js-pure",
-      "cypress"
-    ]
+    "neverBuiltDependencies": ["core-js", "core-js-compat", "core-js-pure", "cypress"]
   },
   "prettier": "@2digits/prettier-config",
   "eslintConfig": {
