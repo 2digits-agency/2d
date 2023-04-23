@@ -1,27 +1,54 @@
 import consola from 'consola';
 import fs from 'fs-extra';
+import type { Ignore } from 'ignore';
 import ignore from 'ignore';
 
-export async function createIgnoreFilter(ignoreFilePaths: string[]) {
-  const ig = ignore();
+async function readIgnoreFile(ignoreFilePath: string): Promise<string[] | undefined> {
+  if (!(await fs.pathExists(ignoreFilePath))) return;
 
-  for (const ignoreFilePath of ignoreFilePaths) {
-    try {
-      consola.debug('ignoreFilePath', ignoreFilePath);
+  const contents = await fs.readFile(ignoreFilePath, { encoding: 'utf8' });
 
-      if (await fs.exists(ignoreFilePath)) {
-        const ignoreContents = await fs.readFile(ignoreFilePath, { encoding: 'utf8' });
+  return contents.split('\n');
+}
 
-        const ignoreLines = ignoreContents.split('\n').filter((line) => ignore.isPathValid(line));
+function parseIgnoreLines(ignoreContents: string[]): string[] {
+  const parsedLines: string[] = [];
 
-        consola.debug('ignoreLines', ignoreLines);
+  for (const ignoreLine of ignoreContents) {
+    const trimmed = ignoreLine.trim();
 
-        ig.add(ignoreLines);
-      }
-    } catch (error) {
-      consola.error(error);
+    if (ignore.isPathValid(trimmed) && !trimmed.startsWith('#')) {
+      parsedLines.push(trimmed);
     }
   }
 
-  return ig;
+  return parsedLines;
+}
+
+export async function createIgnoreFilter(ignoreFilePaths: string[]): Promise<Ignore> {
+  const parsedIgnoreLines: string[][] = [];
+
+  for (const ignoreFilePath of ignoreFilePaths) {
+    consola.debug('ignoreFilePath', ignoreFilePath);
+
+    const ignoreContents = await readIgnoreFile(ignoreFilePath);
+
+    if (!ignoreContents) {
+      consola.debug('No file found at ' + ignoreFilePath);
+
+      continue;
+    }
+
+    const ignoreLines = parseIgnoreLines(ignoreContents);
+
+    consola.debug('ignoreLines', ignoreLines);
+
+    parsedIgnoreLines.push(ignoreLines);
+  }
+
+  const ignoreSet = new Set(parsedIgnoreLines.flat());
+
+  consola.debug('ignoreSet', ignoreSet);
+
+  return ignore().add([...ignoreSet]);
 }
