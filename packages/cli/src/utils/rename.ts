@@ -10,7 +10,7 @@ export async function renamePlaceholders(path: string) {
 
   for await (const placeholder of placeholders) {
     const renamed = placeholder.toString().replace(/_2d_/g, '');
-    consola.info(placeholder, renamed);
+    consola.debug(placeholder, renamed);
 
     await fs.rename(placeholder, renamed);
   }
