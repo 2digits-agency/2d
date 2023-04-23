@@ -30,17 +30,10 @@
     "node": ">=18.0.0"
   },
   "manypkg": {
-    "ignoredRules": [
-      "INTERNAL_MISMATCH"
-    ]
+    "ignoredRules": ["INTERNAL_MISMATCH"]
   },
   "pnpm": {
-    "neverBuiltDependencies": [
-      "core-js",
-      "core-js-compat",
-      "core-js-pure",
-      "cypress"
-    ]
+    "neverBuiltDependencies": ["core-js", "core-js-compat", "core-js-pure", "cypress"]
   },
   "prettier": "@2digits/prettier-config",
   "eslintConfig": {
