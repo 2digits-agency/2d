@@ -9,6 +9,8 @@ jobs:
   build:
     name: ⚗️ Lint, typecheck and format
     runs-on: ubuntu-latest
+    env:
+      FORCE_COLORS: 1
     steps:
       - name: 🗃️ Checkout repository
         uses: actions/checkout@v3
