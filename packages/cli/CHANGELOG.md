@@ -1,5 +1,20 @@
 # @2digits/cli
 
+## 0.2.0
+
+### Minor Changes
+
+- 7efb16e: Added the logic for adding modules
+
+### Patch Changes
+
+- 6e53e09: Added the web module
+- 18f08bc: Moved logic for logging to a separate package
+- 15a44ef: Upgraded deps for templates and main packages
+- Updated dependencies [18f08bc]
+- Updated dependencies [15a44ef]
+  - @2digits/log@0.0.1
+
 ## 0.1.1
 
 ### Patch Changes
