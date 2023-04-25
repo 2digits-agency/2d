@@ -3,7 +3,7 @@ import fs from 'fs-extra';
 import { globby } from 'globby';
 
 export async function findPlaceholders(path: string): Promise<string[]> {
-  const placeholders = await globby(['**/_2d_**'], {
+  const placeholders = await globby(['**/*_2d_**'], {
     cwd: path,
     absolute: true,
     dot: true,

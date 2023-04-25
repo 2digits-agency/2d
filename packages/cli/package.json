@@ -12,7 +12,8 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "eslint --ignore-path ../../.gitignore .",
-    "types": "tsc --noEmit"
+    "types": "tsc --noEmit",
+    "test": "vitest"
   },
   "exports": {
     "./package.json": "./package.json",
@@ -35,10 +36,13 @@
   "devDependencies": {
     "@2digits/tsconfig": "^0.1.1",
     "@types/fs-extra": "^11.0.1",
+    "@types/mock-fs": "^4.13.1",
     "@types/yargs": "^17.0.24",
     "eslint": "^8.39.0",
+    "mock-fs": "^5.2.0",
     "tsup": "^6.7.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "vitest": "^0.30.1"
   },
   "dependencies": {
     "@2digits/log": "workspace:*",
