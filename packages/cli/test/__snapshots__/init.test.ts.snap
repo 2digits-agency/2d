@@ -302,7 +302,9 @@ export { type RouterInputs, type RouterOutputs } from '@mod/trpc';
   \\"main\\": \\"./dist/index.js\\",
   \\"module\\": \\"./dist/index.mjs\\",
   \\"types\\": \\"./src/index.ts\\",
-  \\"files\\": [\\"dist\\"],
+  \\"files\\": [
+    \\"dist\\"
+  ],
   \\"scripts\\": {
     \\"build\\": \\"tsup\\",
     \\"dev\\": \\"tsup --watch\\",
