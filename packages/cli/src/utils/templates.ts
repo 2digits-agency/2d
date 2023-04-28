@@ -6,6 +6,7 @@ import pathe from 'pathe';
 import { Spinner } from '@2digits/log';
 
 import base from '../../templates/base/package.json';
+import trpc from '../../templates/trpc/packages/trpc/package.json';
 import web from '../../templates/web/apps/web/package.json';
 import { TEMPLATE_DIR } from '../constants';
 import { onCancel } from '../helpers';
@@ -18,6 +19,7 @@ const rootIgnoreFile = pathe.join(TEMPLATE_DIR, '.gitignore');
 export const templates = {
   base,
   web,
+  trpc,
 } as const;
 
 export type Template = keyof typeof templates;
@@ -41,8 +43,7 @@ export async function copyTemplate(template: Template, path: string) {
 
   try {
     await fs.copy(sourceDir, path, {
-      errorOnExist: true,
-      overwrite: false,
+      overwrite: true,
       filter(src, dest) {
         const relative = pathe.relative(sourceDir, src);
 

@@ -14,7 +14,7 @@ import { installDependencies } from '../utils/dependencies';
 import { renamePlaceholders } from '../utils/rename';
 import { copyTemplate } from '../utils/templates';
 
-const moduleEnum = z.enum(['web']);
+const moduleEnum = z.enum(['web', 'trpc']);
 
 const appModule = z.array(moduleEnum);
 
