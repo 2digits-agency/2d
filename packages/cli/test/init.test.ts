@@ -10,7 +10,12 @@ import { TEMPLATE_DIR } from '../src/constants';
 
 describe('init', () => {
   beforeEach(async () => {
-    const files = await globby('./**/*', { dot: true, gitignore: true, cwd: TEMPLATE_DIR });
+    const files = await globby('./**/*', {
+      dot: true,
+      gitignore: true,
+      cwd: TEMPLATE_DIR,
+      ignore: ['**/CHANGELOG.md'],
+    });
 
     const mockFiles = {} as Record<string, string>;
 
