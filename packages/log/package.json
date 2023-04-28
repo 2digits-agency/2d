@@ -5,6 +5,10 @@
   "license": "MIT",
   "private": true,
   "packageManager": "pnpm@8.3.1",
+  "repository": {
+    "url": "https://github.com/2digits-agency/2d",
+    "directory": "packages/log"
+  },
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -14,19 +18,25 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/index.mjs"
     }
   },
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "keywords": [],
+  "types": "./src/index.ts",
+  "keywords": [
+    "log",
+    "2digits",
+    "spinner"
+  ],
   "author": "",
   "files": [
     "dist"
   ],
   "bugs": {
     "url": "https://github.com/2digits-agency/2d/issues/new"
+  },
+  "publishConfig": {
+    "types": "./dist/index.d.ts"
   },
   "devDependencies": {
     "@2digits/tsconfig": "^0.1.1",
