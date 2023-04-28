@@ -9,7 +9,7 @@ import type { Template } from './templates';
 
 export function getTemplatePatches(template: Template) {
   const cwd = pathe.join(TEMPLATE_DIR, template);
-  return globby('./**/*.patch', { cwd, followSymbolicLinks: false });
+  return globby('./**/*.patch', { cwd, followSymbolicLinks: false, gitignore: true });
 }
 
 export async function applyPatch(template: Template, patch: string, path: string) {
@@ -26,5 +26,7 @@ export async function applyPatch(template: Template, patch: string, path: string
 
   consola.debug('patched', patched);
 
-  await fs.writeFile(target, patched);
+  if (patched) {
+    await fs.writeFile(target, patched);
+  }
 }

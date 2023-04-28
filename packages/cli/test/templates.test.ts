@@ -10,7 +10,12 @@ import { copyTemplate } from '../src/utils/templates';
 
 describe('copyTemplate', () => {
   beforeEach(async () => {
-    const files = await globby('./**/*', { dot: true, gitignore: true, cwd: TEMPLATE_DIR });
+    const files = await globby('./**/*', {
+      dot: true,
+      gitignore: true,
+      cwd: TEMPLATE_DIR,
+      ignore: ['**/CHANGELOG.md'],
+    });
 
     const mockFiles = {} as Record<string, string>;
 

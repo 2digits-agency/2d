@@ -78,7 +78,7 @@ export default withSentryConfig(
 ",
   "./test/path/apps/web/package.json": "{
   \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.0.0\\",
+  \\"version\\": \\"0.0.1\\",
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"next build\\",
@@ -238,7 +238,7 @@ export { type RouterInputs, type RouterOutputs } from '@mod/trpc';
 ",
   "./test/path/package.json": "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.0\\",
+  \\"version\\": \\"0.0.1\\",
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"turbo run build\\",
@@ -288,7 +288,7 @@ export { type RouterInputs, type RouterOutputs } from '@mod/trpc';
 ",
   "./test/path/packages/trpc/package.json": "{
   \\"name\\": \\"@mod/trpc\\",
-  \\"version\\": \\"0.0.0\\",
+  \\"version\\": \\"0.0.1\\",
   \\"private\\": true,
   \\"sideEffects\\": false,
   \\"exports\\": {
@@ -507,7 +507,7 @@ export default withSentryConfig(
 ",
   "./test/path/apps/web/package.json": "{
   \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.0.0\\",
+  \\"version\\": \\"0.0.1\\",
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"next build\\",
@@ -606,7 +606,7 @@ export default App;
 ",
   "./test/path/package.json": "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.0\\",
+  \\"version\\": \\"0.0.1\\",
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"turbo run build\\",
@@ -730,7 +730,7 @@ public
 ",
   "./test/path/package.json": "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.0\\",
+  \\"version\\": \\"0.0.1\\",
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"turbo run build\\",
