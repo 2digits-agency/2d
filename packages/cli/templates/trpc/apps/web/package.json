@@ -1,5 +1,5 @@
 {
-  "name": "@mod/web2",
+  "name": "@mod/web-trpc",
   "version": "0.0.0",
   "private": true,
   "scripts": {
