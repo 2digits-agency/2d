@@ -10,8 +10,8 @@
     "types": "tsc --noEmit"
   },
   "dependencies": {
-    "@sentry/cli": "^2.17.4",
-    "@sentry/nextjs": "^7.49.0",
+    "@sentry/cli": "^2.17.5",
+    "@sentry/nextjs": "^7.50.0",
     "next": "^13.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -20,9 +20,9 @@
     "@2digits/tsconfig": "^0.1.1",
     "@babel/core": "^7.21.4",
     "@next/bundle-analyzer": "^13.3.1",
-    "@types/node": "^18.16.0",
-    "@types/react": "^18.0.38",
-    "@types/react-dom": "^18.0.11",
+    "@types/node": "^18.16.2",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
     "eslint": "^8.39.0",
     "typescript": "^5.0.4"
   }
