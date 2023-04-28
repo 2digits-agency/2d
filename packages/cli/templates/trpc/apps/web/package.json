@@ -1,0 +1,33 @@
+{
+  "name": "@mod/web2",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mod/trpc": "workspace:*",
+    "@sentry/cli": "^2.17.5",
+    "@sentry/nextjs": "^7.50.0",
+    "@tanstack/react-query": "^4.29.5",
+    "@trpc/client": "^10.21.2",
+    "@trpc/next": "^10.21.2",
+    "@trpc/react-query": "^10.21.2",
+    "@trpc/server": "^10.21.2",
+    "next": "^13.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "superjson": "^1.12.3",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@2digits/tsconfig": "^0.1.1",
+    "@babel/core": "^7.21.4",
+    "@next/bundle-analyzer": "^13.3.1",
+    "@types/node": "^18.16.2",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
+    "eslint": "^8.39.0",
+    "typescript": "^5.0.4"
+  }
+}
