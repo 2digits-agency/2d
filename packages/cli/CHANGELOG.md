@@ -1,5 +1,11 @@
 # @2digits/cli
 
+## 0.3.1
+
+### Patch Changes
+
+- a67dc10: Fixed package depending on internal package
+
 ## 0.3.0
 
 ### Minor Changes
