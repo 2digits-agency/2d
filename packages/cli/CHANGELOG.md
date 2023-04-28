@@ -1,5 +1,25 @@
 # @2digits/cli
 
+## 0.3.0
+
+### Minor Changes
+
+- 0231c69: Added new trpc module template
+
+### Patch Changes
+
+- e33d219: Updated deps
+- 7372595: Refactored logic related to ignoring files
+- 3f2b385: Updated deps
+- 7b1e850: Refactored logic related to renaming files
+- f93a40f: Added CODE_OWNERS
+- 032f663: Added ability to patch diffs
+- ee5f738: Moved templates directory back to root of cli
+- e56bec2: Added some basic tests
+- Updated dependencies [f93a40f]
+- Updated dependencies [001e2a2]
+  - @2digits/log@0.0.2
+
 ## 0.2.1
 
 ### Patch Changes
