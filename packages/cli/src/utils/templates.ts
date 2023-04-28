@@ -43,7 +43,7 @@ export async function copyTemplate(template: Template, path: string) {
 
   try {
     await fs.copy(sourceDir, path, {
-      overwrite: true,
+      overwrite: false,
       filter(src, dest) {
         const relative = pathe.relative(sourceDir, src);
 

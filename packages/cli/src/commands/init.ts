@@ -1,6 +1,5 @@
 import * as p from '@clack/prompts';
 import chalk from 'chalk';
-import { consola } from 'consola';
 import fs from 'fs-extra';
 import pathe from 'pathe';
 import link from 'terminal-link';
@@ -11,6 +10,7 @@ import { bugs } from '../../package.json';
 import type packageJson from '../../templates/base/package.json';
 import { createCommand, promptMissingArg, validate } from '../helpers';
 import { installDependencies } from '../utils/dependencies';
+import { applyPatch, getTemplatePatches } from '../utils/patch';
 import { renamePlaceholders } from '../utils/rename';
 import { copyTemplate } from '../utils/templates';
 
@@ -133,8 +133,6 @@ export const init = createCommand(['init [path]', 'i'], {
       },
     });
 
-    consola.debug('module', module);
-
     const install = await promptMissingArg({
       args,
       argName: 'install',
@@ -155,6 +153,14 @@ export const init = createCommand(['init [path]', 'i'], {
     }
 
     await renamePlaceholders(path);
+
+    for (const mod of ['base', ...module] as const) {
+      const patches = await getTemplatePatches(mod);
+
+      for (const patch of patches) {
+        await applyPatch(mod, patch, path);
+      }
+    }
 
     const pkgJsonPath = pathe.join(path, 'package.json');
     const pkg = (await fs.readJson(pkgJsonPath)) as typeof packageJson;
