@@ -1,5 +1,5 @@
 {
   "extends": "@2digits/tsconfig/tsconfig.json",
-  "include": ["**/*.ts", "../../reset.d.ts"],
+  "include": ["**/*.ts", "**/*.tsx", "../../reset.d.ts"],
   "exclude": ["dist"]
 }

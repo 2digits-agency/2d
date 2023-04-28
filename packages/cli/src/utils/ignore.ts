@@ -3,7 +3,7 @@ import fs from 'fs-extra';
 import type { Ignore } from 'ignore';
 import ignore from 'ignore';
 
-async function readIgnoreFile(ignoreFilePath: string): Promise<string[] | undefined> {
+export async function readIgnoreFile(ignoreFilePath: string): Promise<string[] | undefined> {
   if (!(await fs.pathExists(ignoreFilePath))) return;
 
   const contents = await fs.readFile(ignoreFilePath, { encoding: 'utf8' });
@@ -11,7 +11,7 @@ async function readIgnoreFile(ignoreFilePath: string): Promise<string[] | undefi
   return contents.split('\n');
 }
 
-function parseIgnoreLines(ignoreContents: string[]): string[] {
+export function parseIgnoreLines(ignoreContents: string[]): string[] {
   const parsedLines: string[] = [];
 
   for (const ignoreLine of ignoreContents) {
