@@ -1,0 +1,58 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`copyTemplate > base + web 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.npmrc",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_package.json",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/web/_2d_package.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/tsconfig.tsbuildinfo",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+]
+`;
+
+exports[`copyTemplate > base 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.npmrc",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_package.json",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/tsconfig.json",
+]
+`;
+
+exports[`copyTemplate > web 1`] = `
+[
+  "./test/path/apps/web/_2d_package.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/tsconfig.tsbuildinfo",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+]
+`;
