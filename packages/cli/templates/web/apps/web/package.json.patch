@@ -1,0 +1,13 @@
+--- package.json	2023-04-28 11:51:44
++++ _2d_package.json	2023-04-28 11:46:04
+@@ -3,6 +3,10 @@
+   "version": "0.0.0",
+   "private": true,
+   "scripts": {
++    "build": "next build",
++    "dev": "next dev",
++    "lint": "eslint --ignore-path ../../.gitignore .",
++    "start": "next start",
+     "types": "tsc --noEmit"
+   },
+   "dependencies": {

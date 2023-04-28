@@ -1,0 +1,39 @@
+{
+  "name": "@mod/trpc",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": false,
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./src/index.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^4.29.5",
+    "@trpc/client": "^10.21.2",
+    "@trpc/next": "^10.21.2",
+    "@trpc/react-query": "^10.21.2",
+    "@trpc/server": "^10.21.2",
+    "next": "^13.3.1",
+    "superjson": "^1.12.3",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@2digits/tsconfig": "^0.1.1",
+    "eslint": "^8.39.0",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
+  }
+}

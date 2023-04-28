@@ -6,12 +6,10 @@ exports[`copyTemplate > base + web 1`] = `
   "./test/path/.npmrc",
   "./test/path/.prettierignore",
   "./test/path/_2d_.gitignore",
-  "./test/path/_2d_package.json",
   "./test/path/_2d_pnpm-workspace.yaml",
   "./test/path/_2d_turbo.json",
   "./test/path/package.json",
   "./test/path/tsconfig.json",
-  "./test/path/apps/web/_2d_package.json",
   "./test/path/apps/web/next.config.mjs",
   "./test/path/apps/web/package.json",
   "./test/path/apps/web/sentry.client.config.ts",
@@ -31,7 +29,6 @@ exports[`copyTemplate > base 1`] = `
   "./test/path/.npmrc",
   "./test/path/.prettierignore",
   "./test/path/_2d_.gitignore",
-  "./test/path/_2d_package.json",
   "./test/path/_2d_pnpm-workspace.yaml",
   "./test/path/_2d_turbo.json",
   "./test/path/package.json",
@@ -41,7 +38,6 @@ exports[`copyTemplate > base 1`] = `
 
 exports[`copyTemplate > web 1`] = `
 [
-  "./test/path/apps/web/_2d_package.json",
   "./test/path/apps/web/next.config.mjs",
   "./test/path/apps/web/package.json",
   "./test/path/apps/web/sentry.client.config.ts",

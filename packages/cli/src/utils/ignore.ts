@@ -26,7 +26,7 @@ export function parseIgnoreLines(ignoreContents: string[]): string[] {
 }
 
 export async function createIgnoreFilter(ignoreFilePaths: string[]): Promise<Ignore> {
-  const parsedIgnoreLines: string[][] = [];
+  const parsedIgnoreLines = [['*.patch']];
 
   for (const ignoreFilePath of ignoreFilePaths) {
     consola.debug('ignoreFilePath', ignoreFilePath);
