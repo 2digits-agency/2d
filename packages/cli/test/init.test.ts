@@ -1,3 +1,4 @@
+import consola from 'consola';
 import fs from 'fs-extra';
 import { globby } from 'globby';
 import mock from 'mock-fs';
@@ -19,10 +20,16 @@ describe('init', () => {
     }
 
     mock(mockFiles);
+
+    consola.wrapAll();
+    consola.pauseLogs();
   });
 
   afterEach(() => {
     mock.restore();
+
+    consola.resumeLogs();
+    consola.restoreAll();
   });
 
   test('base', async () => {
