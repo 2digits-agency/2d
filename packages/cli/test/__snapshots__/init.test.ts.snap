@@ -96,7 +96,7 @@ export default withSentryConfig(
     \\"@trpc/next\\": \\"^10.23.0\\",
     \\"@trpc/react-query\\": \\"^10.23.0\\",
     \\"@trpc/server\\": \\"^10.23.0\\",
-    \\"next\\": \\"^13.3.2\\",
+    \\"next\\": \\"^13.3.4\\",
     \\"react\\": \\"^18.2.0\\",
     \\"react-dom\\": \\"^18.2.0\\",
     \\"superjson\\": \\"^1.12.3\\",
@@ -105,7 +105,7 @@ export default withSentryConfig(
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@babel/core\\": \\"^7.21.5\\",
-    \\"@next/bundle-analyzer\\": \\"^13.3.2\\",
+    \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
     \\"@types/node\\": \\"^18.16.3\\",
     \\"@types/react\\": \\"^18.2.0\\",
     \\"@types/react-dom\\": \\"^18.2.1\\",
@@ -252,8 +252,8 @@ export { type RouterInputs, type RouterOutputs } from '@mod/trpc';
     \\"types\\": \\"turbo types && tsc --noEmit\\"
   },
   \\"dependencies\\": {
-    \\"@2digits/eslint-config\\": \\"^0.2.1\\",
-    \\"@2digits/prettier-config\\": \\"^0.2.0\\",
+    \\"@2digits/eslint-config\\": \\"^0.3.0\\",
+    \\"@2digits/prettier-config\\": \\"^0.3.0\\",
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@types/node\\": \\"^18.16.3\\",
@@ -317,7 +317,7 @@ export { type RouterInputs, type RouterOutputs } from '@mod/trpc';
     \\"@trpc/next\\": \\"^10.23.0\\",
     \\"@trpc/react-query\\": \\"^10.23.0\\",
     \\"@trpc/server\\": \\"^10.23.0\\",
-    \\"next\\": \\"^13.3.2\\",
+    \\"next\\": \\"^13.3.4\\",
     \\"superjson\\": \\"^1.12.3\\",
     \\"zod\\": \\"^3.21.4\\"
   },
@@ -519,14 +519,14 @@ export default withSentryConfig(
   \\"dependencies\\": {
     \\"@sentry/cli\\": \\"^2.17.5\\",
     \\"@sentry/nextjs\\": \\"^7.50.0\\",
-    \\"next\\": \\"^13.3.2\\",
+    \\"next\\": \\"^13.3.4\\",
     \\"react\\": \\"^18.2.0\\",
     \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@babel/core\\": \\"^7.21.5\\",
-    \\"@next/bundle-analyzer\\": \\"^13.3.2\\",
+    \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
     \\"@types/node\\": \\"^18.16.3\\",
     \\"@types/react\\": \\"^18.2.0\\",
     \\"@types/react-dom\\": \\"^18.2.1\\",
@@ -620,8 +620,8 @@ export default App;
     \\"types\\": \\"turbo types && tsc --noEmit\\"
   },
   \\"dependencies\\": {
-    \\"@2digits/eslint-config\\": \\"^0.2.1\\",
-    \\"@2digits/prettier-config\\": \\"^0.2.0\\",
+    \\"@2digits/eslint-config\\": \\"^0.3.0\\",
+    \\"@2digits/prettier-config\\": \\"^0.3.0\\",
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@types/node\\": \\"^18.16.3\\",
@@ -744,8 +744,8 @@ public
     \\"types\\": \\"turbo types && tsc --noEmit\\"
   },
   \\"dependencies\\": {
-    \\"@2digits/eslint-config\\": \\"^0.2.1\\",
-    \\"@2digits/prettier-config\\": \\"^0.2.0\\",
+    \\"@2digits/eslint-config\\": \\"^0.3.0\\",
+    \\"@2digits/prettier-config\\": \\"^0.3.0\\",
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@types/node\\": \\"^18.16.3\\",
