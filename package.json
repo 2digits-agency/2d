@@ -15,7 +15,8 @@
     "types": "turbo run types",
     "publish": "changeset publish",
     "release": "turbo run build && changeset publish",
-    "test": "vitest"
+    "test": "vitest",
+    "check": "pnpm build && pnpm lint && pnpm format && pnpm types && pnpm test run"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -37,7 +38,7 @@
     "@changesets/cli": "^2.26.1",
     "@manypkg/cli": "^0.20.0",
     "@total-typescript/ts-reset": "^0.4.2",
-    "@types/node": "^18.16.2",
+    "@types/node": "^18.16.3",
     "@vitest/ui": "^0.30.1",
     "eslint": "^8.39.0",
     "prettier": "^2.8.8",

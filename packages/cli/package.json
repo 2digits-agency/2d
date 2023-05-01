@@ -5,6 +5,10 @@
   "license": "MIT",
   "public": true,
   "packageManager": "pnpm@8.3.1",
+  "repository": {
+    "url": "https://github.com/2digits-agency/2d",
+    "directory": "packages/cli"
+  },
   "bin": {
     "2d": "./dist/bin.mjs"
   },
@@ -19,12 +23,17 @@
     "./package.json": "./package.json",
     ".": {
       "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "types": "./src/index.ts"
     }
   },
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "keywords": [],
+  "types": "./src/index.ts",
+  "keywords": [
+    "cli",
+    "2d",
+    "2digits",
+    "2digits-agency"
+  ],
   "author": "",
   "files": [
     "dist",
@@ -32,6 +41,16 @@
   ],
   "bugs": {
     "url": "https://github.com/2digits-agency/2d/issues/new"
+  },
+  "publishConfig": {
+    "types": "./dist/index.d.ts",
+    "exports": {
+      "./package.json": "./package.json",
+      ".": {
+        "import": "./dist/index.mjs",
+        "types": "./dist/index.d.ts"
+      }
+    }
   },
   "devDependencies": {
     "@2digits/tsconfig": "^0.1.1",
