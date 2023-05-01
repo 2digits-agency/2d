@@ -16,7 +16,7 @@
     "publish": "changeset publish",
     "release": "turbo run build && changeset publish",
     "test": "vitest",
-    "check": "pnpm format && turbo run build lint:pkg lint types && vitest run"
+    "check": "pnpm build && pnpm lint && pnpm format && pnpm types && pnpm test run"
   },
   "engines": {
     "node": ">=18.0.0"
