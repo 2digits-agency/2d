@@ -1,23 +1,27 @@
 name: 💠 Publish
 
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
 on:
   push:
     branches:
       - 'main'
 
-concurrency: ${{ github.workflow }}-${{ github.ref }}
-
 jobs:
   publish:
     name: 🦋 Changesets
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     env:
       FORCE_COLORS: 1
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+
     steps:
       - name: 🗃️ Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
 
       - name: 🛸 Setup PNPM
         uses: pnpm/action-setup@v2
