@@ -9,11 +9,17 @@ jobs:
   build:
     name: ⚗️ Lint, typecheck and format
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     env:
       FORCE_COLORS: 1
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+
     steps:
       - name: 🗃️ Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
 
       - name: 🛸 Setup PNPM
         uses: pnpm/action-setup@v2
@@ -28,16 +34,16 @@ jobs:
         run: pnpm install
 
       - name: 🏗️ Build packages
-        run: pnpm run build
+        run: pnpm build
 
       - name: 🩻 Check types
-        run: pnpm run types
+        run: pnpm types
 
       - name: 🔬 Lint files
-        run: pnpm run lint
+        run: pnpm lint
 
       - name: 🧬 Format files
-        run: pnpm run format
+        run: pnpm format
 
       - name: 🧪 Run tests
-        run: pnpm run test --run
+        run: pnpm turbo test
