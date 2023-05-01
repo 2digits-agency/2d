@@ -18,7 +18,8 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "types": "./src/index.ts"
     }
   },
   "module": "./dist/index.mjs",
@@ -36,7 +37,14 @@
     "url": "https://github.com/2digits-agency/2d/issues/new"
   },
   "publishConfig": {
-    "types": "./dist/index.d.ts"
+    "types": "./dist/index.d.ts",
+    "exports": {
+      "./package.json": "./package.json",
+      ".": {
+        "import": "./dist/index.mjs",
+        "types": "./dist/index.d.ts"
+      }
+    }
   },
   "devDependencies": {
     "@2digits/tsconfig": "^0.1.1",
