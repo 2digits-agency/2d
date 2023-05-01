@@ -3,6 +3,7 @@
     "build": { "dependsOn": ["^build"], "outputs": ["dist"] },
     "types": { "dependsOn": ["^types"], "cache": false },
     "dev": { "persistent": true, "cache": false },
+    "test": { "dependsOn": ["^build", "^test"] },
 
     "lint": { "cache": false },
     "//#lint:pkg": { "cache": false },
