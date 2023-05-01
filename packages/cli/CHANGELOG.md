@@ -1,5 +1,14 @@
 # @2digits/cli
 
+## 0.3.2
+
+### Patch Changes
+
+- 0a7d47e: Changed some package.json stuff for better compat
+- Updated dependencies [0a7d47e]
+- Updated dependencies [9b43605]
+  - @2digits/log@0.0.3
+
 ## 0.3.1
 
 ### Patch Changes

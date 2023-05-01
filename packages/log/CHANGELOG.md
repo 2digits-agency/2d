@@ -1,5 +1,12 @@
 # @2digits/log
 
+## 0.0.3
+
+### Patch Changes
+
+- 0a7d47e: Changed some package.json stuff for better compat
+- 9b43605: Re-enabled publishing log
+
 ## 0.0.2
 
 ### Patch Changes
