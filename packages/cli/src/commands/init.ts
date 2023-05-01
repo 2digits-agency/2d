@@ -119,7 +119,7 @@ export const init = createCommand(['init [path]', 'i'], {
       },
     });
 
-    const module = await promptMissingArg({
+    const modules = await promptMissingArg({
       args,
       argName: 'module',
       schema: appModule,
@@ -148,13 +148,13 @@ export const init = createCommand(['init [path]', 'i'], {
 
     await copyTemplate('base', path);
 
-    for (const mod of module) {
+    for (const mod of modules) {
       await copyTemplate(mod, path);
     }
 
     await renamePlaceholders(path);
 
-    for (const mod of ['base', ...module] as const) {
+    for (const mod of ['base', ...modules] as const) {
       const patches = await getTemplatePatches(mod);
 
       for (const patch of patches) {
