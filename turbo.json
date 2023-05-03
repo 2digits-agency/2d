@@ -6,7 +6,7 @@
     "test": { "dependsOn": ["^build", "^test"] },
     "bench": { "dependsOn": ["^build", "^bench"] },
 
-    "lint": { "cache": false },
+    "lint": { "cache": false, "dependsOn": ["//#lint:pkg"] },
     "//#lint:pkg": { "cache": false },
     "//#lint:pkg:fix": { "cache": false }
   }
