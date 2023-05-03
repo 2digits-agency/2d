@@ -1,5 +1,5 @@
 --- package.json	2023-04-28 11:51:44
-+++ _2d_package.json	2023-04-28 14:24:07
++++ package.json	2023-04-28 14:24:07
 @@ -2,7 +2,17 @@
    "name": "@mod/base",
    "version": "0.0.1",
@@ -17,5 +17,5 @@
 +    "types": "turbo types && tsc --noEmit"
 +  },
    "dependencies": {
-     "@2digits/eslint-config": "^0.2.1",
-     "@2digits/prettier-config": "^0.2.0",
+     "@2digits/eslint-config": "^0.3.0",
+     "@2digits/prettier-config": "^0.3.0",

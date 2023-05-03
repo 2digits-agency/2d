@@ -14,7 +14,7 @@ import { applyPatch, getTemplatePatches } from '../utils/patch';
 import { renamePlaceholders } from '../utils/rename';
 import { copyTemplate } from '../utils/templates';
 
-const moduleEnum = z.enum(['web', 'trpc']);
+export const moduleEnum = z.enum(['web', 'trpc']);
 
 const appModule = z.array(moduleEnum);
 
@@ -119,7 +119,7 @@ export const init = createCommand(['init [path]', 'i'], {
       },
     });
 
-    const module = await promptMissingArg({
+    const modules = await promptMissingArg({
       args,
       argName: 'module',
       schema: appModule,
@@ -148,13 +148,13 @@ export const init = createCommand(['init [path]', 'i'], {
 
     await copyTemplate('base', path);
 
-    for (const mod of module) {
+    for (const mod of modules) {
       await copyTemplate(mod, path);
     }
 
     await renamePlaceholders(path);
 
-    for (const mod of ['base', ...module] as const) {
+    for (const mod of ['base', ...modules] as const) {
       const patches = await getTemplatePatches(mod);
 
       for (const patch of patches) {

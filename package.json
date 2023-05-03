@@ -8,7 +8,7 @@
     "dev": "turbo run dev",
     "format": "bash -c 'prettier \"**/*\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --check'",
     "format:fix": "bash -c 'prettier \"**/*\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --write'",
-    "lint": "turbo run lint:pkg lint",
+    "lint": "turbo run lint",
     "lint:fix": "turbo run lint:pkg:fix lint -- --fix",
     "lint:pkg": "manypkg check",
     "lint:pkg:fix": "manypkg fix",
@@ -16,12 +16,12 @@
     "publish": "changeset publish",
     "release": "turbo run build && changeset publish",
     "test": "vitest",
-    "check": "pnpm build && pnpm lint && pnpm format && pnpm types && pnpm test run"
+    "check": "pnpm format && pnpm turbo run test lint types"
   },
   "engines": {
     "node": ">=18.0.0"
   },
-  "packageManager": "pnpm@8.3.1",
+  "packageManager": "pnpm@8.4.0",
   "manypkg": {
     "ignoredRules": [
       "INTERNAL_MISMATCH"
@@ -32,8 +32,8 @@
   },
   "prettier": "@2digits/prettier-config",
   "dependencies": {
-    "@2digits/eslint-config": "^0.2.1",
-    "@2digits/prettier-config": "^0.2.0",
+    "@2digits/eslint-config": "^0.3.0",
+    "@2digits/prettier-config": "^0.3.0",
     "@2digits/tsconfig": "^0.1.1",
     "@changesets/cli": "^2.26.1",
     "@manypkg/cli": "^0.20.0",

@@ -1,15 +1,17 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`init > base + web + trpc 1`] = `
-{
-  "./test/path/.editorconfig": "# editorconfig.org
+exports[`base > should create a base project > ./test/path/.editorconfig 1`] = `
+"# editorconfig.org
 root = true
 
 [*]
 indent_style = space
 indent_size = 2
-",
-  "./test/path/.gitignore": "# dependencies
+"
+`;
+
+exports[`base > should create a base project > ./test/path/.gitignore 1`] = `
+"# dependencies
 node_modules
 .pnp
 .pnp.js
@@ -44,15 +46,167 @@ yarn-error.log*
 out/
 build
 next-env.d.ts
-",
-  "./test/path/.npmrc": "auto-install-peers=true
+"
+`;
+
+exports[`base > should create a base project > ./test/path/.npmrc 1`] = `
+"auto-install-peers=true
 legacy-peer-deps=true
 node-linker=hoisted
-",
-  "./test/path/.prettierignore": "pnpm-lock.yaml
+"
+`;
+
+exports[`base > should create a base project > ./test/path/.prettierignore 1`] = `
+"pnpm-lock.yaml
 public
-",
-  "./test/path/apps/web/next.config.mjs": "import bundleAnalyzer from '@next/bundle-analyzer';
+"
+`;
+
+exports[`base > should create a base project > ./test/path/package.json 1`] = `
+"{
+  \\"name\\": \\"test\\",
+  \\"version\\": \\"0.0.1\\",
+  \\"private\\": true,
+  \\"scripts\\": {
+    \\"build\\": \\"turbo run build\\",
+    \\"clean\\": \\"find . -name node_modules -o -name .turbo -o -name .next -o -name dist -type d -prune | xargs rm -rf\\",
+    \\"dev\\": \\"turbo run dev\\",
+    \\"format\\": \\"bash -c 'prettier \\\\\\"**/*\\\\\\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --check'\\",
+    \\"format:fix\\": \\"bash -c 'prettier \\\\\\"**/*\\\\\\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --write'\\",
+    \\"lint\\": \\"turbo lint && manypkg check\\",
+    \\"lint:fix\\": \\"turbo lint -- --fix && manypkg fix\\",
+    \\"plop\\": \\"plop\\",
+    \\"types\\": \\"turbo types && tsc --noEmit\\"
+  },
+  \\"dependencies\\": {
+    \\"@2digits/eslint-config\\": \\"^0.3.0\\",
+    \\"@2digits/prettier-config\\": \\"^0.3.0\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@manypkg/cli\\": \\"^0.20.0\\",
+    \\"@types/node\\": \\"^18.16.3\\",
+    \\"eslint\\": \\"^8.39.0\\",
+    \\"plop\\": \\"^3.1.2\\",
+    \\"prettier\\": \\"^2.8.8\\",
+    \\"turbo\\": \\"^1.9.3\\",
+    \\"typescript\\": \\"^5.0.4\\"
+  },
+  \\"packageManager\\": \\"pnpm@8.4.0\\",
+  \\"engines\\": {
+    \\"node\\": \\">=18.0.0\\"
+  },
+  \\"manypkg\\": {
+    \\"ignoredRules\\": [
+      \\"INTERNAL_MISMATCH\\"
+    ]
+  },
+  \\"pnpm\\": {
+    \\"neverBuiltDependencies\\": [
+      \\"core-js\\",
+      \\"core-js-compat\\",
+      \\"core-js-pure\\",
+      \\"cypress\\"
+    ]
+  },
+  \\"prettier\\": \\"@2digits/prettier-config\\",
+  \\"eslintConfig\\": {
+    \\"extends\\": \\"@2digits\\"
+  }
+}
+"
+`;
+
+exports[`base > should create a base project > ./test/path/pnpm-workspace.yaml 1`] = `
+"packages:
+  - 'apps/*'
+  - 'packages/*'
+"
+`;
+
+exports[`base > should create a base project > ./test/path/tsconfig.json 1`] = `
+"{
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
+}
+"
+`;
+
+exports[`base > should create a base project > ./test/path/turbo.json 1`] = `
+"{
+  \\"globalDependencies\\": [\\"**/.env\\", \\"tsconfig.json\\"],
+  \\"pipeline\\": {
+    \\"build\\": { \\"dependsOn\\": [\\"^build\\"], \\"outputs\\": [\\"dist/**\\", \\"build/**\\"] },
+    \\"dev\\": { \\"cache\\": false, \\"persistent\\": true },
+    \\"lint\\": { \\"cache\\": false },
+    \\"lint-fix\\": { \\"cache\\": false },
+    \\"types\\": { \\"dependsOn\\": [\\"^types\\"], \\"cache\\": false }
+  }
+}
+"
+`;
+
+exports[`base > web > should create a web app > ./test/path/.editorconfig 1`] = `
+"# editorconfig.org
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+"
+`;
+
+exports[`base > web > should create a web app > ./test/path/.gitignore 1`] = `
+"# dependencies
+node_modules
+.pnp
+.pnp.js
+package-lock.json
+yarn.lock
+
+# tsup
+dist/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env
+.env*.local
+
+# turbo
+.turbo
+
+# vercel cli
+.vercel
+
+# next.js
+.next/
+out/
+build
+next-env.d.ts
+"
+`;
+
+exports[`base > web > should create a web app > ./test/path/.npmrc 1`] = `
+"auto-install-peers=true
+legacy-peer-deps=true
+node-linker=hoisted
+"
+`;
+
+exports[`base > web > should create a web app > ./test/path/.prettierignore 1`] = `
+"pnpm-lock.yaml
+public
+"
+`;
+
+exports[`base > web > should create a web app > ./test/path/apps/web/next.config.mjs 1`] = `
+"import bundleAnalyzer from '@next/bundle-analyzer';
 import { withSentryConfig } from '@sentry/nextjs';
 
 const shouldAnalyze = process.env.ANALYZE === 'true';
@@ -75,8 +229,11 @@ export default withSentryConfig(
   {},
   { hideSourceMaps: true },
 );
-",
-  "./test/path/apps/web/package.json": "{
+"
+`;
+
+exports[`base > web > should create a web app > ./test/path/apps/web/package.json 1`] = `
+"{
   \\"name\\": \\"@mod/web\\",
   \\"version\\": \\"0.0.1\\",
   \\"private\\": true,
@@ -88,24 +245,16 @@ export default withSentryConfig(
     \\"types\\": \\"tsc --noEmit\\"
   },
   \\"dependencies\\": {
-    \\"@mod/trpc\\": \\"workspace:*\\",
     \\"@sentry/cli\\": \\"^2.17.5\\",
     \\"@sentry/nextjs\\": \\"^7.50.0\\",
-    \\"@tanstack/react-query\\": \\"^4.29.5\\",
-    \\"@trpc/client\\": \\"^10.23.0\\",
-    \\"@trpc/next\\": \\"^10.23.0\\",
-    \\"@trpc/react-query\\": \\"^10.23.0\\",
-    \\"@trpc/server\\": \\"^10.23.0\\",
-    \\"next\\": \\"^13.3.2\\",
+    \\"next\\": \\"^13.3.4\\",
     \\"react\\": \\"^18.2.0\\",
-    \\"react-dom\\": \\"^18.2.0\\",
-    \\"superjson\\": \\"^1.12.3\\",
-    \\"zod\\": \\"^3.21.4\\"
+    \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
-    \\"@babel/core\\": \\"^7.21.5\\",
-    \\"@next/bundle-analyzer\\": \\"^13.3.2\\",
+    \\"@babel/core\\": \\"^7.21.8\\",
+    \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
     \\"@types/node\\": \\"^18.16.3\\",
     \\"@types/react\\": \\"^18.2.0\\",
     \\"@types/react-dom\\": \\"^18.2.1\\",
@@ -113,10 +262,16 @@ export default withSentryConfig(
     \\"typescript\\": \\"^5.0.4\\"
   }
 }
-",
-  "./test/path/apps/web/sentry.client.config.ts": "import './sentry.config';
-",
-  "./test/path/apps/web/sentry.config.ts": "import * as Sentry from '@sentry/nextjs';
+"
+`;
+
+exports[`base > web > should create a web app > ./test/path/apps/web/sentry.client.config.ts 1`] = `
+"import './sentry.config';
+"
+`;
+
+exports[`base > web > should create a web app > ./test/path/apps/web/sentry.config.ts 1`] = `
+"import * as Sentry from '@sentry/nextjs';
 
 function initSentry() {
   const SENTRY_DSN = process.env.SENTRY_DSN ?? process.env.NEXT_PUBLIC_SENTRY_DSN;
@@ -134,12 +289,325 @@ function initSentry() {
 }
 
 initSentry();
-",
-  "./test/path/apps/web/sentry.edge.config.ts": "import './sentry.config';
-",
-  "./test/path/apps/web/sentry.server.config.ts": "import './sentry.config';
-",
-  "./test/path/apps/web/src/pages/_app.tsx": "import type { AppProps } from 'next/app';
+"
+`;
+
+exports[`base > web > should create a web app > ./test/path/apps/web/sentry.edge.config.ts 1`] = `
+"import './sentry.config';
+"
+`;
+
+exports[`base > web > should create a web app > ./test/path/apps/web/sentry.server.config.ts 1`] = `
+"import './sentry.config';
+"
+`;
+
+exports[`base > web > should create a web app > ./test/path/apps/web/src/pages/_app.tsx 1`] = `
+"import type { AppProps } from 'next/app';
+
+function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
+
+export default App;
+"
+`;
+
+exports[`base > web > should create a web app > ./test/path/apps/web/src/pages/index.tsx 1`] = `
+"export default function Home() {
+  return (
+    <div>
+      <h1>Hello, world!</h1>
+    </div>
+  );
+}
+"
+`;
+
+exports[`base > web > should create a web app > ./test/path/apps/web/tsconfig.json 1`] = `
+"{
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
+  \\"include\\": [\\"next-env.d.ts\\", \\"**/*.ts\\", \\"**/*.tsx\\", \\"next.config.mjs\\", \\".next/types/**/*.ts\\"],
+  \\"compilerOptions\\": {
+    \\"incremental\\": true,
+    \\"baseUrl\\": \\"./src\\",
+    \\"module\\": \\"esnext\\",
+    \\"jsx\\": \\"preserve\\",
+    \\"plugins\\": [
+      {
+        \\"name\\": \\"next\\"
+      }
+    ],
+    \\"moduleResolution\\": \\"node\\"
+  },
+  \\"exclude\\": [\\"node_modules\\"]
+}
+"
+`;
+
+exports[`base > web > should create a web app > ./test/path/apps/web/turbo.json 1`] = `
+"{
+  \\"extends\\": [\\"//\\"],
+  \\"pipeline\\": {
+    \\"build\\": {
+      \\"env\\": [\\"SENTRY_DSN\\", \\"NEXT_PUBLIC_SENTRY_DSN\\", \\"ANALYZE\\", \\"NODE_ENV\\", \\"VERCEL_URL\\"],
+      \\"outputs\\": [\\".next/**\\", \\"!.next/cache/**\\"]
+    }
+  }
+}
+"
+`;
+
+exports[`base > web > should create a web app > ./test/path/package.json 1`] = `
+"{
+  \\"name\\": \\"test\\",
+  \\"version\\": \\"0.0.1\\",
+  \\"private\\": true,
+  \\"scripts\\": {
+    \\"build\\": \\"turbo run build\\",
+    \\"clean\\": \\"find . -name node_modules -o -name .turbo -o -name .next -o -name dist -type d -prune | xargs rm -rf\\",
+    \\"dev\\": \\"turbo run dev\\",
+    \\"format\\": \\"bash -c 'prettier \\\\\\"**/*\\\\\\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --check'\\",
+    \\"format:fix\\": \\"bash -c 'prettier \\\\\\"**/*\\\\\\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --write'\\",
+    \\"lint\\": \\"turbo lint && manypkg check\\",
+    \\"lint:fix\\": \\"turbo lint -- --fix && manypkg fix\\",
+    \\"plop\\": \\"plop\\",
+    \\"types\\": \\"turbo types && tsc --noEmit\\"
+  },
+  \\"dependencies\\": {
+    \\"@2digits/eslint-config\\": \\"^0.3.0\\",
+    \\"@2digits/prettier-config\\": \\"^0.3.0\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@manypkg/cli\\": \\"^0.20.0\\",
+    \\"@types/node\\": \\"^18.16.3\\",
+    \\"eslint\\": \\"^8.39.0\\",
+    \\"plop\\": \\"^3.1.2\\",
+    \\"prettier\\": \\"^2.8.8\\",
+    \\"turbo\\": \\"^1.9.3\\",
+    \\"typescript\\": \\"^5.0.4\\"
+  },
+  \\"packageManager\\": \\"pnpm@8.4.0\\",
+  \\"engines\\": {
+    \\"node\\": \\">=18.0.0\\"
+  },
+  \\"manypkg\\": {
+    \\"ignoredRules\\": [
+      \\"INTERNAL_MISMATCH\\"
+    ]
+  },
+  \\"pnpm\\": {
+    \\"neverBuiltDependencies\\": [
+      \\"core-js\\",
+      \\"core-js-compat\\",
+      \\"core-js-pure\\",
+      \\"cypress\\"
+    ]
+  },
+  \\"prettier\\": \\"@2digits/prettier-config\\",
+  \\"eslintConfig\\": {
+    \\"extends\\": \\"@2digits\\"
+  }
+}
+"
+`;
+
+exports[`base > web > should create a web app > ./test/path/pnpm-workspace.yaml 1`] = `
+"packages:
+  - 'apps/*'
+  - 'packages/*'
+"
+`;
+
+exports[`base > web > should create a web app > ./test/path/tsconfig.json 1`] = `
+"{
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
+}
+"
+`;
+
+exports[`base > web > should create a web app > ./test/path/turbo.json 1`] = `
+"{
+  \\"globalDependencies\\": [\\"**/.env\\", \\"tsconfig.json\\"],
+  \\"pipeline\\": {
+    \\"build\\": { \\"dependsOn\\": [\\"^build\\"], \\"outputs\\": [\\"dist/**\\", \\"build/**\\"] },
+    \\"dev\\": { \\"cache\\": false, \\"persistent\\": true },
+    \\"lint\\": { \\"cache\\": false },
+    \\"lint-fix\\": { \\"cache\\": false },
+    \\"types\\": { \\"dependsOn\\": [\\"^types\\"], \\"cache\\": false }
+  }
+}
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/.editorconfig 1`] = `
+"# editorconfig.org
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/.gitignore 1`] = `
+"# dependencies
+node_modules
+.pnp
+.pnp.js
+package-lock.json
+yarn.lock
+
+# tsup
+dist/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env
+.env*.local
+
+# turbo
+.turbo
+
+# vercel cli
+.vercel
+
+# next.js
+.next/
+out/
+build
+next-env.d.ts
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/.npmrc 1`] = `
+"auto-install-peers=true
+legacy-peer-deps=true
+node-linker=hoisted
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/.prettierignore 1`] = `
+"pnpm-lock.yaml
+public
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/next.config.mjs 1`] = `
+"import bundleAnalyzer from '@next/bundle-analyzer';
+import { withSentryConfig } from '@sentry/nextjs';
+
+const shouldAnalyze = process.env.ANALYZE === 'true';
+
+/** @type {(config?: import('next').NextConfig) => import('next').NextConfig} */
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: shouldAnalyze,
+});
+
+/** @type {import('next').NextConfig} */
+const config = {
+  reactStrictMode: true,
+
+  /** We run eslint as a separate task in CI */
+  eslint: { ignoreDuringBuilds: true },
+};
+
+export default withSentryConfig(
+  shouldAnalyze ? withBundleAnalyzer(config) : config,
+  {},
+  { hideSourceMaps: true },
+);
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/package.json 1`] = `
+"{
+  \\"name\\": \\"@mod/web\\",
+  \\"version\\": \\"0.0.1\\",
+  \\"private\\": true,
+  \\"scripts\\": {
+    \\"build\\": \\"next build\\",
+    \\"dev\\": \\"next dev\\",
+    \\"lint\\": \\"eslint --ignore-path ../../.gitignore .\\",
+    \\"start\\": \\"next start\\",
+    \\"types\\": \\"tsc --noEmit\\"
+  },
+  \\"dependencies\\": {
+    \\"@mod/trpc\\": \\"workspace:*\\",
+    \\"@sentry/cli\\": \\"^2.17.5\\",
+    \\"@sentry/nextjs\\": \\"^7.50.0\\",
+    \\"@tanstack/react-query\\": \\"^4.29.5\\",
+    \\"@trpc/client\\": \\"^10.23.1\\",
+    \\"@trpc/next\\": \\"^10.23.1\\",
+    \\"@trpc/react-query\\": \\"^10.23.1\\",
+    \\"@trpc/server\\": \\"^10.23.1\\",
+    \\"next\\": \\"^13.3.4\\",
+    \\"react\\": \\"^18.2.0\\",
+    \\"react-dom\\": \\"^18.2.0\\",
+    \\"superjson\\": \\"^1.12.3\\",
+    \\"zod\\": \\"^3.21.4\\"
+  },
+  \\"devDependencies\\": {
+    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@babel/core\\": \\"^7.21.8\\",
+    \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
+    \\"@types/node\\": \\"^18.16.3\\",
+    \\"@types/react\\": \\"^18.2.0\\",
+    \\"@types/react-dom\\": \\"^18.2.1\\",
+    \\"eslint\\": \\"^8.39.0\\",
+    \\"typescript\\": \\"^5.0.4\\"
+  }
+}
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/sentry.client.config.ts 1`] = `
+"import './sentry.config';
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/sentry.config.ts 1`] = `
+"import * as Sentry from '@sentry/nextjs';
+
+function initSentry() {
+  const SENTRY_DSN = process.env.SENTRY_DSN ?? process.env.NEXT_PUBLIC_SENTRY_DSN;
+
+  if (!SENTRY_DSN) {
+    console.warn('No Sentry DSN found, check your environment variables');
+
+    return;
+  }
+
+  Sentry.init({
+    enabled: process.env.NODE_ENV !== 'development',
+    dsn: SENTRY_DSN,
+  });
+}
+
+initSentry();
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/sentry.edge.config.ts 1`] = `
+"import './sentry.config';
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/sentry.server.config.ts 1`] = `
+"import './sentry.config';
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/src/pages/_app.tsx 1`] = `
+"import type { AppProps } from 'next/app';
 
 import { trpc } from '../utils/trpc';
 
@@ -148,8 +616,11 @@ function App({ Component, pageProps }: AppProps) {
 }
 
 export default trpc.withTRPC(App);
-",
-  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts": "import { appRouter } from '@mod/trpc';
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/src/pages/api/trpc/[trpc].ts 1`] = `
+"import { appRouter } from '@mod/trpc';
 import { createNextApiHandler } from '@trpc/server/adapters/next';
 
 export default createNextApiHandler({
@@ -158,16 +629,22 @@ export default createNextApiHandler({
     return options;
   },
 });
-",
-  "./test/path/apps/web/src/pages/index.tsx": "export default function Home() {
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/src/pages/index.tsx 1`] = `
+"export default function Home() {
   return (
     <div>
       <h1>Hello, world!</h1>
     </div>
   );
 }
-",
-  "./test/path/apps/web/src/utils/trpc.ts": "import type { AppRouter } from '@mod/trpc';
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/src/utils/trpc.ts 1`] = `
+"import type { AppRouter } from '@mod/trpc';
 import { httpBatchLink, loggerLink } from '@trpc/client';
 import { createTRPCNext } from '@trpc/next';
 import superjson from 'superjson';
@@ -199,8 +676,11 @@ export const trpc = createTRPCNext<AppRouter>({
 });
 
 export { type RouterInputs, type RouterOutputs } from '@mod/trpc';
-",
-  "./test/path/apps/web/tsconfig.json": "{
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/tsconfig.json 1`] = `
+"{
   \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
   \\"include\\": [\\"next-env.d.ts\\", \\"**/*.ts\\", \\"**/*.tsx\\", \\"next.config.mjs\\", \\".next/types/**/*.ts\\"],
   \\"compilerOptions\\": {
@@ -217,8 +697,11 @@ export { type RouterInputs, type RouterOutputs } from '@mod/trpc';
   },
   \\"exclude\\": [\\"node_modules\\"]
 }
-",
-  "./test/path/apps/web/turbo.json": "{
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/turbo.json 1`] = `
+"{
   \\"extends\\": [\\"//\\"],
   \\"pipeline\\": {
     \\"build\\": {
@@ -227,8 +710,11 @@ export { type RouterInputs, type RouterOutputs } from '@mod/trpc';
     }
   }
 }
-",
-  "./test/path/package.json": "{
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/package.json 1`] = `
+"{
   \\"name\\": \\"test\\",
   \\"version\\": \\"0.0.1\\",
   \\"private\\": true,
@@ -244,8 +730,8 @@ export { type RouterInputs, type RouterOutputs } from '@mod/trpc';
     \\"types\\": \\"turbo types && tsc --noEmit\\"
   },
   \\"dependencies\\": {
-    \\"@2digits/eslint-config\\": \\"^0.2.1\\",
-    \\"@2digits/prettier-config\\": \\"^0.2.0\\",
+    \\"@2digits/eslint-config\\": \\"^0.3.0\\",
+    \\"@2digits/prettier-config\\": \\"^0.3.0\\",
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@types/node\\": \\"^18.16.3\\",
@@ -255,7 +741,7 @@ export { type RouterInputs, type RouterOutputs } from '@mod/trpc';
     \\"turbo\\": \\"^1.9.3\\",
     \\"typescript\\": \\"^5.0.4\\"
   },
-  \\"packageManager\\": \\"pnpm@8.3.1\\",
+  \\"packageManager\\": \\"pnpm@8.4.0\\",
   \\"engines\\": {
     \\"node\\": \\">=18.0.0\\"
   },
@@ -277,8 +763,11 @@ export { type RouterInputs, type RouterOutputs } from '@mod/trpc';
     \\"extends\\": \\"@2digits\\"
   }
 }
-",
-  "./test/path/packages/trpc/package.json": "{
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/packages/trpc/package.json 1`] = `
+"{
   \\"name\\": \\"@mod/trpc\\",
   \\"version\\": \\"0.0.1\\",
   \\"private\\": true,
@@ -305,11 +794,11 @@ export { type RouterInputs, type RouterOutputs } from '@mod/trpc';
   },
   \\"dependencies\\": {
     \\"@tanstack/react-query\\": \\"^4.29.5\\",
-    \\"@trpc/client\\": \\"^10.23.0\\",
-    \\"@trpc/next\\": \\"^10.23.0\\",
-    \\"@trpc/react-query\\": \\"^10.23.0\\",
-    \\"@trpc/server\\": \\"^10.23.0\\",
-    \\"next\\": \\"^13.3.2\\",
+    \\"@trpc/client\\": \\"^10.23.1\\",
+    \\"@trpc/next\\": \\"^10.23.1\\",
+    \\"@trpc/react-query\\": \\"^10.23.1\\",
+    \\"@trpc/server\\": \\"^10.23.1\\",
+    \\"next\\": \\"^13.3.4\\",
     \\"superjson\\": \\"^1.12.3\\",
     \\"zod\\": \\"^3.21.4\\"
   },
@@ -320,8 +809,11 @@ export { type RouterInputs, type RouterOutputs } from '@mod/trpc';
     \\"typescript\\": \\"^5.0.4\\"
   }
 }
-",
-  "./test/path/packages/trpc/src/index.ts": "import { type inferRouterInputs, type inferRouterOutputs } from '@trpc/server';
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/packages/trpc/src/index.ts 1`] = `
+"import { type inferRouterInputs, type inferRouterOutputs } from '@trpc/server';
 
 import type { AppRouter } from './router';
 
@@ -338,16 +830,22 @@ export type RouterInputs = inferRouterInputs<AppRouter>;
  * @example type HelloOutput = RouterOutputs['example']['hello']
  **/
 export type RouterOutputs = inferRouterOutputs<AppRouter>;
-",
-  "./test/path/packages/trpc/src/router/example/hello.ts": "import { z } from 'zod';
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/packages/trpc/src/router/example/hello.ts 1`] = `
+"import { z } from 'zod';
 
 import { publicProcedure } from '../../trpc';
 
 export const helloProcedure = publicProcedure
   .input(z.object({ name: z.string() }))
   .query(({ input }) => \`Hello \${input.name}!\`);
-",
-  "./test/path/packages/trpc/src/router/index.ts": "import { createTRPCRouter } from '../trpc';
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/packages/trpc/src/router/index.ts 1`] = `
+"import { createTRPCRouter } from '../trpc';
 import { helloProcedure } from './example/hello';
 
 export const appRouter = createTRPCRouter({
@@ -355,8 +853,11 @@ export const appRouter = createTRPCRouter({
 });
 
 export type AppRouter = typeof appRouter;
-",
-  "./test/path/packages/trpc/src/trpc.ts": "import { initTRPC } from '@trpc/server';
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/packages/trpc/src/trpc.ts 1`] = `
+"import { initTRPC } from '@trpc/server';
 import superjson from 'superjson';
 import { ZodError } from 'zod';
 
@@ -376,13 +877,19 @@ const t = initTRPC.create({
 export const createTRPCRouter = t.router;
 
 export const publicProcedure = t.procedure;
-",
-  "./test/path/packages/trpc/tsconfig.json": "{
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/packages/trpc/tsconfig.json 1`] = `
+"{
   \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
   \\"include\\": [\\"**/*.ts\\", \\"**/*.tsx\\"]
 }
-",
-  "./test/path/packages/trpc/tsup.config.ts": "import { defineConfig } from 'tsup';
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/packages/trpc/tsup.config.ts 1`] = `
+"import { defineConfig } from 'tsup';
 
 import { name } from './package.json';
 
@@ -398,387 +905,25 @@ export default defineConfig({
   dts: true,
   name,
 });
-",
-  "./test/path/pnpm-workspace.yaml": "packages:
-  - 'apps/*'
-  - 'packages/*'
-",
-  "./test/path/tsconfig.json": "{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
-}
-",
-  "./test/path/turbo.json": "{
-  \\"globalDependencies\\": [\\"**/.env\\", \\"tsconfig.json\\"],
-  \\"pipeline\\": {
-    \\"build\\": { \\"dependsOn\\": [\\"^build\\"], \\"outputs\\": [\\"dist/**\\", \\"build/**\\"] },
-    \\"dev\\": { \\"cache\\": false, \\"persistent\\": true },
-    \\"lint\\": { \\"cache\\": false },
-    \\"lint-fix\\": { \\"cache\\": false },
-    \\"types\\": { \\"dependsOn\\": [\\"^types\\"], \\"cache\\": false }
-  }
-}
-",
-}
+"
 `;
 
-exports[`init > base + web 1`] = `
-{
-  "./test/path/.editorconfig": "# editorconfig.org
-root = true
-
-[*]
-indent_style = space
-indent_size = 2
-",
-  "./test/path/.gitignore": "# dependencies
-node_modules
-.pnp
-.pnp.js
-package-lock.json
-yarn.lock
-
-# tsup
-dist/
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# local env files
-.env
-.env*.local
-
-# turbo
-.turbo
-
-# vercel cli
-.vercel
-
-# next.js
-.next/
-out/
-build
-next-env.d.ts
-",
-  "./test/path/.npmrc": "auto-install-peers=true
-legacy-peer-deps=true
-node-linker=hoisted
-",
-  "./test/path/.prettierignore": "pnpm-lock.yaml
-public
-",
-  "./test/path/apps/web/next.config.mjs": "import bundleAnalyzer from '@next/bundle-analyzer';
-import { withSentryConfig } from '@sentry/nextjs';
-
-const shouldAnalyze = process.env.ANALYZE === 'true';
-
-/** @type {(config?: import('next').NextConfig) => import('next').NextConfig} */
-const withBundleAnalyzer = bundleAnalyzer({
-  enabled: shouldAnalyze,
-});
-
-/** @type {import('next').NextConfig} */
-const config = {
-  reactStrictMode: true,
-
-  /** We run eslint as a separate task in CI */
-  eslint: { ignoreDuringBuilds: true },
-};
-
-export default withSentryConfig(
-  shouldAnalyze ? withBundleAnalyzer(config) : config,
-  {},
-  { hideSourceMaps: true },
-);
-",
-  "./test/path/apps/web/package.json": "{
-  \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.0.1\\",
-  \\"private\\": true,
-  \\"scripts\\": {
-    \\"build\\": \\"next build\\",
-    \\"dev\\": \\"next dev\\",
-    \\"lint\\": \\"eslint --ignore-path ../../.gitignore .\\",
-    \\"start\\": \\"next start\\",
-    \\"types\\": \\"tsc --noEmit\\"
-  },
-  \\"dependencies\\": {
-    \\"@sentry/cli\\": \\"^2.17.5\\",
-    \\"@sentry/nextjs\\": \\"^7.50.0\\",
-    \\"next\\": \\"^13.3.2\\",
-    \\"react\\": \\"^18.2.0\\",
-    \\"react-dom\\": \\"^18.2.0\\"
-  },
-  \\"devDependencies\\": {
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
-    \\"@babel/core\\": \\"^7.21.5\\",
-    \\"@next/bundle-analyzer\\": \\"^13.3.2\\",
-    \\"@types/node\\": \\"^18.16.3\\",
-    \\"@types/react\\": \\"^18.2.0\\",
-    \\"@types/react-dom\\": \\"^18.2.1\\",
-    \\"eslint\\": \\"^8.39.0\\",
-    \\"typescript\\": \\"^5.0.4\\"
-  }
-}
-",
-  "./test/path/apps/web/sentry.client.config.ts": "import './sentry.config';
-",
-  "./test/path/apps/web/sentry.config.ts": "import * as Sentry from '@sentry/nextjs';
-
-function initSentry() {
-  const SENTRY_DSN = process.env.SENTRY_DSN ?? process.env.NEXT_PUBLIC_SENTRY_DSN;
-
-  if (!SENTRY_DSN) {
-    console.warn('No Sentry DSN found, check your environment variables');
-
-    return;
-  }
-
-  Sentry.init({
-    enabled: process.env.NODE_ENV !== 'development',
-    dsn: SENTRY_DSN,
-  });
-}
-
-initSentry();
-",
-  "./test/path/apps/web/sentry.edge.config.ts": "import './sentry.config';
-",
-  "./test/path/apps/web/sentry.server.config.ts": "import './sentry.config';
-",
-  "./test/path/apps/web/src/pages/_app.tsx": "import type { AppProps } from 'next/app';
-
-function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
-
-export default App;
-",
-  "./test/path/apps/web/src/pages/index.tsx": "export default function Home() {
-  return (
-    <div>
-      <h1>Hello, world!</h1>
-    </div>
-  );
-}
-",
-  "./test/path/apps/web/tsconfig.json": "{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
-  \\"include\\": [\\"next-env.d.ts\\", \\"**/*.ts\\", \\"**/*.tsx\\", \\"next.config.mjs\\", \\".next/types/**/*.ts\\"],
-  \\"compilerOptions\\": {
-    \\"incremental\\": true,
-    \\"baseUrl\\": \\"./src\\",
-    \\"module\\": \\"esnext\\",
-    \\"jsx\\": \\"preserve\\",
-    \\"plugins\\": [
-      {
-        \\"name\\": \\"next\\"
-      }
-    ],
-    \\"moduleResolution\\": \\"node\\"
-  },
-  \\"exclude\\": [\\"node_modules\\"]
-}
-",
-  "./test/path/apps/web/turbo.json": "{
-  \\"extends\\": [\\"//\\"],
-  \\"pipeline\\": {
-    \\"build\\": {
-      \\"env\\": [\\"SENTRY_DSN\\", \\"NEXT_PUBLIC_SENTRY_DSN\\", \\"ANALYZE\\", \\"NODE_ENV\\", \\"VERCEL_URL\\"],
-      \\"outputs\\": [\\".next/**\\", \\"!.next/cache/**\\"]
-    }
-  }
-}
-",
-  "./test/path/package.json": "{
-  \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.1\\",
-  \\"private\\": true,
-  \\"scripts\\": {
-    \\"build\\": \\"turbo run build\\",
-    \\"clean\\": \\"find . -name node_modules -o -name .turbo -o -name .next -o -name dist -type d -prune | xargs rm -rf\\",
-    \\"dev\\": \\"turbo run dev\\",
-    \\"format\\": \\"bash -c 'prettier \\\\\\"**/*\\\\\\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --check'\\",
-    \\"format:fix\\": \\"bash -c 'prettier \\\\\\"**/*\\\\\\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --write'\\",
-    \\"lint\\": \\"turbo lint && manypkg check\\",
-    \\"lint:fix\\": \\"turbo lint -- --fix && manypkg fix\\",
-    \\"plop\\": \\"plop\\",
-    \\"types\\": \\"turbo types && tsc --noEmit\\"
-  },
-  \\"dependencies\\": {
-    \\"@2digits/eslint-config\\": \\"^0.2.1\\",
-    \\"@2digits/prettier-config\\": \\"^0.2.0\\",
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
-    \\"@manypkg/cli\\": \\"^0.20.0\\",
-    \\"@types/node\\": \\"^18.16.3\\",
-    \\"eslint\\": \\"^8.39.0\\",
-    \\"plop\\": \\"^3.1.2\\",
-    \\"prettier\\": \\"^2.8.8\\",
-    \\"turbo\\": \\"^1.9.3\\",
-    \\"typescript\\": \\"^5.0.4\\"
-  },
-  \\"packageManager\\": \\"pnpm@8.3.1\\",
-  \\"engines\\": {
-    \\"node\\": \\">=18.0.0\\"
-  },
-  \\"manypkg\\": {
-    \\"ignoredRules\\": [
-      \\"INTERNAL_MISMATCH\\"
-    ]
-  },
-  \\"pnpm\\": {
-    \\"neverBuiltDependencies\\": [
-      \\"core-js\\",
-      \\"core-js-compat\\",
-      \\"core-js-pure\\",
-      \\"cypress\\"
-    ]
-  },
-  \\"prettier\\": \\"@2digits/prettier-config\\",
-  \\"eslintConfig\\": {
-    \\"extends\\": \\"@2digits\\"
-  }
-}
-",
-  "./test/path/pnpm-workspace.yaml": "packages:
+exports[`base > web > trpc > should add a trpc module > ./test/path/pnpm-workspace.yaml 1`] = `
+"packages:
   - 'apps/*'
   - 'packages/*'
-",
-  "./test/path/tsconfig.json": "{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
-}
-",
-  "./test/path/turbo.json": "{
-  \\"globalDependencies\\": [\\"**/.env\\", \\"tsconfig.json\\"],
-  \\"pipeline\\": {
-    \\"build\\": { \\"dependsOn\\": [\\"^build\\"], \\"outputs\\": [\\"dist/**\\", \\"build/**\\"] },
-    \\"dev\\": { \\"cache\\": false, \\"persistent\\": true },
-    \\"lint\\": { \\"cache\\": false },
-    \\"lint-fix\\": { \\"cache\\": false },
-    \\"types\\": { \\"dependsOn\\": [\\"^types\\"], \\"cache\\": false }
-  }
-}
-",
-}
+"
 `;
 
-exports[`init > base 1`] = `
-{
-  "./test/path/.editorconfig": "# editorconfig.org
-root = true
-
-[*]
-indent_style = space
-indent_size = 2
-",
-  "./test/path/.gitignore": "# dependencies
-node_modules
-.pnp
-.pnp.js
-package-lock.json
-yarn.lock
-
-# tsup
-dist/
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# local env files
-.env
-.env*.local
-
-# turbo
-.turbo
-
-# vercel cli
-.vercel
-
-# next.js
-.next/
-out/
-build
-next-env.d.ts
-",
-  "./test/path/.npmrc": "auto-install-peers=true
-legacy-peer-deps=true
-node-linker=hoisted
-",
-  "./test/path/.prettierignore": "pnpm-lock.yaml
-public
-",
-  "./test/path/package.json": "{
-  \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.1\\",
-  \\"private\\": true,
-  \\"scripts\\": {
-    \\"build\\": \\"turbo run build\\",
-    \\"clean\\": \\"find . -name node_modules -o -name .turbo -o -name .next -o -name dist -type d -prune | xargs rm -rf\\",
-    \\"dev\\": \\"turbo run dev\\",
-    \\"format\\": \\"bash -c 'prettier \\\\\\"**/*\\\\\\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --check'\\",
-    \\"format:fix\\": \\"bash -c 'prettier \\\\\\"**/*\\\\\\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --write'\\",
-    \\"lint\\": \\"turbo lint && manypkg check\\",
-    \\"lint:fix\\": \\"turbo lint -- --fix && manypkg fix\\",
-    \\"plop\\": \\"plop\\",
-    \\"types\\": \\"turbo types && tsc --noEmit\\"
-  },
-  \\"dependencies\\": {
-    \\"@2digits/eslint-config\\": \\"^0.2.1\\",
-    \\"@2digits/prettier-config\\": \\"^0.2.0\\",
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
-    \\"@manypkg/cli\\": \\"^0.20.0\\",
-    \\"@types/node\\": \\"^18.16.3\\",
-    \\"eslint\\": \\"^8.39.0\\",
-    \\"plop\\": \\"^3.1.2\\",
-    \\"prettier\\": \\"^2.8.8\\",
-    \\"turbo\\": \\"^1.9.3\\",
-    \\"typescript\\": \\"^5.0.4\\"
-  },
-  \\"packageManager\\": \\"pnpm@8.3.1\\",
-  \\"engines\\": {
-    \\"node\\": \\">=18.0.0\\"
-  },
-  \\"manypkg\\": {
-    \\"ignoredRules\\": [
-      \\"INTERNAL_MISMATCH\\"
-    ]
-  },
-  \\"pnpm\\": {
-    \\"neverBuiltDependencies\\": [
-      \\"core-js\\",
-      \\"core-js-compat\\",
-      \\"core-js-pure\\",
-      \\"cypress\\"
-    ]
-  },
-  \\"prettier\\": \\"@2digits/prettier-config\\",
-  \\"eslintConfig\\": {
-    \\"extends\\": \\"@2digits\\"
-  }
-}
-",
-  "./test/path/pnpm-workspace.yaml": "packages:
-  - 'apps/*'
-  - 'packages/*'
-",
-  "./test/path/tsconfig.json": "{
+exports[`base > web > trpc > should add a trpc module > ./test/path/tsconfig.json 1`] = `
+"{
   \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
 }
-",
-  "./test/path/turbo.json": "{
+"
+`;
+
+exports[`base > web > trpc > should add a trpc module > ./test/path/turbo.json 1`] = `
+"{
   \\"globalDependencies\\": [\\"**/.env\\", \\"tsconfig.json\\"],
   \\"pipeline\\": {
     \\"build\\": { \\"dependsOn\\": [\\"^build\\"], \\"outputs\\": [\\"dist/**\\", \\"build/**\\"] },
@@ -788,6 +933,5 @@ public
     \\"types\\": { \\"dependsOn\\": [\\"^types\\"], \\"cache\\": false }
   }
 }
-",
-}
+"
 `;
