@@ -1,70 +1,51 @@
 import consola from 'consola';
-import fs from 'fs-extra';
-import { globby } from 'globby';
 import mock from 'mock-fs';
-import pathe from 'pathe';
-import { afterEach, beforeEach, describe, expect, test } from 'vitest';
+import { afterEach, beforeEach, describe, expectTypeOf, it, test } from 'vitest';
 
-import { TEMPLATE_DIR } from '../src/constants';
+import { moduleEnum } from '../src/commands/init';
+import type { Template } from '../src/utils/templates';
 import { copyTemplate } from '../src/utils/templates';
+import { getTemplateFiles, snapshotCliOutputFs } from './testUtils';
 
-describe('copyTemplate', () => {
-  beforeEach(async () => {
-    const files = await globby('./**/*', {
-      dot: true,
-      gitignore: true,
-      cwd: TEMPLATE_DIR,
-      ignore: ['**/CHANGELOG.md'],
-    });
+describe('copyTemplate', async () => {
+  const mockFileSystem = await getTemplateFiles();
 
-    const mockFiles = {} as Record<string, string>;
-
-    for (const file of files) {
-      const path = pathe.join(TEMPLATE_DIR, file);
-      mockFiles[path] = await fs.readFile(path, { encoding: 'utf8' });
-    }
-
-    mock(mockFiles);
+  beforeEach(() => {
+    mock(mockFileSystem);
 
     consola.wrapAll();
     consola.pauseLogs();
   });
 
   afterEach(() => {
+    mock.restore();
+
     consola.resumeLogs();
     consola.restoreAll();
-
-    mock.restore();
   });
 
   test('base', async () => {
     await copyTemplate('base', './test/path');
 
-    const files = await globby('./test/path/**/*', { dot: true });
-
-    mock.restore();
-
-    expect(files).toMatchSnapshot();
+    await snapshotCliOutputFs();
   });
 
   test('web', async () => {
     await copyTemplate('web', './test/path');
 
-    const files = await globby('./test/path/**/*', { dot: true });
-
-    mock.restore();
-
-    expect(files).toMatchSnapshot();
+    await snapshotCliOutputFs();
   });
 
   test('base + web', async () => {
     await copyTemplate('base', './test/path');
     await copyTemplate('web', './test/path');
 
-    const files = await globby('./test/path/**/*', { dot: true });
+    await snapshotCliOutputFs();
+  });
+});
 
-    mock.restore();
-
-    expect(files).toMatchSnapshot();
+describe('types', () => {
+  it('should export a correct Templates type', () => {
+    expectTypeOf(moduleEnum.options).items.toMatchTypeOf<Template>();
   });
 });

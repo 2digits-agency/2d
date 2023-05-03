@@ -4,6 +4,7 @@
     "types": { "dependsOn": ["^types"], "cache": false },
     "dev": { "persistent": true, "cache": false },
     "test": { "dependsOn": ["^build", "^test"] },
+    "bench": { "dependsOn": ["^build", "^bench"] },
 
     "lint": { "cache": false },
     "//#lint:pkg": { "cache": false },

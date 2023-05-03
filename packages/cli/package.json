@@ -17,7 +17,8 @@
     "dev": "tsup --watch",
     "lint": "eslint --ignore-path ../../.gitignore .",
     "types": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "bench": "vitest bench --run"
   },
   "exports": {
     "./package.json": "./package.json",
