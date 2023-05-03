@@ -33,19 +33,6 @@ describe('base', () => {
     await snapshotCliOutputFs();
   });
 
-  describe('stitches', () => {
-    it('should add a stitches module', async () => {
-      await init.handler({
-        path: './test/path',
-        module: ['stitches'],
-        install: false,
-        name: 'test',
-      });
-
-      await snapshotCliOutputFs();
-    });
-  });
-
   describe('web', () => {
     it('should create a web app', async () => {
       await init.handler({
@@ -56,6 +43,19 @@ describe('base', () => {
       });
 
       await snapshotCliOutputFs();
+    });
+
+    describe('stitches', () => {
+      it('should add a stitches module', async () => {
+        await init.handler({
+          path: './test/path',
+          module: ['web', 'stitches'],
+          install: false,
+          name: 'test',
+        });
+
+        await snapshotCliOutputFs();
+      });
     });
 
     describe('trpc', () => {
