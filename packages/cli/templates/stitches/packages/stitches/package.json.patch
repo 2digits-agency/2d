@@ -9,4 +9,4 @@
 +    "lint": "eslint --ignore-path ../../.gitignore .",
      "types": "tsc --noEmit"
    },
-   "module": "./dist/index.mjs",
+   "module": "dist/index.mjs",

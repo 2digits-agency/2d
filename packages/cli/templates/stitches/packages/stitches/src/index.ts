@@ -1,3 +1,4 @@
 export * from './stitches';
 export * from './types';
-export * from './helpers';
+export * from './helpers/createRangeVariant';
+export * from './helpers/createScaleVariant';
