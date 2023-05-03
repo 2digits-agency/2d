@@ -139,23 +139,15 @@ initSentry();
 ",
   "./test/path/apps/web/sentry.server.config.ts": "import './sentry.config';
 ",
-  "./test/path/apps/web/src/pages/_app.trpc.tsx": "import type { AppProps } from 'next/app';
+  "./test/path/apps/web/src/pages/_app.tsx": "import type { AppProps } from 'next/app';
 
 import { trpc } from '../utils/trpc';
-
-const App = ({ Component, pageProps }: AppProps) => {
-  return <Component {...pageProps} />;
-};
-
-export default trpc.withTRPC(App);
-",
-  "./test/path/apps/web/src/pages/_app.tsx": "import type { AppProps } from 'next/app';
 
 function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
 
-export default App;
+export default trpc.withTRPC(App);
 ",
   "./test/path/apps/web/src/pages/api/trpc/[trpc].ts": "import { appRouter } from '@mod/trpc';
 import { createNextApiHandler } from '@trpc/server/adapters/next';
