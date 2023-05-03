@@ -606,27 +606,16 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/sen
 "
 `;
 
-exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/src/pages/_app.trpc.tsx 1`] = `
+exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/src/pages/_app.tsx 1`] = `
 "import type { AppProps } from 'next/app';
 
 import { trpc } from '../utils/trpc';
-
-const App = ({ Component, pageProps }: AppProps) => {
-  return <Component {...pageProps} />;
-};
-
-export default trpc.withTRPC(App);
-"
-`;
-
-exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/src/pages/_app.tsx 1`] = `
-"import type { AppProps } from 'next/app';
 
 function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
 
-export default App;
+export default trpc.withTRPC(App);
 "
 `;
 
