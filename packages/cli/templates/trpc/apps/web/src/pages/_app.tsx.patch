@@ -1,5 +1,5 @@
---- _app.tsx	2023-05-03 11:50:13
-+++ _app.tsx	2023-05-03 11:54:55
+--- web/apps/web/src/pages/_app.tsx	2023-05-03 11:50:13
++++ apps/web/src/pages/_app.trpc.tsx	2023-05-03 11:54:55
 @@ -1,7 +1,9 @@
  import type { AppProps } from 'next/app';
  

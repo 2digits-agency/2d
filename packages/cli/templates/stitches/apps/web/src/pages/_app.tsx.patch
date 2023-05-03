@@ -1,5 +1,5 @@
---- ../../../web/apps/web/src/pages/_app.tsx	2023-05-03 11:50:13
-+++ ./src/pages/_app.tsx	2023-05-03 17:31:21
+--- web/apps/web/src/pages/_app.tsx	2023-05-03 11:50:13
++++ apps/web/src/pages/_app.stitches.tsx	2023-05-03 17:31:21
 @@ -1,5 +1,7 @@
  import type { AppProps } from 'next/app';
  

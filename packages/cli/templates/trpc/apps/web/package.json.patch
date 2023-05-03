@@ -1,5 +1,5 @@
---- ../../../web/apps/web/package.json	2023-04-28 11:46:04
-+++ package.json	2023-04-28 14:16:15
+--- web/apps/web/package.json	2023-04-28 11:46:04
++++ apps/web/package.trpc.json	2023-04-28 14:16:15
 @@ -10,11 +10,19 @@
      "types": "tsc --noEmit"
    },

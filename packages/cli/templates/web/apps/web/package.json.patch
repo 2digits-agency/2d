@@ -1,5 +1,5 @@
---- package.json	2023-05-01 22:06:35
-+++ package.json	2023-05-01 22:09:31
+--- web/apps/web/package.json	2023-05-01 22:06:35
++++ apps/web/package.web.json	2023-05-01 22:09:31
 @@ -3,6 +3,10 @@
    "version": "0.0.1",
    "private": true,

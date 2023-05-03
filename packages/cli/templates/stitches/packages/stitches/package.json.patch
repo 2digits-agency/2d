@@ -1,5 +1,5 @@
---- package.json	2023-05-03 16:15:21
-+++ package.json	2023-05-03 16:15:04
+--- stitches/packages/stitches/package.json	2023-05-03 16:15:21
++++ packages/stitches/package.stitches.json	2023-05-03 16:15:04
 @@ -12,6 +12,9 @@
      "./reset": "./dist/reset.css"
    },
