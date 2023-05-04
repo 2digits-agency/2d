@@ -2,7 +2,7 @@
   "pipeline": {
     "build": { "dependsOn": ["^build"], "outputs": ["dist"] },
     "types": { "dependsOn": ["^types", "^build"] },
-    "dev": { "persistent": true, "cache": false },
+    "dev": { "cache": false },
     "test": { "dependsOn": ["^build", "^test"] },
     "bench": { "dependsOn": ["^build", "^bench"] },
 
