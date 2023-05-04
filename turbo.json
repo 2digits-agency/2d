@@ -1,13 +1,16 @@
 {
   "pipeline": {
     "build": { "dependsOn": ["^build"], "outputs": ["dist"] },
-    "types": { "dependsOn": ["^types"], "cache": false },
+    "types": { "dependsOn": ["^types", "^build"] },
     "dev": { "persistent": true, "cache": false },
     "test": { "dependsOn": ["^build", "^test"] },
     "bench": { "dependsOn": ["^build", "^bench"] },
 
-    "lint": { "cache": false, "dependsOn": ["//#lint:pkg"] },
-    "//#lint:pkg": { "cache": false },
-    "//#lint:pkg:fix": { "cache": false }
+    "lint": {},
+    "//#lint:pkg": { "inputs": ["**/package.json"] },
+    "//#lint:pkg:fix": { "cache": false },
+
+    "//#format": {},
+    "//#format:fix": { "cache": false }
   }
 }

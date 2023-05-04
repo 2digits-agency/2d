@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      FORCE_COLORS: 1
+      FORCE_COLOR: 1
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+      TURBO_TEAM: ${{ vars.TURBO_TEAM }}
 
     steps:
       - name: 🗃️ Checkout repository
@@ -33,17 +33,5 @@ jobs:
       - name: 📦 Install dependencies
         run: pnpm install
 
-      - name: 🏗️ Build packages
-        run: pnpm build
-
-      - name: 🩻 Check types
-        run: pnpm types
-
-      - name: 🔬 Lint files
-        run: pnpm lint
-
-      - name: 🧬 Format files
-        run: pnpm format
-
-      - name: 🧪 Run tests
-        run: pnpm turbo test bench
+      - name: 🧪 Test, lint, format, build, bench, build and type-check
+        run: pnpm turbo run build test bench lint format types

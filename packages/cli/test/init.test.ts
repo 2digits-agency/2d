@@ -33,6 +33,19 @@ describe('base', () => {
     await snapshotCliOutputFs();
   });
 
+  describe('swagger-sdk', () => {
+    it('should create a swagger-sdk module', async () => {
+      await init.handler({
+        path: './test/path',
+        module: ['swagger-sdk'],
+        install: false,
+        name: 'test',
+      });
+
+      await snapshotCliOutputFs();
+    });
+  });
+
   describe('web', () => {
     it('should create a web app', async () => {
       await init.handler({

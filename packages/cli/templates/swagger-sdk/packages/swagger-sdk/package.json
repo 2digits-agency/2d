@@ -1,6 +1,6 @@
 {
-  "name": "@mod/trpc",
-  "version": "0.0.1",
+  "name": "@mod/swagger-sdk",
+  "version": "0.0.0",
   "private": true,
   "sideEffects": false,
   "exports": {
@@ -21,18 +21,20 @@
     "types": "tsc --noEmit"
   },
   "dependencies": {
-    "@tanstack/react-query": "^4.29.5",
-    "@trpc/client": "^10.25.0",
-    "@trpc/next": "^10.25.0",
-    "@trpc/react-query": "^10.25.0",
-    "@trpc/server": "^10.25.0",
-    "next": "^13.3.4",
-    "superjson": "^1.12.3",
-    "zod": "^3.21.4"
+    "axios": "^1.4.0"
   },
   "devDependencies": {
     "@2digits/tsconfig": "^0.1.1",
+    "@faker-js/faker": "^7.6.0",
+    "@orval/core": "^6.15.0",
+    "@types/prettier": "^2.7.2",
+    "consola": "^3.1.0",
     "eslint": "^8.39.0",
+    "knitwork": "^1.0.0",
+    "msw": "^1.2.1",
+    "orval": "^6.15.0",
+    "pathe": "^1.1.0",
+    "prettier": "^2.8.8",
     "tsup": "^6.7.0",
     "typescript": "^5.0.4"
   }

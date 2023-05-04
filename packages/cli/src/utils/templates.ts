@@ -7,6 +7,7 @@ import { Spinner } from '@2digits/log';
 
 import base from '../../templates/base/package.json';
 import stitches from '../../templates/stitches/packages/stitches/package.json';
+import swaggerSdk from '../../templates/swagger-sdk/packages/swagger-sdk/package.json';
 import trpc from '../../templates/trpc/packages/trpc/package.json';
 import web from '../../templates/web/apps/web/package.json';
 import { TEMPLATE_DIR } from '../constants';
@@ -22,6 +23,7 @@ export const templates = {
   web,
   trpc,
   stitches,
+  ['swagger-sdk']: swaggerSdk,
 } as const;
 
 export type Template = keyof typeof templates;
