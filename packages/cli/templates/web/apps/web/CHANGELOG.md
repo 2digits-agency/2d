@@ -1,5 +1,12 @@
 # @mod/web
 
+## 0.1.1
+
+### Patch Changes
+
+- fc60151: Updated deps
+- a1cac01: Added bug report item to template package.jsons to fix patches and their version numbers
+
 ## 0.1.0
 
 ### Minor Changes

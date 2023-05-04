@@ -1,5 +1,15 @@
 # @mod/web-stitches
 
+## 0.0.2
+
+### Patch Changes
+
+- fc60151: Updated deps
+- a1cac01: Added bug report item to template package.jsons to fix patches and their version numbers
+- Updated dependencies [fc60151]
+- Updated dependencies [a1cac01]
+  - @mod/stitches@0.0.2
+
 ## 0.0.1
 
 ### Patch Changes

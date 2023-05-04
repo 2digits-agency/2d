@@ -1,5 +1,14 @@
 # @mod/web-trpc
 
+## 0.1.1
+
+### Patch Changes
+
+- fc60151: Updated deps
+- a1cac01: Added bug report item to template package.jsons to fix patches and their version numbers
+- Updated dependencies [a1cac01]
+  - @mod/trpc@0.0.3
+
 ## 0.1.0
 
 ### Minor Changes
