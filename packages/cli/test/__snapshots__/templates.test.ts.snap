@@ -123,8 +123,8 @@ exports[`copyTemplate > base + web > ./test/path/apps/web/package.json 1`] = `
     \\"@babel/core\\": \\"^7.21.8\\",
     \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
     \\"@types/node\\": \\"^18.16.3\\",
-    \\"@types/react\\": \\"^18.2.1\\",
-    \\"@types/react-dom\\": \\"^18.2.2\\",
+    \\"@types/react\\": \\"^18.2.3\\",
+    \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"typescript\\": \\"^5.0.4\\"
   }
@@ -448,8 +448,8 @@ exports[`copyTemplate > web > ./test/path/apps/web/package.json 1`] = `
     \\"@babel/core\\": \\"^7.21.8\\",
     \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
     \\"@types/node\\": \\"^18.16.3\\",
-    \\"@types/react\\": \\"^18.2.1\\",
-    \\"@types/react-dom\\": \\"^18.2.2\\",
+    \\"@types/react\\": \\"^18.2.3\\",
+    \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"typescript\\": \\"^5.0.4\\"
   }
