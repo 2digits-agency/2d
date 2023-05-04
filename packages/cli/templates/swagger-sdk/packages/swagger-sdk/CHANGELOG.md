@@ -1,5 +1,11 @@
 # @mod/swagger-sdk
 
+## 0.0.2
+
+### Patch Changes
+
+- a1cac01: Added bug report item to template package.jsons to fix patches and their version numbers
+
 ## 0.0.1
 
 ### Patch Changes

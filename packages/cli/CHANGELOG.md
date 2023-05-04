@@ -1,5 +1,11 @@
 # @2digits/cli
 
+## 0.5.0
+
+### Minor Changes
+
+- 6c254e1: Added Storybook template
+
 ## 0.4.1
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @mod/base
 
+## 0.0.3
+
+### Patch Changes
+
+- a1cac01: Added bug report item to template package.jsons to fix patches and their version numbers
+- 368be3e: Added ts-reset to base template
+- e7110aa: Fixed typechecking the root of the project
+
 ## 0.0.2
 
 ### Patch Changes
