@@ -1,6 +1,9 @@
 {
   "name": "@mod/stitches",
   "version": "0.0.1",
+  "bugs": {
+    "url": "https://github.com/2digits-agency/2d/issues/new"
+  },
   "private": true,
   "sideEffects": false,
   "exports": {
@@ -27,7 +30,7 @@
   },
   "devDependencies": {
     "@2digits/tsconfig": "^0.1.1",
-    "@types/react": "^18.2.4",
+    "@types/react": "^18.2.5",
     "@types/react-dom": "^18.2.3",
     "eslint": "^8.39.0",
     "tsup": "^6.7.0",

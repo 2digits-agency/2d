@@ -6,8 +6,12 @@ import { expect } from 'vitest';
 
 import { TEMPLATE_DIR } from '../src/constants';
 
+export function getMockFsFiles() {
+  return globby('./test/path/**/*', { dot: true });
+}
+
 export async function snapshotCliOutputFs() {
-  const files = await globby('./test/path/**/*', { dot: true });
+  const files = await getMockFsFiles();
 
   const fileContents = {} as Record<string, string>;
 
@@ -38,4 +42,27 @@ export async function getTemplateFiles() {
   }
 
   return mockFiles;
+}
+
+export function getCombinations<TData extends string>(valuesArray: TData[]) {
+  const combinations: TData[][] = [];
+  const { length } = valuesArray;
+  const max = Math.pow(2, length);
+
+  for (let i = 0; i < max; i++) {
+    const combination: TData[] = [];
+
+    for (let j = 0; j < length; j++) {
+      if (i & (1 << j)) {
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        combination.push(valuesArray[j]!);
+      }
+    }
+
+    if (combination.length > 0) {
+      combinations.push(combination.sort());
+    }
+  }
+
+  return combinations.sort();
 }

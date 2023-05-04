@@ -1,6 +1,6 @@
 {
-  "name": "@mod/web-stitches",
-  "version": "0.0.1",
+  "name": "@mod/storybook",
+  "version": "0.0.0",
   "bugs": {
     "url": "https://github.com/2digits-agency/2d/issues/new"
   },
@@ -10,20 +10,22 @@
   },
   "dependencies": {
     "@mod/stitches": "workspace:*",
-    "@sentry/cli": "^2.17.5",
-    "@sentry/nextjs": "^7.50.0",
     "next": "^13.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@2digits/tsconfig": "^0.1.1",
-    "@babel/core": "^7.21.8",
-    "@next/bundle-analyzer": "^13.3.4",
+    "@storybook/addon-essentials": "^7.0.8",
+    "@storybook/blocks": "^7.0.8",
+    "@storybook/nextjs": "^7.0.8",
+    "@storybook/react": "^7.0.8",
     "@types/node": "^18.16.3",
     "@types/react": "^18.2.5",
     "@types/react-dom": "^18.2.3",
-    "eslint": "^8.39.0",
+    "eslint": "8.39.0",
+    "serve": "^14.2.0",
+    "storybook": "^7.0.8",
     "typescript": "^5.0.4"
   }
 }

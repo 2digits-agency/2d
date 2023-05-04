@@ -10,7 +10,7 @@ const mockFileSystem = await getTemplateFiles();
 beforeEach(() => {
   mock(mockFileSystem);
 
-  consola.wrapAll();
+  consola.wrapStd();
   consola.pauseLogs();
 });
 
@@ -38,6 +38,19 @@ describe('base', () => {
       await init.handler({
         path: './test/path',
         module: ['swagger-sdk'],
+        install: false,
+        name: 'test',
+      });
+
+      await snapshotCliOutputFs();
+    });
+  });
+
+  describe('storybook', () => {
+    it('should create a storybook app', async () => {
+      await init.handler({
+        path: './test/path',
+        module: ['storybook'],
         install: false,
         name: 'test',
       });

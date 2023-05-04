@@ -58,7 +58,10 @@ public
 exports[`base > should create a base project > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"turbo run build\\",
@@ -76,6 +79,7 @@ exports[`base > should create a base project > ./test/path/package.json 1`] = `
     \\"@2digits/prettier-config\\": \\"^0.3.0\\",
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
+    \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^18.16.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
@@ -115,14 +119,305 @@ exports[`base > should create a base project > ./test/path/pnpm-workspace.yaml 1
 "
 `;
 
+exports[`base > should create a base project > ./test/path/reset.d.ts 1`] = `
+"import '@total-typescript/ts-reset';
+"
+`;
+
 exports[`base > should create a base project > ./test/path/tsconfig.json 1`] = `
 "{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
+  \\"include\\": [\\"./reset.d.ts\\"]
 }
 "
 `;
 
 exports[`base > should create a base project > ./test/path/turbo.json 1`] = `
+"{
+  \\"globalDependencies\\": [\\"**/.env\\", \\"tsconfig.json\\"],
+  \\"pipeline\\": {
+    \\"build\\": { \\"dependsOn\\": [\\"^build\\"], \\"outputs\\": [\\"dist/**\\", \\"build/**\\"] },
+    \\"dev\\": { \\"cache\\": false, \\"persistent\\": true },
+    \\"lint\\": { \\"cache\\": false },
+    \\"lint-fix\\": { \\"cache\\": false },
+    \\"types\\": { \\"dependsOn\\": [\\"^types\\"], \\"cache\\": false }
+  }
+}
+"
+`;
+
+exports[`base > storybook > should create a storybook app > ./test/path/.editorconfig 1`] = `
+"# editorconfig.org
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+"
+`;
+
+exports[`base > storybook > should create a storybook app > ./test/path/.gitignore 1`] = `
+"# dependencies
+node_modules
+.pnp
+.pnp.js
+package-lock.json
+yarn.lock
+
+# tsup
+dist/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env
+.env*.local
+
+# turbo
+.turbo
+
+# vercel cli
+.vercel
+
+# next.js
+.next/
+out/
+build
+next-env.d.ts
+"
+`;
+
+exports[`base > storybook > should create a storybook app > ./test/path/.prettierignore 1`] = `
+"pnpm-lock.yaml
+public
+"
+`;
+
+exports[`base > storybook > should create a storybook app > ./test/path/apps/storybook/config/main.ts 1`] = `
+"import type { StorybookConfig } from '@storybook/nextjs';
+
+const config = {
+  stories: ['../stories/**/*.stories.@(ts|tsx)'],
+  addons: ['@storybook/addon-essentials'],
+  framework: {
+    name: '@storybook/nextjs',
+    options: {
+      nextConfigPath: '../../web/next.config.mjs',
+    },
+  },
+  docs: {
+    autodocs: true,
+  },
+  core: {
+    disableTelemetry: true,
+  },
+} satisfies StorybookConfig;
+
+export default config;
+"
+`;
+
+exports[`base > storybook > should create a storybook app > ./test/path/apps/storybook/config/preview.ts 1`] = `
+"import type { Preview } from '@storybook/react';
+
+import '@mod/stitches/reset';
+
+const preview = {
+  parameters: {
+    backgrounds: {
+      default: 'light',
+    },
+    actions: { argTypesRegex: '^on[A-Z].*' },
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/,
+      },
+    },
+  },
+} satisfies Preview;
+
+export default preview;
+"
+`;
+
+exports[`base > storybook > should create a storybook app > ./test/path/apps/storybook/package.json 1`] = `
+"{
+  \\"name\\": \\"@mod/storybook\\",
+  \\"version\\": \\"0.0.0\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
+  \\"private\\": true,
+  \\"scripts\\": {
+    \\"build\\": \\"storybook build --quiet -c config -o public\\",
+    \\"dev\\": \\"storybook dev -p 6006 --no-open --quiet -c config\\",
+    \\"lint\\": \\"eslint --ignore-path ../../.gitignore .\\",
+    \\"start\\": \\"serve public\\",
+    \\"types\\": \\"tsc --noEmit\\"
+  },
+  \\"dependencies\\": {
+    \\"@mod/stitches\\": \\"workspace:*\\",
+    \\"next\\": \\"^13.3.4\\",
+    \\"react\\": \\"^18.2.0\\",
+    \\"react-dom\\": \\"^18.2.0\\"
+  },
+  \\"devDependencies\\": {
+    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@storybook/addon-essentials\\": \\"^7.0.8\\",
+    \\"@storybook/blocks\\": \\"^7.0.8\\",
+    \\"@storybook/nextjs\\": \\"^7.0.8\\",
+    \\"@storybook/react\\": \\"^7.0.8\\",
+    \\"@types/node\\": \\"^18.16.3\\",
+    \\"@types/react\\": \\"^18.2.5\\",
+    \\"@types/react-dom\\": \\"^18.2.3\\",
+    \\"eslint\\": \\"8.39.0\\",
+    \\"serve\\": \\"^14.2.0\\",
+    \\"storybook\\": \\"^7.0.8\\",
+    \\"typescript\\": \\"^5.0.4\\"
+  }
+}
+"
+`;
+
+exports[`base > storybook > should create a storybook app > ./test/path/apps/storybook/stories/.gitkeep 1`] = `""`;
+
+exports[`base > storybook > should create a storybook app > ./test/path/apps/storybook/stories/examples/Button.stories.tsx 1`] = `
+"import type { Meta, StoryObj } from '@storybook/react';
+import type { ReactNode } from 'react';
+
+const meta = {
+  component: Button,
+  argTypes: {
+    children: {
+      type: 'string',
+      defaultValue: 'This is a button',
+    },
+  },
+} satisfies Meta<typeof Button>;
+
+export default meta;
+
+type Story = StoryObj<typeof Button>;
+
+export const Primary: Story = {
+  args: {
+    children: 'This is an example button',
+  },
+};
+
+function Button({ children }: { children: ReactNode }) {
+  return <button>{children}</button>;
+}
+"
+`;
+
+exports[`base > storybook > should create a storybook app > ./test/path/apps/storybook/tsconfig.json 1`] = `
+"{
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
+  \\"include\\": [\\"**/*.ts\\", \\"**/*.tsx\\"]
+}
+"
+`;
+
+exports[`base > storybook > should create a storybook app > ./test/path/apps/storybook/turbo.json 1`] = `
+"{
+  \\"extends\\": [\\"//\\"],
+  \\"pipeline\\": {
+    \\"build\\": {
+      \\"outputs\\": [\\"public/**\\"]
+    }
+  }
+}
+"
+`;
+
+exports[`base > storybook > should create a storybook app > ./test/path/package.json 1`] = `
+"{
+  \\"name\\": \\"test\\",
+  \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
+  \\"private\\": true,
+  \\"scripts\\": {
+    \\"build\\": \\"turbo run build\\",
+    \\"clean\\": \\"find . -name node_modules -o -name .turbo -o -name .next -o -name dist -type d -prune | xargs rm -rf\\",
+    \\"dev\\": \\"turbo run dev\\",
+    \\"format\\": \\"bash -c 'prettier \\\\\\"**/*\\\\\\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --check'\\",
+    \\"format:fix\\": \\"bash -c 'prettier \\\\\\"**/*\\\\\\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --write'\\",
+    \\"lint\\": \\"turbo lint && manypkg check\\",
+    \\"lint:fix\\": \\"turbo lint -- --fix && manypkg fix\\",
+    \\"plop\\": \\"plop\\",
+    \\"types\\": \\"turbo types && tsc --noEmit\\"
+  },
+  \\"dependencies\\": {
+    \\"@2digits/eslint-config\\": \\"^0.3.0\\",
+    \\"@2digits/prettier-config\\": \\"^0.3.0\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@manypkg/cli\\": \\"^0.20.0\\",
+    \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
+    \\"@types/node\\": \\"^18.16.3\\",
+    \\"eslint\\": \\"^8.39.0\\",
+    \\"plop\\": \\"^3.1.2\\",
+    \\"prettier\\": \\"^2.8.8\\",
+    \\"turbo\\": \\"^1.9.3\\",
+    \\"typescript\\": \\"^5.0.4\\"
+  },
+  \\"packageManager\\": \\"pnpm@8.4.0\\",
+  \\"engines\\": {
+    \\"node\\": \\">=18.0.0\\"
+  },
+  \\"manypkg\\": {
+    \\"ignoredRules\\": [
+      \\"INTERNAL_MISMATCH\\"
+    ]
+  },
+  \\"pnpm\\": {
+    \\"neverBuiltDependencies\\": [
+      \\"core-js\\",
+      \\"core-js-compat\\",
+      \\"core-js-pure\\",
+      \\"cypress\\"
+    ]
+  },
+  \\"prettier\\": \\"@2digits/prettier-config\\",
+  \\"eslintConfig\\": {
+    \\"extends\\": \\"@2digits\\"
+  }
+}
+"
+`;
+
+exports[`base > storybook > should create a storybook app > ./test/path/pnpm-workspace.yaml 1`] = `
+"packages:
+  - 'apps/*'
+  - 'packages/*'
+"
+`;
+
+exports[`base > storybook > should create a storybook app > ./test/path/reset.d.ts 1`] = `
+"import '@total-typescript/ts-reset';
+"
+`;
+
+exports[`base > storybook > should create a storybook app > ./test/path/tsconfig.json 1`] = `
+"{
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
+  \\"include\\": [\\"./reset.d.ts\\"]
+}
+"
+`;
+
+exports[`base > storybook > should create a storybook app > ./test/path/turbo.json 1`] = `
 "{
   \\"globalDependencies\\": [\\"**/.env\\", \\"tsconfig.json\\"],
   \\"pipeline\\": {
@@ -194,7 +489,10 @@ public
 exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"turbo run build\\",
@@ -212,6 +510,7 @@ exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/p
     \\"@2digits/prettier-config\\": \\"^0.3.0\\",
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
+    \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^18.16.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
@@ -368,7 +667,10 @@ export default config;
 exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/packages/swagger-sdk/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/swagger-sdk\\",
-  \\"version\\": \\"0.0.0\\",
+  \\"version\\": \\"0.0.1\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"sideEffects\\": false,
   \\"exports\\": {
@@ -463,9 +765,15 @@ exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/p
 "
 `;
 
+exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/reset.d.ts 1`] = `
+"import '@total-typescript/ts-reset';
+"
+`;
+
 exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/tsconfig.json 1`] = `
 "{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
+  \\"include\\": [\\"./reset.d.ts\\"]
 }
 "
 `;
@@ -569,7 +877,10 @@ export default withSentryConfig(
 exports[`base > web > should create a web app > ./test/path/apps/web/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.1.0\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"next build\\",
@@ -590,7 +901,7 @@ exports[`base > web > should create a web app > ./test/path/apps/web/package.jso
     \\"@babel/core\\": \\"^7.21.8\\",
     \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
     \\"@types/node\\": \\"^18.16.3\\",
-    \\"@types/react\\": \\"^18.2.4\\",
+    \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"typescript\\": \\"^5.0.4\\"
@@ -697,7 +1008,10 @@ exports[`base > web > should create a web app > ./test/path/apps/web/turbo.json 
 exports[`base > web > should create a web app > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"turbo run build\\",
@@ -715,6 +1029,7 @@ exports[`base > web > should create a web app > ./test/path/package.json 1`] = `
     \\"@2digits/prettier-config\\": \\"^0.3.0\\",
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
+    \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^18.16.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
@@ -754,9 +1069,15 @@ exports[`base > web > should create a web app > ./test/path/pnpm-workspace.yaml 
 "
 `;
 
+exports[`base > web > should create a web app > ./test/path/reset.d.ts 1`] = `
+"import '@total-typescript/ts-reset';
+"
+`;
+
 exports[`base > web > should create a web app > ./test/path/tsconfig.json 1`] = `
 "{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
+  \\"include\\": [\\"./reset.d.ts\\"]
 }
 "
 `;
@@ -860,7 +1181,10 @@ export default withSentryConfig(
 exports[`base > web > stitches > should add a stitches module > ./test/path/apps/web/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.1.0\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"next build\\",
@@ -882,7 +1206,7 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/apps
     \\"@babel/core\\": \\"^7.21.8\\",
     \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
     \\"@types/node\\": \\"^18.16.3\\",
-    \\"@types/react\\": \\"^18.2.4\\",
+    \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"typescript\\": \\"^5.0.4\\"
@@ -1014,7 +1338,10 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/apps
 exports[`base > web > stitches > should add a stitches module > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"turbo run build\\",
@@ -1032,6 +1359,7 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/pack
     \\"@2digits/prettier-config\\": \\"^0.3.0\\",
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
+    \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^18.16.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
@@ -1067,7 +1395,10 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/pack
 exports[`base > web > stitches > should add a stitches module > ./test/path/packages/stitches/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/stitches\\",
-  \\"version\\": \\"0.0.0\\",
+  \\"version\\": \\"0.0.1\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"sideEffects\\": false,
   \\"exports\\": {
@@ -1097,7 +1428,7 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/pack
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
-    \\"@types/react\\": \\"^18.2.4\\",
+    \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"tsup\\": \\"^6.7.0\\",
@@ -1368,9 +1699,15 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/pnpm
 "
 `;
 
+exports[`base > web > stitches > should add a stitches module > ./test/path/reset.d.ts 1`] = `
+"import '@total-typescript/ts-reset';
+"
+`;
+
 exports[`base > web > stitches > should add a stitches module > ./test/path/tsconfig.json 1`] = `
 "{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
+  \\"include\\": [\\"./reset.d.ts\\"]
 }
 "
 `;
@@ -1474,7 +1811,10 @@ export default withSentryConfig(
 exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/apps/web/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.1.0\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"next build\\",
@@ -1503,7 +1843,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
     \\"@babel/core\\": \\"^7.21.8\\",
     \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
     \\"@types/node\\": \\"^18.16.3\\",
-    \\"@types/react\\": \\"^18.2.4\\",
+    \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"typescript\\": \\"^5.0.4\\"
@@ -1515,7 +1855,10 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
 exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/apps/web/package.stitches.json 1`] = `
 "{
   \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.1.0\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"types\\": \\"tsc --noEmit\\"
@@ -1533,7 +1876,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
     \\"@babel/core\\": \\"^7.21.8\\",
     \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
     \\"@types/node\\": \\"^18.16.3\\",
-    \\"@types/react\\": \\"^18.2.4\\",
+    \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"typescript\\": \\"^5.0.4\\"
@@ -1727,7 +2070,10 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
 exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"turbo run build\\",
@@ -1745,6 +2091,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
     \\"@2digits/prettier-config\\": \\"^0.3.0\\",
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
+    \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^18.16.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
@@ -1780,7 +2127,10 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
 exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/packages/stitches/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/stitches\\",
-  \\"version\\": \\"0.0.0\\",
+  \\"version\\": \\"0.0.1\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"sideEffects\\": false,
   \\"exports\\": {
@@ -1810,7 +2160,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
-    \\"@types/react\\": \\"^18.2.4\\",
+    \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"tsup\\": \\"^6.7.0\\",
@@ -2077,7 +2427,10 @@ export default defineConfig({
 exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/packages/trpc/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/trpc\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"sideEffects\\": false,
   \\"exports\\": {
@@ -2223,9 +2576,15 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
 "
 `;
 
+exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/reset.d.ts 1`] = `
+"import '@total-typescript/ts-reset';
+"
+`;
+
 exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/tsconfig.json 1`] = `
 "{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
+  \\"include\\": [\\"./reset.d.ts\\"]
 }
 "
 `;
@@ -2329,7 +2688,10 @@ export default withSentryConfig(
 exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.1.0\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"next build\\",
@@ -2358,7 +2720,7 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/pac
     \\"@babel/core\\": \\"^7.21.8\\",
     \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
     \\"@types/node\\": \\"^18.16.3\\",
-    \\"@types/react\\": \\"^18.2.4\\",
+    \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"typescript\\": \\"^5.0.4\\"
@@ -2516,7 +2878,10 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/tur
 exports[`base > web > trpc > should add a trpc module > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"turbo run build\\",
@@ -2534,6 +2899,7 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/package.json
     \\"@2digits/prettier-config\\": \\"^0.3.0\\",
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
+    \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^18.16.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
@@ -2569,7 +2935,10 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/package.json
 exports[`base > web > trpc > should add a trpc module > ./test/path/packages/trpc/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/trpc\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"sideEffects\\": false,
   \\"exports\\": {
@@ -2715,9 +3084,15 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/pnpm-workspa
 "
 `;
 
+exports[`base > web > trpc > should add a trpc module > ./test/path/reset.d.ts 1`] = `
+"import '@total-typescript/ts-reset';
+"
+`;
+
 exports[`base > web > trpc > should add a trpc module > ./test/path/tsconfig.json 1`] = `
 "{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
+  \\"include\\": [\\"./reset.d.ts\\"]
 }
 "
 `;

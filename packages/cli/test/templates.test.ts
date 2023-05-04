@@ -1,11 +1,16 @@
 import consola from 'consola';
 import mock from 'mock-fs';
-import { afterEach, beforeEach, describe, expectTypeOf, it, test } from 'vitest';
+import { afterEach, beforeEach, describe, expect, expectTypeOf, it, test } from 'vitest';
 
 import { moduleEnum } from '../src/commands/init';
-import type { Template } from '../src/utils/templates';
+import type { Template } from '../src/constants';
+import { templates } from '../src/constants';
 import { copyTemplate } from '../src/utils/templates';
-import { getTemplateFiles, snapshotCliOutputFs } from './testUtils';
+import { getCombinations, getMockFsFiles, getTemplateFiles } from './testUtils';
+
+const templateNames = Object.keys(templates) as Template[];
+
+const combinations = getCombinations(templateNames);
 
 describe('copyTemplate', async () => {
   const mockFileSystem = await getTemplateFiles();
@@ -13,7 +18,7 @@ describe('copyTemplate', async () => {
   beforeEach(() => {
     mock(mockFileSystem);
 
-    consola.wrapAll();
+    consola.wrapStd();
     consola.pauseLogs();
   });
 
@@ -24,24 +29,23 @@ describe('copyTemplate', async () => {
     consola.restoreAll();
   });
 
-  test('base', async () => {
-    await copyTemplate('base', './test/path');
+  for (const combination of combinations) {
+    const name = combination.join(' + ');
 
-    await snapshotCliOutputFs();
-  });
+    test(name, async () => {
+      for (const template of combination) {
+        await copyTemplate(template, './test/path');
+      }
 
-  test('web', async () => {
-    await copyTemplate('web', './test/path');
+      const files = await getMockFsFiles();
 
-    await snapshotCliOutputFs();
-  });
+      mock.restore();
 
-  test('base + web', async () => {
-    await copyTemplate('base', './test/path');
-    await copyTemplate('web', './test/path');
+      consola.debug(files);
 
-    await snapshotCliOutputFs();
-  });
+      expect(files).toMatchSnapshot();
+    });
+  }
 });
 
 describe('types', () => {

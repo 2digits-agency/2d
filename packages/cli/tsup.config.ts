@@ -14,5 +14,4 @@ export default defineConfig({
   target: 'esnext',
   outDir: 'dist',
   ignoreWatch: ['**/.next/**'],
-  noExternal: ['@2digits'],
 });

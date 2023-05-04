@@ -5,8 +5,8 @@ import fs from 'fs-extra';
 import { globby } from 'globby';
 import pathe from 'pathe';
 
+import type { Template } from '../constants';
 import { TEMPLATE_DIR } from '../constants';
-import type { Template } from './templates';
 
 export function getTemplatePatches(template: Template) {
   const cwd = pathe.join(TEMPLATE_DIR, template);
@@ -50,6 +50,12 @@ export async function applyPatch(template: Template, patch: string, path: string
 
     p.log.warn(`Could not merge ${relativeTmpTarget} and ${relativeTarget}.`);
 
-    return fs.writeFile(tmpTarget, tmpPatched);
+    try {
+      await fs.writeFile(tmpTarget, tmpPatched);
+
+      return;
+    } catch {
+      p.log.error('Something went wrong while trying to write the patch to the file system.');
+    }
   }
 }
