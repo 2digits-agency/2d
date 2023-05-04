@@ -324,7 +324,9 @@ exports[`base > web > should create a web app > ./test/path/apps/web/tsconfig.js
         \\"name\\": \\"next\\"
       }
     ],
-    \\"moduleResolution\\": \\"node\\"
+    \\"moduleResolution\\": \\"node\\",
+    \\"declaration\\": false,
+    \\"declarationMap\\": false
   },
   \\"exclude\\": [\\"node_modules\\"]
 }
@@ -639,7 +641,9 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/apps
         \\"name\\": \\"next\\"
       }
     ],
-    \\"moduleResolution\\": \\"node\\"
+    \\"moduleResolution\\": \\"node\\",
+    \\"declaration\\": false,
+    \\"declarationMap\\": false
   },
   \\"exclude\\": [\\"node_modules\\"]
 }
@@ -1350,7 +1354,9 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
         \\"name\\": \\"next\\"
       }
     ],
-    \\"moduleResolution\\": \\"node\\"
+    \\"moduleResolution\\": \\"node\\",
+    \\"declaration\\": false,
+    \\"declarationMap\\": false
   },
   \\"exclude\\": [\\"node_modules\\"]
 }
@@ -2137,7 +2143,9 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/tsc
         \\"name\\": \\"next\\"
       }
     ],
-    \\"moduleResolution\\": \\"node\\"
+    \\"moduleResolution\\": \\"node\\",
+    \\"declaration\\": false,
+    \\"declarationMap\\": false
   },
   \\"exclude\\": [\\"node_modules\\"]
 }

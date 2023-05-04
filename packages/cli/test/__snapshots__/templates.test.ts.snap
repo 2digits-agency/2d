@@ -205,7 +205,9 @@ exports[`copyTemplate > base + web > ./test/path/apps/web/tsconfig.json 1`] = `
         \\"name\\": \\"next\\"
       }
     ],
-    \\"moduleResolution\\": \\"node\\"
+    \\"moduleResolution\\": \\"node\\",
+    \\"declaration\\": false,
+    \\"declarationMap\\": false
   },
   \\"exclude\\": [\\"node_modules\\"]
 }
@@ -530,7 +532,9 @@ exports[`copyTemplate > web > ./test/path/apps/web/tsconfig.json 1`] = `
         \\"name\\": \\"next\\"
       }
     ],
-    \\"moduleResolution\\": \\"node\\"
+    \\"moduleResolution\\": \\"node\\",
+    \\"declaration\\": false,
+    \\"declarationMap\\": false
   },
   \\"exclude\\": [\\"node_modules\\"]
 }
