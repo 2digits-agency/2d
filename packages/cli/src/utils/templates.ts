@@ -5,11 +5,7 @@ import pathe from 'pathe';
 
 import { Spinner } from '@2digits/log';
 
-import base from '../../templates/base/package.json';
-import stitches from '../../templates/stitches/packages/stitches/package.json';
-import swaggerSdk from '../../templates/swagger-sdk/packages/swagger-sdk/package.json';
-import trpc from '../../templates/trpc/packages/trpc/package.json';
-import web from '../../templates/web/apps/web/package.json';
+import type { Template } from '../constants';
 import { TEMPLATE_DIR } from '../constants';
 import { onCancel } from '../helpers';
 import { createIgnoreFilter } from './ignore';
@@ -17,16 +13,6 @@ import { createIgnoreFilter } from './ignore';
 const consola = createConsola({ defaults: { tag: 'utils/templates' } });
 
 const rootIgnoreFile = pathe.join(TEMPLATE_DIR, '.gitignore');
-
-export const templates = {
-  base,
-  web,
-  trpc,
-  stitches,
-  ['swagger-sdk']: swaggerSdk,
-} as const;
-
-export type Template = keyof typeof templates;
 
 export async function copyTemplate(template: Template, path: string) {
   const sourceDir = pathe.join(TEMPLATE_DIR, template);
