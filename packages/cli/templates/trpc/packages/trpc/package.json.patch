@@ -1,5 +1,5 @@
---- package.json	2023-04-28 13:49:30
-+++ package.json	2023-04-28 13:56:48
+--- trpc/packages/trpc/package.json	2023-04-28 13:49:30
++++ packages/trpc/package.trpc.json	2023-04-28 13:56:48
 @@ -18,6 +18,9 @@
      "dist"
    ],

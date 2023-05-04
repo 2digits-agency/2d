@@ -14,7 +14,7 @@ import { applyPatch, getTemplatePatches } from '../utils/patch';
 import { renamePlaceholders } from '../utils/rename';
 import { copyTemplate } from '../utils/templates';
 
-export const moduleEnum = z.enum(['web', 'trpc']);
+export const moduleEnum = z.enum(['web', 'trpc', 'stitches']);
 
 const appModule = z.array(moduleEnum);
 

@@ -10,13 +10,6 @@ indent_size = 2
 "
 `;
 
-exports[`copyTemplate > base + web > ./test/path/.npmrc 1`] = `
-"auto-install-peers=true
-legacy-peer-deps=true
-node-linker=hoisted
-"
-`;
-
 exports[`copyTemplate > base + web > ./test/path/.prettierignore 1`] = `
 "pnpm-lock.yaml
 public
@@ -130,8 +123,8 @@ exports[`copyTemplate > base + web > ./test/path/apps/web/package.json 1`] = `
     \\"@babel/core\\": \\"^7.21.8\\",
     \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
     \\"@types/node\\": \\"^18.16.3\\",
-    \\"@types/react\\": \\"^18.2.0\\",
-    \\"@types/react-dom\\": \\"^18.2.1\\",
+    \\"@types/react\\": \\"^18.2.3\\",
+    \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"typescript\\": \\"^5.0.4\\"
   }
@@ -289,13 +282,6 @@ root = true
 [*]
 indent_style = space
 indent_size = 2
-"
-`;
-
-exports[`copyTemplate > base > ./test/path/.npmrc 1`] = `
-"auto-install-peers=true
-legacy-peer-deps=true
-node-linker=hoisted
 "
 `;
 
@@ -462,8 +448,8 @@ exports[`copyTemplate > web > ./test/path/apps/web/package.json 1`] = `
     \\"@babel/core\\": \\"^7.21.8\\",
     \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
     \\"@types/node\\": \\"^18.16.3\\",
-    \\"@types/react\\": \\"^18.2.0\\",
-    \\"@types/react-dom\\": \\"^18.2.1\\",
+    \\"@types/react\\": \\"^18.2.3\\",
+    \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"typescript\\": \\"^5.0.4\\"
   }

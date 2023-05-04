@@ -45,6 +45,32 @@ describe('base', () => {
       await snapshotCliOutputFs();
     });
 
+    describe('stitches', () => {
+      it('should add a stitches module', async () => {
+        await init.handler({
+          path: './test/path',
+          module: ['web', 'stitches'],
+          install: false,
+          name: 'test',
+        });
+
+        await snapshotCliOutputFs();
+      });
+
+      describe('trpc', () => {
+        it('should add a trpc module', async () => {
+          await init.handler({
+            path: './test/path',
+            module: ['web', 'trpc', 'stitches'],
+            install: false,
+            name: 'test',
+          });
+
+          await snapshotCliOutputFs();
+        });
+      });
+    });
+
     describe('trpc', () => {
       it('should add a trpc module', async () => {
         await init.handler({

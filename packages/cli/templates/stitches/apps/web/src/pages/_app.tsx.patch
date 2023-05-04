@@ -1,13 +1,10 @@
 --- web/apps/web/src/pages/_app.tsx	2023-05-03 11:50:13
-+++ apps/web/src/pages/_app.trpc.tsx	2023-05-03 11:54:55
-@@ -1,7 +1,9 @@
++++ apps/web/src/pages/_app.stitches.tsx	2023-05-03 17:31:21
+@@ -1,5 +1,7 @@
  import type { AppProps } from 'next/app';
  
-+import { trpc } from '../utils/trpc';
++import '@mod/stitches/reset';
 +
  function App({ Component, pageProps }: AppProps) {
    return <Component {...pageProps} />;
  }
- 
--export default App;
-+export default trpc.withTRPC(App);

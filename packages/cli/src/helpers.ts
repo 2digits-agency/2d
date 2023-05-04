@@ -1,5 +1,6 @@
 import * as p from '@clack/prompts';
 import chalk from 'chalk';
+import process from 'node:process';
 import { formatWithOptions } from 'node:util';
 import type { Arguments, ArgumentsCamelCase, Argv, CommandModule } from 'yargs';
 import type { z } from 'zod';
@@ -58,7 +59,7 @@ export function onCancel() {
   p.cancel('Operation cancelled.');
 
   // eslint-disable-next-line unicorn/no-process-exit
-  // return process.exit(0);
+  return process.exit(0);
 }
 
 export function validate<TValue>(validator: z.ZodType<TValue>) {

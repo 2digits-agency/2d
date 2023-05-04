@@ -1,11 +1,12 @@
 {
-  "name": "@mod/web",
-  "version": "0.0.1",
+  "name": "@mod/web-stitches",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "types": "tsc --noEmit"
   },
   "dependencies": {
+    "@mod/stitches": "workspace:*",
     "@sentry/cli": "^2.17.5",
     "@sentry/nextjs": "^7.50.0",
     "next": "^13.3.4",
