@@ -3,7 +3,7 @@ import mock from 'mock-fs';
 import { afterEach, beforeEach, describe, expectTypeOf, it, test } from 'vitest';
 
 import { moduleEnum } from '../src/commands/init';
-import type { Template } from '../src/utils/templates';
+import type { Template } from '../src/constants';
 import { copyTemplate } from '../src/utils/templates';
 import { getTemplateFiles, snapshotCliOutputFs } from './testUtils';
 
