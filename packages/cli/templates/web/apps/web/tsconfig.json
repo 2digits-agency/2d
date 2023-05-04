@@ -11,7 +11,9 @@
         "name": "next"
       }
     ],
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "declaration": false,
+    "declarationMap": false
   },
   "exclude": ["node_modules"]
 }
