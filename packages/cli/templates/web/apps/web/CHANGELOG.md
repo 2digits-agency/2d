@@ -1,5 +1,18 @@
 # @mod/web
 
+## 0.1.0
+
+### Minor Changes
+
+- ea6f144: Changed tsconfig so it wont error on build anymore
+
+### Patch Changes
+
+- 9bc3a69: Updated deps
+- 5bdd398: Updated deps
+- cc65c81: Updated deps
+- b52ac0b: Changed patch files to include extra data
+
 ## 0.0.1
 
 ### Patch Changes

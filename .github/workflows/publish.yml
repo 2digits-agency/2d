@@ -36,7 +36,7 @@ jobs:
         run: pnpm install
 
       - name: 🏗️ Build packages
-        run: pnpm build
+        run: pnpm build --force
 
       - name: 🪄 Create Release Pull Request or Publish
         id: changesets

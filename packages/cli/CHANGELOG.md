@@ -1,5 +1,22 @@
 # @2digits/cli
 
+## 0.4.1
+
+### Patch Changes
+
+- 2b79a12: Fixed package contents
+
+## 0.4.0
+
+### Minor Changes
+
+- a2d5b70: Added new functionality to the patching of files
+
+### Patch Changes
+
+- 9bc3a69: Updated deps
+- cc65c81: Updated deps
+
 ## 0.3.2
 
 ### Patch Changes
