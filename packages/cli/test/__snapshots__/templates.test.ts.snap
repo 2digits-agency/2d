@@ -106,7 +106,7 @@ export default withSentryConfig(
 exports[`copyTemplate > base + web > ./test/path/apps/web/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.1.0\\",
   \\"private\\": true,
   \\"scripts\\": {
     \\"types\\": \\"tsc --noEmit\\"
@@ -230,7 +230,7 @@ exports[`copyTemplate > base + web > ./test/path/apps/web/turbo.json 1`] = `
 exports[`copyTemplate > base + web > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/base\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.0.2\\",
   \\"private\\": true,
   \\"scripts\\": {},
   \\"dependencies\\": {
@@ -356,7 +356,7 @@ exports[`copyTemplate > base > ./test/path/_2d_turbo.json 1`] = `
 exports[`copyTemplate > base > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/base\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.0.2\\",
   \\"private\\": true,
   \\"scripts\\": {},
   \\"dependencies\\": {
@@ -433,7 +433,7 @@ export default withSentryConfig(
 exports[`copyTemplate > web > ./test/path/apps/web/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.1.0\\",
   \\"private\\": true,
   \\"scripts\\": {
     \\"types\\": \\"tsc --noEmit\\"
