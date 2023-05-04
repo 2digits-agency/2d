@@ -16,16 +16,16 @@
   },
   "devDependencies": {
     "@2digits/tsconfig": "^0.1.1",
-    "@storybook/addon-essentials": "next",
-    "@storybook/blocks": "next",
-    "@storybook/nextjs": "next",
-    "@storybook/react": "next",
+    "@storybook/addon-essentials": "^7.0.8",
+    "@storybook/blocks": "^7.0.8",
+    "@storybook/nextjs": "^7.0.8",
+    "@storybook/react": "^7.0.8",
     "@types/node": "^18.16.3",
-    "@types/react": "^18.2.4",
+    "@types/react": "^18.2.5",
     "@types/react-dom": "^18.2.3",
     "eslint": "8.39.0",
     "serve": "^14.2.0",
-    "storybook": "next",
+    "storybook": "^7.0.8",
     "typescript": "^5.0.4"
   }
 }

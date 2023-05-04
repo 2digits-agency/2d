@@ -616,7 +616,7 @@ exports[`base > web > should create a web app > ./test/path/apps/web/package.jso
     \\"@babel/core\\": \\"^7.21.8\\",
     \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
     \\"@types/node\\": \\"^18.16.3\\",
-    \\"@types/react\\": \\"^18.2.4\\",
+    \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"typescript\\": \\"^5.0.4\\"
@@ -921,7 +921,7 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/apps
     \\"@babel/core\\": \\"^7.21.8\\",
     \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
     \\"@types/node\\": \\"^18.16.3\\",
-    \\"@types/react\\": \\"^18.2.4\\",
+    \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"typescript\\": \\"^5.0.4\\"
@@ -1143,7 +1143,7 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/pack
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
-    \\"@types/react\\": \\"^18.2.4\\",
+    \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"tsup\\": \\"^6.7.0\\",
@@ -1558,7 +1558,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
     \\"@babel/core\\": \\"^7.21.8\\",
     \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
     \\"@types/node\\": \\"^18.16.3\\",
-    \\"@types/react\\": \\"^18.2.4\\",
+    \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"typescript\\": \\"^5.0.4\\"
@@ -1591,7 +1591,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
     \\"@babel/core\\": \\"^7.21.8\\",
     \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
     \\"@types/node\\": \\"^18.16.3\\",
-    \\"@types/react\\": \\"^18.2.4\\",
+    \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"typescript\\": \\"^5.0.4\\"
@@ -1875,7 +1875,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
-    \\"@types/react\\": \\"^18.2.4\\",
+    \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"tsup\\": \\"^6.7.0\\",
@@ -2435,7 +2435,7 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/pac
     \\"@babel/core\\": \\"^7.21.8\\",
     \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
     \\"@types/node\\": \\"^18.16.3\\",
-    \\"@types/react\\": \\"^18.2.4\\",
+    \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"typescript\\": \\"^5.0.4\\"
