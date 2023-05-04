@@ -79,6 +79,7 @@ exports[`base > should create a base project > ./test/path/package.json 1`] = `
     \\"@2digits/prettier-config\\": \\"^0.3.0\\",
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
+    \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^18.16.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
@@ -118,9 +119,15 @@ exports[`base > should create a base project > ./test/path/pnpm-workspace.yaml 1
 "
 `;
 
+exports[`base > should create a base project > ./test/path/reset.d.ts 1`] = `
+"import '@total-typescript/ts-reset';
+"
+`;
+
 exports[`base > should create a base project > ./test/path/tsconfig.json 1`] = `
 "{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
+  \\"include\\": [\\"./reset.d.ts\\"]
 }
 "
 `;
@@ -218,6 +225,7 @@ exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/p
     \\"@2digits/prettier-config\\": \\"^0.3.0\\",
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
+    \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^18.16.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
@@ -472,9 +480,15 @@ exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/p
 "
 `;
 
+exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/reset.d.ts 1`] = `
+"import '@total-typescript/ts-reset';
+"
+`;
+
 exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/tsconfig.json 1`] = `
 "{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
+  \\"include\\": [\\"./reset.d.ts\\"]
 }
 "
 `;
@@ -730,6 +744,7 @@ exports[`base > web > should create a web app > ./test/path/package.json 1`] = `
     \\"@2digits/prettier-config\\": \\"^0.3.0\\",
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
+    \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^18.16.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
@@ -769,9 +784,15 @@ exports[`base > web > should create a web app > ./test/path/pnpm-workspace.yaml 
 "
 `;
 
+exports[`base > web > should create a web app > ./test/path/reset.d.ts 1`] = `
+"import '@total-typescript/ts-reset';
+"
+`;
+
 exports[`base > web > should create a web app > ./test/path/tsconfig.json 1`] = `
 "{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
+  \\"include\\": [\\"./reset.d.ts\\"]
 }
 "
 `;
@@ -1053,6 +1074,7 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/pack
     \\"@2digits/prettier-config\\": \\"^0.3.0\\",
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
+    \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^18.16.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
@@ -1392,9 +1414,15 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/pnpm
 "
 `;
 
+exports[`base > web > stitches > should add a stitches module > ./test/path/reset.d.ts 1`] = `
+"import '@total-typescript/ts-reset';
+"
+`;
+
 exports[`base > web > stitches > should add a stitches module > ./test/path/tsconfig.json 1`] = `
 "{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
+  \\"include\\": [\\"./reset.d.ts\\"]
 }
 "
 `;
@@ -1778,6 +1806,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
     \\"@2digits/prettier-config\\": \\"^0.3.0\\",
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
+    \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^18.16.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
@@ -2262,9 +2291,15 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
 "
 `;
 
+exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/reset.d.ts 1`] = `
+"import '@total-typescript/ts-reset';
+"
+`;
+
 exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/tsconfig.json 1`] = `
 "{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
+  \\"include\\": [\\"./reset.d.ts\\"]
 }
 "
 `;
@@ -2579,6 +2614,7 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/package.json
     \\"@2digits/prettier-config\\": \\"^0.3.0\\",
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
+    \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^18.16.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
@@ -2763,9 +2799,15 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/pnpm-workspa
 "
 `;
 
+exports[`base > web > trpc > should add a trpc module > ./test/path/reset.d.ts 1`] = `
+"import '@total-typescript/ts-reset';
+"
+`;
+
 exports[`base > web > trpc > should add a trpc module > ./test/path/tsconfig.json 1`] = `
 "{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
+  \\"include\\": [\\"./reset.d.ts\\"]
 }
 "
 `;

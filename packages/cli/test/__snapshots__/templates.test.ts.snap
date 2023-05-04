@@ -244,6 +244,7 @@ exports[`copyTemplate > base + web > ./test/path/package.json 1`] = `
     \\"@2digits/prettier-config\\": \\"^0.3.0\\",
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
+    \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^18.16.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
@@ -276,9 +277,15 @@ exports[`copyTemplate > base + web > ./test/path/package.json 1`] = `
 "
 `;
 
+exports[`copyTemplate > base + web > ./test/path/reset.d.ts 1`] = `
+"import '@total-typescript/ts-reset';
+"
+`;
+
 exports[`copyTemplate > base + web > ./test/path/tsconfig.json 1`] = `
 "{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
+  \\"include\\": [\\"./reset.d.ts\\"]
 }
 "
 `;
@@ -373,6 +380,7 @@ exports[`copyTemplate > base > ./test/path/package.json 1`] = `
     \\"@2digits/prettier-config\\": \\"^0.3.0\\",
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
+    \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^18.16.3\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
@@ -405,9 +413,15 @@ exports[`copyTemplate > base > ./test/path/package.json 1`] = `
 "
 `;
 
+exports[`copyTemplate > base > ./test/path/reset.d.ts 1`] = `
+"import '@total-typescript/ts-reset';
+"
+`;
+
 exports[`copyTemplate > base > ./test/path/tsconfig.json 1`] = `
 "{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\"
+  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
+  \\"include\\": [\\"./reset.d.ts\\"]
 }
 "
 `;
