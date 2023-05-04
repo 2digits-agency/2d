@@ -46,6 +46,19 @@ describe('base', () => {
     });
   });
 
+  describe('storybook', () => {
+    it('should create a storybook app', async () => {
+      await init.handler({
+        path: './test/path',
+        module: ['storybook'],
+        install: false,
+        name: 'test',
+      });
+
+      await snapshotCliOutputFs();
+    });
+  });
+
   describe('web', () => {
     it('should create a web app', async () => {
       await init.handler({
