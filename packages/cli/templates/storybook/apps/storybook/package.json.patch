@@ -1,0 +1,13 @@
+--- storybook/apps/storybook/package.json	2023-05-04 13:56:22
++++ apps/storybook/package.storybook.json	2023-05-04 13:56:36
+@@ -3,6 +3,10 @@
+   },
+   "private": true,
+   "scripts": {
++    "build": "storybook build --quiet -c config -o public",
++    "dev": "storybook dev -p 6006 --no-open --quiet -c config",
++    "lint": "eslint --ignore-path ../../.gitignore .",
++    "start": "serve public",
+     "types": "tsc --noEmit"
+   },
+   "dependencies": {
