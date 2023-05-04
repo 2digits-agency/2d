@@ -1,0 +1,41 @@
+{
+  "name": "@mod/swagger-sdk",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": false,
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./src/index.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  },
+  "devDependencies": {
+    "@2digits/tsconfig": "^0.1.1",
+    "@faker-js/faker": "^7.6.0",
+    "@orval/core": "^6.15.0",
+    "@types/prettier": "^2.7.2",
+    "consola": "^3.1.0",
+    "eslint": "^8.39.0",
+    "knitwork": "^1.0.0",
+    "msw": "^1.2.1",
+    "orval": "^6.15.0",
+    "pathe": "^1.1.0",
+    "prettier": "^2.8.8",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
+  }
+}
