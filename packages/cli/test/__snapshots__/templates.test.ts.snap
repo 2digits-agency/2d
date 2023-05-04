@@ -1,581 +1,1956 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`copyTemplate > base + web > ./test/path/.editorconfig 1`] = `
-"# editorconfig.org
-root = true
-
-[*]
-indent_style = space
-indent_size = 2
-"
+exports[`copyTemplate > base + stitches + storybook + swagger-sdk + trpc + web 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
 `;
 
-exports[`copyTemplate > base + web > ./test/path/.prettierignore 1`] = `
-"pnpm-lock.yaml
-public
-"
+exports[`copyTemplate > base + stitches + storybook + swagger-sdk + trpc 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
 `;
 
-exports[`copyTemplate > base + web > ./test/path/_2d_.gitignore 1`] = `
-"# dependencies
-node_modules
-.pnp
-.pnp.js
-package-lock.json
-yarn.lock
-
-# tsup
-dist/
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# local env files
-.env
-.env*.local
-
-# turbo
-.turbo
-
-# vercel cli
-.vercel
-
-# next.js
-.next/
-out/
-build
-next-env.d.ts
-"
+exports[`copyTemplate > base + stitches + storybook + swagger-sdk + web 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+]
 `;
 
-exports[`copyTemplate > base + web > ./test/path/_2d_pnpm-workspace.yaml 1`] = `
-"packages:
-  - 'apps/*'
-  - 'packages/*'
-"
+exports[`copyTemplate > base + stitches + storybook + swagger-sdk 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/package.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+]
 `;
 
-exports[`copyTemplate > base + web > ./test/path/_2d_turbo.json 1`] = `
-"{
-  \\"globalDependencies\\": [\\"**/.env\\", \\"tsconfig.json\\"],
-  \\"pipeline\\": {
-    \\"build\\": { \\"dependsOn\\": [\\"^build\\"], \\"outputs\\": [\\"dist/**\\", \\"build/**\\"] },
-    \\"dev\\": { \\"cache\\": false, \\"persistent\\": true },
-    \\"lint\\": { \\"cache\\": false },
-    \\"lint-fix\\": { \\"cache\\": false },
-    \\"types\\": { \\"dependsOn\\": [\\"^types\\"], \\"cache\\": false }
-  }
-}
-"
+exports[`copyTemplate > base + stitches + storybook + trpc + web 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
 `;
 
-exports[`copyTemplate > base + web > ./test/path/apps/web/next.config.mjs 1`] = `
-"import bundleAnalyzer from '@next/bundle-analyzer';
-import { withSentryConfig } from '@sentry/nextjs';
-
-const shouldAnalyze = process.env.ANALYZE === 'true';
-
-/** @type {(config?: import('next').NextConfig) => import('next').NextConfig} */
-const withBundleAnalyzer = bundleAnalyzer({
-  enabled: shouldAnalyze,
-});
-
-/** @type {import('next').NextConfig} */
-const config = {
-  reactStrictMode: true,
-
-  /** We run eslint as a separate task in CI */
-  eslint: { ignoreDuringBuilds: true },
-};
-
-export default withSentryConfig(
-  shouldAnalyze ? withBundleAnalyzer(config) : config,
-  {},
-  { hideSourceMaps: true },
-);
-"
+exports[`copyTemplate > base + stitches + storybook + trpc 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
 `;
 
-exports[`copyTemplate > base + web > ./test/path/apps/web/package.json 1`] = `
-"{
-  \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.1.0\\",
-  \\"bugs\\": {
-    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
-  },
-  \\"private\\": true,
-  \\"scripts\\": {
-    \\"types\\": \\"tsc --noEmit\\"
-  },
-  \\"dependencies\\": {
-    \\"@sentry/cli\\": \\"^2.17.5\\",
-    \\"@sentry/nextjs\\": \\"^7.50.0\\",
-    \\"next\\": \\"^13.3.4\\",
-    \\"react\\": \\"^18.2.0\\",
-    \\"react-dom\\": \\"^18.2.0\\"
-  },
-  \\"devDependencies\\": {
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
-    \\"@babel/core\\": \\"^7.21.8\\",
-    \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
-    \\"@types/node\\": \\"^18.16.3\\",
-    \\"@types/react\\": \\"^18.2.5\\",
-    \\"@types/react-dom\\": \\"^18.2.3\\",
-    \\"eslint\\": \\"^8.39.0\\",
-    \\"typescript\\": \\"^5.0.4\\"
-  }
-}
-"
+exports[`copyTemplate > base + stitches + storybook + web 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+]
 `;
 
-exports[`copyTemplate > base + web > ./test/path/apps/web/sentry.client.config.ts 1`] = `
-"import './sentry.config';
-"
+exports[`copyTemplate > base + stitches + storybook 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/package.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+]
 `;
 
-exports[`copyTemplate > base + web > ./test/path/apps/web/sentry.config.ts 1`] = `
-"import * as Sentry from '@sentry/nextjs';
-
-function initSentry() {
-  const SENTRY_DSN = process.env.SENTRY_DSN ?? process.env.NEXT_PUBLIC_SENTRY_DSN;
-
-  if (!SENTRY_DSN) {
-    console.warn('No Sentry DSN found, check your environment variables');
-
-    return;
-  }
-
-  Sentry.init({
-    enabled: process.env.NODE_ENV !== 'development',
-    dsn: SENTRY_DSN,
-  });
-}
-
-initSentry();
-"
+exports[`copyTemplate > base + stitches + swagger-sdk + trpc + web 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
 `;
 
-exports[`copyTemplate > base + web > ./test/path/apps/web/sentry.edge.config.ts 1`] = `
-"import './sentry.config';
-"
+exports[`copyTemplate > base + stitches + swagger-sdk + trpc 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
 `;
 
-exports[`copyTemplate > base + web > ./test/path/apps/web/sentry.server.config.ts 1`] = `
-"import './sentry.config';
-"
+exports[`copyTemplate > base + stitches + swagger-sdk + web 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+]
 `;
 
-exports[`copyTemplate > base + web > ./test/path/apps/web/src/pages/_app.tsx 1`] = `
-"import type { AppProps } from 'next/app';
-
-function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
-
-export default App;
-"
+exports[`copyTemplate > base + stitches + swagger-sdk 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/web/package.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+]
 `;
 
-exports[`copyTemplate > base + web > ./test/path/apps/web/src/pages/index.tsx 1`] = `
-"export default function Home() {
-  return (
-    <div>
-      <h1>Hello, world!</h1>
-    </div>
-  );
-}
-"
+exports[`copyTemplate > base + stitches + trpc + web 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
 `;
 
-exports[`copyTemplate > base + web > ./test/path/apps/web/tsconfig.json 1`] = `
-"{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
-  \\"include\\": [\\"next-env.d.ts\\", \\"**/*.ts\\", \\"**/*.tsx\\", \\"next.config.mjs\\", \\".next/types/**/*.ts\\"],
-  \\"compilerOptions\\": {
-    \\"incremental\\": true,
-    \\"baseUrl\\": \\"./src\\",
-    \\"module\\": \\"esnext\\",
-    \\"jsx\\": \\"preserve\\",
-    \\"plugins\\": [
-      {
-        \\"name\\": \\"next\\"
-      }
-    ],
-    \\"moduleResolution\\": \\"node\\",
-    \\"declaration\\": false,
-    \\"declarationMap\\": false
-  },
-  \\"exclude\\": [\\"node_modules\\"]
-}
-"
+exports[`copyTemplate > base + stitches + trpc 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
 `;
 
-exports[`copyTemplate > base + web > ./test/path/apps/web/turbo.json 1`] = `
-"{
-  \\"extends\\": [\\"//\\"],
-  \\"pipeline\\": {
-    \\"build\\": {
-      \\"env\\": [\\"SENTRY_DSN\\", \\"NEXT_PUBLIC_SENTRY_DSN\\", \\"ANALYZE\\", \\"NODE_ENV\\", \\"VERCEL_URL\\"],
-      \\"outputs\\": [\\".next/**\\", \\"!.next/cache/**\\"]
-    }
-  }
-}
-"
+exports[`copyTemplate > base + stitches + web 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+]
 `;
 
-exports[`copyTemplate > base + web > ./test/path/package.json 1`] = `
-"{
-  \\"name\\": \\"@mod/base\\",
-  \\"version\\": \\"0.0.2\\",
-  \\"bugs\\": {
-    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
-  },
-  \\"private\\": true,
-  \\"scripts\\": {},
-  \\"dependencies\\": {
-    \\"@2digits/eslint-config\\": \\"^0.3.0\\",
-    \\"@2digits/prettier-config\\": \\"^0.3.0\\",
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
-    \\"@manypkg/cli\\": \\"^0.20.0\\",
-    \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
-    \\"@types/node\\": \\"^18.16.3\\",
-    \\"eslint\\": \\"^8.39.0\\",
-    \\"plop\\": \\"^3.1.2\\",
-    \\"prettier\\": \\"^2.8.8\\",
-    \\"turbo\\": \\"^1.9.3\\",
-    \\"typescript\\": \\"^5.0.4\\"
-  },
-  \\"packageManager\\": \\"pnpm@8.4.0\\",
-  \\"engines\\": {
-    \\"node\\": \\">=18.0.0\\"
-  },
-  \\"manypkg\\": {
-    \\"ignoredRules\\": [
-      \\"INTERNAL_MISMATCH\\"
-    ]
-  },
-  \\"pnpm\\": {
-    \\"neverBuiltDependencies\\": [
-      \\"core-js\\",
-      \\"core-js-compat\\",
-      \\"core-js-pure\\",
-      \\"cypress\\"
-    ]
-  },
-  \\"prettier\\": \\"@2digits/prettier-config\\",
-  \\"eslintConfig\\": {
-    \\"extends\\": \\"@2digits\\"
-  }
-}
-"
+exports[`copyTemplate > base + stitches 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/web/package.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+]
 `;
 
-exports[`copyTemplate > base + web > ./test/path/reset.d.ts 1`] = `
-"import '@total-typescript/ts-reset';
-"
+exports[`copyTemplate > base + storybook + swagger-sdk + trpc + web 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
 `;
 
-exports[`copyTemplate > base + web > ./test/path/tsconfig.json 1`] = `
-"{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
-  \\"include\\": [\\"./reset.d.ts\\"]
-}
-"
+exports[`copyTemplate > base + storybook + swagger-sdk + trpc 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
 `;
 
-exports[`copyTemplate > base > ./test/path/.editorconfig 1`] = `
-"# editorconfig.org
-root = true
-
-[*]
-indent_style = space
-indent_size = 2
-"
+exports[`copyTemplate > base + storybook + swagger-sdk + web 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+]
 `;
 
-exports[`copyTemplate > base > ./test/path/.prettierignore 1`] = `
-"pnpm-lock.yaml
-public
-"
+exports[`copyTemplate > base + storybook + swagger-sdk 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+]
 `;
 
-exports[`copyTemplate > base > ./test/path/_2d_.gitignore 1`] = `
-"# dependencies
-node_modules
-.pnp
-.pnp.js
-package-lock.json
-yarn.lock
-
-# tsup
-dist/
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# local env files
-.env
-.env*.local
-
-# turbo
-.turbo
-
-# vercel cli
-.vercel
-
-# next.js
-.next/
-out/
-build
-next-env.d.ts
-"
+exports[`copyTemplate > base + storybook + trpc + web 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
 `;
 
-exports[`copyTemplate > base > ./test/path/_2d_pnpm-workspace.yaml 1`] = `
-"packages:
-  - 'apps/*'
-  - 'packages/*'
-"
+exports[`copyTemplate > base + storybook + trpc 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
 `;
 
-exports[`copyTemplate > base > ./test/path/_2d_turbo.json 1`] = `
-"{
-  \\"globalDependencies\\": [\\"**/.env\\", \\"tsconfig.json\\"],
-  \\"pipeline\\": {
-    \\"build\\": { \\"dependsOn\\": [\\"^build\\"], \\"outputs\\": [\\"dist/**\\", \\"build/**\\"] },
-    \\"dev\\": { \\"cache\\": false, \\"persistent\\": true },
-    \\"lint\\": { \\"cache\\": false },
-    \\"lint-fix\\": { \\"cache\\": false },
-    \\"types\\": { \\"dependsOn\\": [\\"^types\\"], \\"cache\\": false }
-  }
-}
-"
+exports[`copyTemplate > base + storybook + web 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+]
 `;
 
-exports[`copyTemplate > base > ./test/path/package.json 1`] = `
-"{
-  \\"name\\": \\"@mod/base\\",
-  \\"version\\": \\"0.0.2\\",
-  \\"bugs\\": {
-    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
-  },
-  \\"private\\": true,
-  \\"scripts\\": {},
-  \\"dependencies\\": {
-    \\"@2digits/eslint-config\\": \\"^0.3.0\\",
-    \\"@2digits/prettier-config\\": \\"^0.3.0\\",
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
-    \\"@manypkg/cli\\": \\"^0.20.0\\",
-    \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
-    \\"@types/node\\": \\"^18.16.3\\",
-    \\"eslint\\": \\"^8.39.0\\",
-    \\"plop\\": \\"^3.1.2\\",
-    \\"prettier\\": \\"^2.8.8\\",
-    \\"turbo\\": \\"^1.9.3\\",
-    \\"typescript\\": \\"^5.0.4\\"
-  },
-  \\"packageManager\\": \\"pnpm@8.4.0\\",
-  \\"engines\\": {
-    \\"node\\": \\">=18.0.0\\"
-  },
-  \\"manypkg\\": {
-    \\"ignoredRules\\": [
-      \\"INTERNAL_MISMATCH\\"
-    ]
-  },
-  \\"pnpm\\": {
-    \\"neverBuiltDependencies\\": [
-      \\"core-js\\",
-      \\"core-js-compat\\",
-      \\"core-js-pure\\",
-      \\"cypress\\"
-    ]
-  },
-  \\"prettier\\": \\"@2digits/prettier-config\\",
-  \\"eslintConfig\\": {
-    \\"extends\\": \\"@2digits\\"
-  }
-}
-"
+exports[`copyTemplate > base + storybook 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+]
 `;
 
-exports[`copyTemplate > base > ./test/path/reset.d.ts 1`] = `
-"import '@total-typescript/ts-reset';
-"
+exports[`copyTemplate > base + swagger-sdk + trpc + web 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
 `;
 
-exports[`copyTemplate > base > ./test/path/tsconfig.json 1`] = `
-"{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
-  \\"include\\": [\\"./reset.d.ts\\"]
-}
-"
+exports[`copyTemplate > base + swagger-sdk + trpc 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
 `;
 
-exports[`copyTemplate > web > ./test/path/apps/web/next.config.mjs 1`] = `
-"import bundleAnalyzer from '@next/bundle-analyzer';
-import { withSentryConfig } from '@sentry/nextjs';
-
-const shouldAnalyze = process.env.ANALYZE === 'true';
-
-/** @type {(config?: import('next').NextConfig) => import('next').NextConfig} */
-const withBundleAnalyzer = bundleAnalyzer({
-  enabled: shouldAnalyze,
-});
-
-/** @type {import('next').NextConfig} */
-const config = {
-  reactStrictMode: true,
-
-  /** We run eslint as a separate task in CI */
-  eslint: { ignoreDuringBuilds: true },
-};
-
-export default withSentryConfig(
-  shouldAnalyze ? withBundleAnalyzer(config) : config,
-  {},
-  { hideSourceMaps: true },
-);
-"
+exports[`copyTemplate > base + swagger-sdk + web 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+]
 `;
 
-exports[`copyTemplate > web > ./test/path/apps/web/package.json 1`] = `
-"{
-  \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.1.0\\",
-  \\"bugs\\": {
-    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
-  },
-  \\"private\\": true,
-  \\"scripts\\": {
-    \\"types\\": \\"tsc --noEmit\\"
-  },
-  \\"dependencies\\": {
-    \\"@sentry/cli\\": \\"^2.17.5\\",
-    \\"@sentry/nextjs\\": \\"^7.50.0\\",
-    \\"next\\": \\"^13.3.4\\",
-    \\"react\\": \\"^18.2.0\\",
-    \\"react-dom\\": \\"^18.2.0\\"
-  },
-  \\"devDependencies\\": {
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
-    \\"@babel/core\\": \\"^7.21.8\\",
-    \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
-    \\"@types/node\\": \\"^18.16.3\\",
-    \\"@types/react\\": \\"^18.2.5\\",
-    \\"@types/react-dom\\": \\"^18.2.3\\",
-    \\"eslint\\": \\"^8.39.0\\",
-    \\"typescript\\": \\"^5.0.4\\"
-  }
-}
-"
+exports[`copyTemplate > base + swagger-sdk 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+]
 `;
 
-exports[`copyTemplate > web > ./test/path/apps/web/sentry.client.config.ts 1`] = `
-"import './sentry.config';
-"
+exports[`copyTemplate > base + trpc + web 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
 `;
 
-exports[`copyTemplate > web > ./test/path/apps/web/sentry.config.ts 1`] = `
-"import * as Sentry from '@sentry/nextjs';
-
-function initSentry() {
-  const SENTRY_DSN = process.env.SENTRY_DSN ?? process.env.NEXT_PUBLIC_SENTRY_DSN;
-
-  if (!SENTRY_DSN) {
-    console.warn('No Sentry DSN found, check your environment variables');
-
-    return;
-  }
-
-  Sentry.init({
-    enabled: process.env.NODE_ENV !== 'development',
-    dsn: SENTRY_DSN,
-  });
-}
-
-initSentry();
-"
+exports[`copyTemplate > base + trpc 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
 `;
 
-exports[`copyTemplate > web > ./test/path/apps/web/sentry.edge.config.ts 1`] = `
-"import './sentry.config';
-"
+exports[`copyTemplate > base + web 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+]
 `;
 
-exports[`copyTemplate > web > ./test/path/apps/web/sentry.server.config.ts 1`] = `
-"import './sentry.config';
-"
+exports[`copyTemplate > base 1`] = `
+[
+  "./test/path/.editorconfig",
+  "./test/path/.prettierignore",
+  "./test/path/_2d_.gitignore",
+  "./test/path/_2d_pnpm-workspace.yaml",
+  "./test/path/_2d_turbo.json",
+  "./test/path/package.json",
+  "./test/path/reset.d.ts",
+  "./test/path/tsconfig.json",
+]
 `;
 
-exports[`copyTemplate > web > ./test/path/apps/web/src/pages/_app.tsx 1`] = `
-"import type { AppProps } from 'next/app';
-
-function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
-
-export default App;
-"
+exports[`copyTemplate > stitches + storybook + swagger-sdk + trpc + web 1`] = `
+[
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
 `;
 
-exports[`copyTemplate > web > ./test/path/apps/web/src/pages/index.tsx 1`] = `
-"export default function Home() {
-  return (
-    <div>
-      <h1>Hello, world!</h1>
-    </div>
-  );
-}
-"
+exports[`copyTemplate > stitches + storybook + swagger-sdk + trpc 1`] = `
+[
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
 `;
 
-exports[`copyTemplate > web > ./test/path/apps/web/tsconfig.json 1`] = `
-"{
-  \\"extends\\": \\"@2digits/tsconfig/tsconfig.json\\",
-  \\"include\\": [\\"next-env.d.ts\\", \\"**/*.ts\\", \\"**/*.tsx\\", \\"next.config.mjs\\", \\".next/types/**/*.ts\\"],
-  \\"compilerOptions\\": {
-    \\"incremental\\": true,
-    \\"baseUrl\\": \\"./src\\",
-    \\"module\\": \\"esnext\\",
-    \\"jsx\\": \\"preserve\\",
-    \\"plugins\\": [
-      {
-        \\"name\\": \\"next\\"
-      }
-    ],
-    \\"moduleResolution\\": \\"node\\",
-    \\"declaration\\": false,
-    \\"declarationMap\\": false
-  },
-  \\"exclude\\": [\\"node_modules\\"]
-}
-"
+exports[`copyTemplate > stitches + storybook + swagger-sdk + web 1`] = `
+[
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+]
 `;
 
-exports[`copyTemplate > web > ./test/path/apps/web/turbo.json 1`] = `
-"{
-  \\"extends\\": [\\"//\\"],
-  \\"pipeline\\": {
-    \\"build\\": {
-      \\"env\\": [\\"SENTRY_DSN\\", \\"NEXT_PUBLIC_SENTRY_DSN\\", \\"ANALYZE\\", \\"NODE_ENV\\", \\"VERCEL_URL\\"],
-      \\"outputs\\": [\\".next/**\\", \\"!.next/cache/**\\"]
-    }
-  }
-}
-"
+exports[`copyTemplate > stitches + storybook + swagger-sdk 1`] = `
+[
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/package.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+]
+`;
+
+exports[`copyTemplate > stitches + storybook + trpc + web 1`] = `
+[
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
+`;
+
+exports[`copyTemplate > stitches + storybook + trpc 1`] = `
+[
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
+`;
+
+exports[`copyTemplate > stitches + storybook + web 1`] = `
+[
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+]
+`;
+
+exports[`copyTemplate > stitches + storybook 1`] = `
+[
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/package.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+]
+`;
+
+exports[`copyTemplate > stitches + swagger-sdk + trpc + web 1`] = `
+[
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
+`;
+
+exports[`copyTemplate > stitches + swagger-sdk + trpc 1`] = `
+[
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
+`;
+
+exports[`copyTemplate > stitches + swagger-sdk + web 1`] = `
+[
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+]
+`;
+
+exports[`copyTemplate > stitches + swagger-sdk 1`] = `
+[
+  "./test/path/apps/web/package.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+]
+`;
+
+exports[`copyTemplate > stitches + trpc + web 1`] = `
+[
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
+`;
+
+exports[`copyTemplate > stitches + trpc 1`] = `
+[
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
+`;
+
+exports[`copyTemplate > stitches + web 1`] = `
+[
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+]
+`;
+
+exports[`copyTemplate > stitches 1`] = `
+[
+  "./test/path/apps/web/package.json",
+  "./test/path/packages/stitches/package.json",
+  "./test/path/packages/stitches/tsconfig.json",
+  "./test/path/packages/stitches/tsup.config.ts",
+  "./test/path/packages/stitches/src/index.ts",
+  "./test/path/packages/stitches/src/reset.css",
+  "./test/path/packages/stitches/src/stitches.ts",
+  "./test/path/packages/stitches/src/types.ts",
+  "./test/path/apps/web/src/pages/_document.tsx",
+  "./test/path/packages/stitches/src/helpers/createRangeVariant.ts",
+  "./test/path/packages/stitches/src/helpers/createScaleVariant.ts",
+]
+`;
+
+exports[`copyTemplate > storybook + swagger-sdk + trpc + web 1`] = `
+[
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
+`;
+
+exports[`copyTemplate > storybook + swagger-sdk + trpc 1`] = `
+[
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
+`;
+
+exports[`copyTemplate > storybook + swagger-sdk + web 1`] = `
+[
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+]
+`;
+
+exports[`copyTemplate > storybook + swagger-sdk 1`] = `
+[
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+]
+`;
+
+exports[`copyTemplate > storybook + trpc + web 1`] = `
+[
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
+`;
+
+exports[`copyTemplate > storybook + trpc 1`] = `
+[
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
+`;
+
+exports[`copyTemplate > storybook + web 1`] = `
+[
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+]
+`;
+
+exports[`copyTemplate > storybook 1`] = `
+[
+  "./test/path/apps/storybook/package.json",
+  "./test/path/apps/storybook/tsconfig.json",
+  "./test/path/apps/storybook/turbo.json",
+  "./test/path/apps/storybook/config/main.ts",
+  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/stories/.gitkeep",
+  "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
+]
+`;
+
+exports[`copyTemplate > swagger-sdk + trpc + web 1`] = `
+[
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
+`;
+
+exports[`copyTemplate > swagger-sdk + trpc 1`] = `
+[
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
+`;
+
+exports[`copyTemplate > swagger-sdk + web 1`] = `
+[
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+]
+`;
+
+exports[`copyTemplate > swagger-sdk 1`] = `
+[
+  "./test/path/packages/swagger-sdk/generateExports.ts",
+  "./test/path/packages/swagger-sdk/orval.config.ts",
+  "./test/path/packages/swagger-sdk/package.json",
+  "./test/path/packages/swagger-sdk/tsconfig.json",
+  "./test/path/packages/swagger-sdk/tsup.config.ts",
+  "./test/path/packages/swagger-sdk/turbo.json",
+]
+`;
+
+exports[`copyTemplate > trpc + web 1`] = `
+[
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
+`;
+
+exports[`copyTemplate > trpc 1`] = `
+[
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/packages/trpc/package.json",
+  "./test/path/packages/trpc/tsconfig.json",
+  "./test/path/packages/trpc/tsup.config.ts",
+  "./test/path/packages/trpc/src/index.ts",
+  "./test/path/packages/trpc/src/trpc.ts",
+  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/packages/trpc/src/router/index.ts",
+  "./test/path/packages/trpc/src/router/example/hello.ts",
+  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
+]
+`;
+
+exports[`copyTemplate > web 1`] = `
+[
+  "./test/path/apps/web/next.config.mjs",
+  "./test/path/apps/web/package.json",
+  "./test/path/apps/web/sentry.client.config.ts",
+  "./test/path/apps/web/sentry.config.ts",
+  "./test/path/apps/web/sentry.edge.config.ts",
+  "./test/path/apps/web/sentry.server.config.ts",
+  "./test/path/apps/web/tsconfig.json",
+  "./test/path/apps/web/turbo.json",
+  "./test/path/apps/web/src/pages/_app.tsx",
+  "./test/path/apps/web/src/pages/index.tsx",
+]
 `;
