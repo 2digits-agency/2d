@@ -1,6 +1,9 @@
 {
   "name": "@mod/base",
   "version": "0.0.2",
+  "bugs": {
+    "url": "https://github.com/2digits-agency/2d/issues/new"
+  },
   "private": true,
   "scripts": {},
   "dependencies": {

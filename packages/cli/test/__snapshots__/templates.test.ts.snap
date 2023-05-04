@@ -107,6 +107,9 @@ exports[`copyTemplate > base + web > ./test/path/apps/web/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/web\\",
   \\"version\\": \\"0.1.0\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"types\\": \\"tsc --noEmit\\"
@@ -231,6 +234,9 @@ exports[`copyTemplate > base + web > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/base\\",
   \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {},
   \\"dependencies\\": {
@@ -357,6 +363,9 @@ exports[`copyTemplate > base > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/base\\",
   \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {},
   \\"dependencies\\": {
@@ -434,6 +443,9 @@ exports[`copyTemplate > web > ./test/path/apps/web/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/web\\",
   \\"version\\": \\"0.1.0\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"types\\": \\"tsc --noEmit\\"

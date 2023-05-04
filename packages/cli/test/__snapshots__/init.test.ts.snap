@@ -59,6 +59,9 @@ exports[`base > should create a base project > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
   \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"turbo run build\\",
@@ -195,6 +198,9 @@ exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/p
 "{
   \\"name\\": \\"test\\",
   \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"turbo run build\\",
@@ -369,6 +375,9 @@ exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/p
 "{
   \\"name\\": \\"@mod/swagger-sdk\\",
   \\"version\\": \\"0.0.1\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"sideEffects\\": false,
   \\"exports\\": {
@@ -570,6 +579,9 @@ exports[`base > web > should create a web app > ./test/path/apps/web/package.jso
 "{
   \\"name\\": \\"@mod/web\\",
   \\"version\\": \\"0.1.0\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"next build\\",
@@ -698,6 +710,9 @@ exports[`base > web > should create a web app > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
   \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"turbo run build\\",
@@ -861,6 +876,9 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/apps
 "{
   \\"name\\": \\"@mod/web\\",
   \\"version\\": \\"0.1.0\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"next build\\",
@@ -1015,6 +1033,9 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/pack
 "{
   \\"name\\": \\"test\\",
   \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"turbo run build\\",
@@ -1068,6 +1089,9 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/pack
 "{
   \\"name\\": \\"@mod/stitches\\",
   \\"version\\": \\"0.0.1\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"sideEffects\\": false,
   \\"exports\\": {
@@ -1475,6 +1499,9 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
 "{
   \\"name\\": \\"@mod/web\\",
   \\"version\\": \\"0.1.0\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"next build\\",
@@ -1516,6 +1543,9 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
 "{
   \\"name\\": \\"@mod/web\\",
   \\"version\\": \\"0.1.0\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"types\\": \\"tsc --noEmit\\"
@@ -1728,6 +1758,9 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
 "{
   \\"name\\": \\"test\\",
   \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"turbo run build\\",
@@ -1781,6 +1814,9 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
 "{
   \\"name\\": \\"@mod/stitches\\",
   \\"version\\": \\"0.0.1\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"sideEffects\\": false,
   \\"exports\\": {
@@ -2078,6 +2114,9 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
 "{
   \\"name\\": \\"@mod/trpc\\",
   \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"sideEffects\\": false,
   \\"exports\\": {
@@ -2330,6 +2369,9 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/pac
 "{
   \\"name\\": \\"@mod/web\\",
   \\"version\\": \\"0.1.0\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"next build\\",
@@ -2517,6 +2559,9 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/package.json
 "{
   \\"name\\": \\"test\\",
   \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"scripts\\": {
     \\"build\\": \\"turbo run build\\",
@@ -2570,6 +2615,9 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/packages/trp
 "{
   \\"name\\": \\"@mod/trpc\\",
   \\"version\\": \\"0.0.2\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
   \\"private\\": true,
   \\"sideEffects\\": false,
   \\"exports\\": {

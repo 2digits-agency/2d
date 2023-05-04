@@ -1,8 +1,8 @@
 --- base/package.json	2023-04-28 11:51:44
 +++ package.base.json	2023-04-28 14:24:07
 @@ -2,7 +2,17 @@
-   "name": "@mod/base",
-   "version": "0.0.2",
+     "url": "https://github.com/2digits-agency/2d/issues/new"
+   },
    "private": true,
 -  "scripts": {},
 +  "scripts": {

@@ -1,6 +1,9 @@
 {
   "name": "@mod/web-trpc",
   "version": "0.1.0",
+  "bugs": {
+    "url": "https://github.com/2digits-agency/2d/issues/new"
+  },
   "private": true,
   "scripts": {
     "types": "tsc --noEmit"
