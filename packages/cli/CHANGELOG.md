@@ -1,5 +1,11 @@
 # @2digits/cli
 
+## 0.4.1
+
+### Patch Changes
+
+- 2b79a12: Fixed package contents
+
 ## 0.4.0
 
 ### Minor Changes
