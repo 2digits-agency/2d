@@ -1,3 +1,4 @@
 {
-  "extends": "@2digits/tsconfig/tsconfig.json"
+  "extends": "@2digits/tsconfig/tsconfig.json",
+  "include": ["./reset.d.ts"]
 }

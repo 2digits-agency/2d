@@ -143,6 +143,9 @@ importers:
       '@manypkg/cli':
         specifier: ^0.20.0
         version: 0.20.0
+      '@total-typescript/ts-reset':
+        specifier: ^0.4.2
+        version: 0.4.2
       '@types/node':
         specifier: ^18.16.3
         version: 18.16.3
