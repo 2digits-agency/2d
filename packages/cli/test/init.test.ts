@@ -10,7 +10,7 @@ const mockFileSystem = await getTemplateFiles();
 beforeEach(() => {
   mock(mockFileSystem);
 
-  consola.wrapAll();
+  consola.wrapStd();
   consola.pauseLogs();
 });
 
