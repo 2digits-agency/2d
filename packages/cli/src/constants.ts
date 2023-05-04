@@ -6,6 +6,7 @@ import stitches from '../templates/stitches/packages/stitches/package.json' asse
 import swaggerSdk from '../templates/swagger-sdk/packages/swagger-sdk/package.json' assert { type: 'json' };
 import trpc from '../templates/trpc/packages/trpc/package.json' assert { type: 'json' };
 import web from '../templates/web/apps/web/package.json' assert { type: 'json' };
+import storybook from '../templates/storybook/apps/storybook/package.json' assert { type: 'json' };
 
 // With the move to TSUP as a build tool, this keeps path routes in other files (installers, loaders, etc) in check more easily.
 // Path is in relation to a single index.js file inside ./dist
@@ -23,6 +24,7 @@ export const templates = {
   trpc,
   stitches,
   ['swagger-sdk']: swaggerSdk,
+  storybook,
 } as const;
 
 export type Template = keyof typeof templates;
