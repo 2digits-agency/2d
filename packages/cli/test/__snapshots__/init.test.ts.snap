@@ -58,7 +58,7 @@ public
 exports[`base > should create a base project > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.2\\",
+  \\"version\\": \\"0.0.3\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -80,7 +80,7 @@ exports[`base > should create a base project > ./test/path/package.json 1`] = `
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
-    \\"@types/node\\": \\"^18.16.3\\",
+    \\"@types/node\\": \\"^20.0.0\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
     \\"prettier\\": \\"^2.8.8\\",
@@ -252,7 +252,7 @@ export default preview;
 exports[`base > storybook > should create a storybook app > ./test/path/apps/storybook/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/storybook\\",
-  \\"version\\": \\"0.0.0\\",
+  \\"version\\": \\"0.0.1\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -266,7 +266,7 @@ exports[`base > storybook > should create a storybook app > ./test/path/apps/sto
   },
   \\"dependencies\\": {
     \\"@mod/stitches\\": \\"workspace:*\\",
-    \\"next\\": \\"^13.3.4\\",
+    \\"next\\": \\"^13.4.0\\",
     \\"react\\": \\"^18.2.0\\",
     \\"react-dom\\": \\"^18.2.0\\"
   },
@@ -276,7 +276,7 @@ exports[`base > storybook > should create a storybook app > ./test/path/apps/sto
     \\"@storybook/blocks\\": \\"^7.0.8\\",
     \\"@storybook/nextjs\\": \\"^7.0.8\\",
     \\"@storybook/react\\": \\"^7.0.8\\",
-    \\"@types/node\\": \\"^18.16.3\\",
+    \\"@types/node\\": \\"^20.0.0\\",
     \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"8.39.0\\",
@@ -343,7 +343,7 @@ exports[`base > storybook > should create a storybook app > ./test/path/apps/sto
 exports[`base > storybook > should create a storybook app > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.2\\",
+  \\"version\\": \\"0.0.3\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -365,7 +365,7 @@ exports[`base > storybook > should create a storybook app > ./test/path/package.
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
-    \\"@types/node\\": \\"^18.16.3\\",
+    \\"@types/node\\": \\"^20.0.0\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
     \\"prettier\\": \\"^2.8.8\\",
@@ -489,7 +489,7 @@ public
 exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.2\\",
+  \\"version\\": \\"0.0.3\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -511,7 +511,7 @@ exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/p
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
-    \\"@types/node\\": \\"^18.16.3\\",
+    \\"@types/node\\": \\"^20.0.0\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
     \\"prettier\\": \\"^2.8.8\\",
@@ -667,7 +667,7 @@ export default config;
 exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/packages/swagger-sdk/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/swagger-sdk\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.0.2\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -877,7 +877,7 @@ export default withSentryConfig(
 exports[`base > web > should create a web app > ./test/path/apps/web/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.1.0\\",
+  \\"version\\": \\"0.1.1\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -891,16 +891,16 @@ exports[`base > web > should create a web app > ./test/path/apps/web/package.jso
   },
   \\"dependencies\\": {
     \\"@sentry/cli\\": \\"^2.17.5\\",
-    \\"@sentry/nextjs\\": \\"^7.50.0\\",
-    \\"next\\": \\"^13.3.4\\",
+    \\"@sentry/nextjs\\": \\"^7.51.0\\",
+    \\"next\\": \\"^13.4.0\\",
     \\"react\\": \\"^18.2.0\\",
     \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@babel/core\\": \\"^7.21.8\\",
-    \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
-    \\"@types/node\\": \\"^18.16.3\\",
+    \\"@next/bundle-analyzer\\": \\"^13.4.0\\",
+    \\"@types/node\\": \\"^20.0.0\\",
     \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
@@ -1008,7 +1008,7 @@ exports[`base > web > should create a web app > ./test/path/apps/web/turbo.json 
 exports[`base > web > should create a web app > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.2\\",
+  \\"version\\": \\"0.0.3\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -1030,7 +1030,7 @@ exports[`base > web > should create a web app > ./test/path/package.json 1`] = `
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
-    \\"@types/node\\": \\"^18.16.3\\",
+    \\"@types/node\\": \\"^20.0.0\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
     \\"prettier\\": \\"^2.8.8\\",
@@ -1181,7 +1181,7 @@ export default withSentryConfig(
 exports[`base > web > stitches > should add a stitches module > ./test/path/apps/web/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.1.0\\",
+  \\"version\\": \\"0.1.1\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -1194,18 +1194,17 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/apps
     \\"types\\": \\"tsc --noEmit\\"
   },
   \\"dependencies\\": {
-    \\"@mod/stitches\\": \\"workspace:*\\",
     \\"@sentry/cli\\": \\"^2.17.5\\",
-    \\"@sentry/nextjs\\": \\"^7.50.0\\",
-    \\"next\\": \\"^13.3.4\\",
+    \\"@sentry/nextjs\\": \\"^7.51.0\\",
+    \\"next\\": \\"^13.4.0\\",
     \\"react\\": \\"^18.2.0\\",
     \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@babel/core\\": \\"^7.21.8\\",
-    \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
-    \\"@types/node\\": \\"^18.16.3\\",
+    \\"@next/bundle-analyzer\\": \\"^13.4.0\\",
+    \\"@types/node\\": \\"^20.0.0\\",
     \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
@@ -1338,7 +1337,7 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/apps
 exports[`base > web > stitches > should add a stitches module > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.2\\",
+  \\"version\\": \\"0.0.3\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -1360,7 +1359,7 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/pack
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
-    \\"@types/node\\": \\"^18.16.3\\",
+    \\"@types/node\\": \\"^20.0.0\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
     \\"prettier\\": \\"^2.8.8\\",
@@ -1395,7 +1394,7 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/pack
 exports[`base > web > stitches > should add a stitches module > ./test/path/packages/stitches/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/stitches\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.0.2\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -1811,7 +1810,7 @@ export default withSentryConfig(
 exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/apps/web/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.1.0\\",
+  \\"version\\": \\"0.1.1\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -1824,58 +1823,17 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
     \\"types\\": \\"tsc --noEmit\\"
   },
   \\"dependencies\\": {
-    \\"@mod/trpc\\": \\"workspace:*\\",
     \\"@sentry/cli\\": \\"^2.17.5\\",
-    \\"@sentry/nextjs\\": \\"^7.50.0\\",
-    \\"@tanstack/react-query\\": \\"^4.29.5\\",
-    \\"@trpc/client\\": \\"^10.25.0\\",
-    \\"@trpc/next\\": \\"^10.25.0\\",
-    \\"@trpc/react-query\\": \\"^10.25.0\\",
-    \\"@trpc/server\\": \\"^10.25.0\\",
-    \\"next\\": \\"^13.3.4\\",
-    \\"react\\": \\"^18.2.0\\",
-    \\"react-dom\\": \\"^18.2.0\\",
-    \\"superjson\\": \\"^1.12.3\\",
-    \\"zod\\": \\"^3.21.4\\"
-  },
-  \\"devDependencies\\": {
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
-    \\"@babel/core\\": \\"^7.21.8\\",
-    \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
-    \\"@types/node\\": \\"^18.16.3\\",
-    \\"@types/react\\": \\"^18.2.5\\",
-    \\"@types/react-dom\\": \\"^18.2.3\\",
-    \\"eslint\\": \\"^8.39.0\\",
-    \\"typescript\\": \\"^5.0.4\\"
-  }
-}
-"
-`;
-
-exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/apps/web/package.stitches.json 1`] = `
-"{
-  \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.1.0\\",
-  \\"bugs\\": {
-    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
-  },
-  \\"private\\": true,
-  \\"scripts\\": {
-    \\"types\\": \\"tsc --noEmit\\"
-  },
-  \\"dependencies\\": {
-    \\"@mod/stitches\\": \\"workspace:*\\",
-    \\"@sentry/cli\\": \\"^2.17.5\\",
-    \\"@sentry/nextjs\\": \\"^7.50.0\\",
-    \\"next\\": \\"^13.3.4\\",
+    \\"@sentry/nextjs\\": \\"^7.51.0\\",
+    \\"next\\": \\"^13.4.0\\",
     \\"react\\": \\"^18.2.0\\",
     \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@babel/core\\": \\"^7.21.8\\",
-    \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
-    \\"@types/node\\": \\"^18.16.3\\",
+    \\"@next/bundle-analyzer\\": \\"^13.4.0\\",
+    \\"@types/node\\": \\"^20.0.0\\",
     \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
@@ -2070,7 +2028,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
 exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.2\\",
+  \\"version\\": \\"0.0.3\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -2092,7 +2050,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
-    \\"@types/node\\": \\"^18.16.3\\",
+    \\"@types/node\\": \\"^20.0.0\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
     \\"prettier\\": \\"^2.8.8\\",
@@ -2127,7 +2085,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
 exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/packages/stitches/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/stitches\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.0.2\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -2427,7 +2385,7 @@ export default defineConfig({
 exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/packages/trpc/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/trpc\\",
-  \\"version\\": \\"0.0.2\\",
+  \\"version\\": \\"0.0.3\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -2459,7 +2417,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
     \\"@trpc/next\\": \\"^10.25.0\\",
     \\"@trpc/react-query\\": \\"^10.25.0\\",
     \\"@trpc/server\\": \\"^10.25.0\\",
-    \\"next\\": \\"^13.3.4\\",
+    \\"next\\": \\"^13.4.0\\",
     \\"superjson\\": \\"^1.12.3\\",
     \\"zod\\": \\"^3.21.4\\"
   },
@@ -2688,7 +2646,7 @@ export default withSentryConfig(
 exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.1.0\\",
+  \\"version\\": \\"0.1.1\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -2701,25 +2659,17 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/pac
     \\"types\\": \\"tsc --noEmit\\"
   },
   \\"dependencies\\": {
-    \\"@mod/trpc\\": \\"workspace:*\\",
     \\"@sentry/cli\\": \\"^2.17.5\\",
-    \\"@sentry/nextjs\\": \\"^7.50.0\\",
-    \\"@tanstack/react-query\\": \\"^4.29.5\\",
-    \\"@trpc/client\\": \\"^10.25.0\\",
-    \\"@trpc/next\\": \\"^10.25.0\\",
-    \\"@trpc/react-query\\": \\"^10.25.0\\",
-    \\"@trpc/server\\": \\"^10.25.0\\",
-    \\"next\\": \\"^13.3.4\\",
+    \\"@sentry/nextjs\\": \\"^7.51.0\\",
+    \\"next\\": \\"^13.4.0\\",
     \\"react\\": \\"^18.2.0\\",
-    \\"react-dom\\": \\"^18.2.0\\",
-    \\"superjson\\": \\"^1.12.3\\",
-    \\"zod\\": \\"^3.21.4\\"
+    \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@babel/core\\": \\"^7.21.8\\",
-    \\"@next/bundle-analyzer\\": \\"^13.3.4\\",
-    \\"@types/node\\": \\"^18.16.3\\",
+    \\"@next/bundle-analyzer\\": \\"^13.4.0\\",
+    \\"@types/node\\": \\"^20.0.0\\",
     \\"@types/react\\": \\"^18.2.5\\",
     \\"@types/react-dom\\": \\"^18.2.3\\",
     \\"eslint\\": \\"^8.39.0\\",
@@ -2878,7 +2828,7 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/tur
 exports[`base > web > trpc > should add a trpc module > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.2\\",
+  \\"version\\": \\"0.0.3\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -2900,7 +2850,7 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/package.json
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
-    \\"@types/node\\": \\"^18.16.3\\",
+    \\"@types/node\\": \\"^20.0.0\\",
     \\"eslint\\": \\"^8.39.0\\",
     \\"plop\\": \\"^3.1.2\\",
     \\"prettier\\": \\"^2.8.8\\",
@@ -2935,7 +2885,7 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/package.json
 exports[`base > web > trpc > should add a trpc module > ./test/path/packages/trpc/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/trpc\\",
-  \\"version\\": \\"0.0.2\\",
+  \\"version\\": \\"0.0.3\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -2967,7 +2917,7 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/packages/trp
     \\"@trpc/next\\": \\"^10.25.0\\",
     \\"@trpc/react-query\\": \\"^10.25.0\\",
     \\"@trpc/server\\": \\"^10.25.0\\",
-    \\"next\\": \\"^13.3.4\\",
+    \\"next\\": \\"^13.4.0\\",
     \\"superjson\\": \\"^1.12.3\\",
     \\"zod\\": \\"^3.21.4\\"
   },
