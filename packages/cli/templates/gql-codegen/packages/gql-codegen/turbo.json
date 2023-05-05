@@ -1,0 +1,9 @@
+{
+  "extends": ["//"],
+  "pipeline": {
+    "build": {
+      "outputs": ["./src/"],
+      "inputs": ["../../codegen.ts", "../../apps/web/src/**/*.ts", "../../apps/web/src/**/*.tsx"]
+    }
+  }
+}

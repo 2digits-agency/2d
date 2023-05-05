@@ -1,0 +1,45 @@
+{
+  "name": "@mod/gql-codegen",
+  "version": "0.0.2",
+  "bugs": {
+    "url": "https://github.com/2digits-agency/2d/issues/new"
+  },
+  "private": true,
+  "sideEffects": false,
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./src/index.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "types": "tsc --noEmit",
+    "build": "graphql-codegen-esm --config ../../codegen.ts"
+  },
+  "dependencies": {
+    "@graphql-typed-document-node/core": "3.2.0",
+    "graphql": "16.5.0"
+  },
+  "devDependencies": {
+    "@2digits/tsconfig": "^0.1.1",
+    "eslint": "^8.39.0",
+    "@graphql-codegen/client-preset-swc-plugin": "0.2.0",
+    "@graphql-codegen/client-preset": "^3.0.1",
+    "@graphql-codegen/cli": "^3.3.1",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
+  },
+  "eslintConfig": {
+    "rules": {
+      "unicorn/no-abusive-eslint-disable": "off"
+    }
+  }
+}
