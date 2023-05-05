@@ -35,10 +35,8 @@ const appName = z
 const appPath = z.string().nonempty().refine(isEmpty, 'Directory has to be empty');
 
 // Some existing files and directories can be safely ignored when checking if a directory is a valid project directory.
-// https://github.com/facebook/create-react-app/blob/d960b9e38c062584ff6cfb1a70e1512509a966e7/packages/create-react-app/createReactApp.js#L907-L934
 const VALID_PROJECT_DIRECTORY_SAFE_LIST = new Set([
   '.DS_Store',
-  '.git',
   '.gitkeep',
   '.gitattributes',
   '.gitignore',
