@@ -1194,6 +1194,7 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/apps
     \\"types\\": \\"tsc --noEmit\\"
   },
   \\"dependencies\\": {
+    \\"@mod/stitches\\": \\"workspace:*\\",
     \\"@sentry/cli\\": \\"^2.17.5\\",
     \\"@sentry/nextjs\\": \\"^7.51.0\\",
     \\"next\\": \\"^13.4.1\\",
@@ -1823,6 +1824,47 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
     \\"types\\": \\"tsc --noEmit\\"
   },
   \\"dependencies\\": {
+    \\"@mod/trpc\\": \\"workspace:*\\",
+    \\"@sentry/cli\\": \\"^2.17.5\\",
+    \\"@sentry/nextjs\\": \\"^7.51.0\\",
+    \\"@tanstack/react-query\\": \\"^4.29.5\\",
+    \\"@trpc/client\\": \\"^10.25.0\\",
+    \\"@trpc/next\\": \\"^10.25.0\\",
+    \\"@trpc/react-query\\": \\"^10.25.0\\",
+    \\"@trpc/server\\": \\"^10.25.0\\",
+    \\"next\\": \\"^13.4.1\\",
+    \\"react\\": \\"^18.2.0\\",
+    \\"react-dom\\": \\"^18.2.0\\",
+    \\"superjson\\": \\"^1.12.3\\",
+    \\"zod\\": \\"^3.21.4\\"
+  },
+  \\"devDependencies\\": {
+    \\"@2digits/tsconfig\\": \\"^0.1.2\\",
+    \\"@babel/core\\": \\"^7.21.8\\",
+    \\"@next/bundle-analyzer\\": \\"^13.4.1\\",
+    \\"@types/node\\": \\"^20.1.0\\",
+    \\"@types/react\\": \\"^18.2.6\\",
+    \\"@types/react-dom\\": \\"^18.2.4\\",
+    \\"eslint\\": \\"^8.40.0\\",
+    \\"typescript\\": \\"^5.0.4\\"
+  }
+}
+"
+`;
+
+exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/apps/web/package.stitches.json 1`] = `
+"{
+  \\"name\\": \\"@mod/web\\",
+  \\"version\\": \\"0.1.1\\",
+  \\"bugs\\": {
+    \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
+  },
+  \\"private\\": true,
+  \\"scripts\\": {
+    \\"types\\": \\"tsc --noEmit\\"
+  },
+  \\"dependencies\\": {
+    \\"@mod/stitches\\": \\"workspace:*\\",
     \\"@sentry/cli\\": \\"^2.17.5\\",
     \\"@sentry/nextjs\\": \\"^7.51.0\\",
     \\"next\\": \\"^13.4.1\\",
@@ -2659,11 +2701,19 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/pac
     \\"types\\": \\"tsc --noEmit\\"
   },
   \\"dependencies\\": {
+    \\"@mod/trpc\\": \\"workspace:*\\",
     \\"@sentry/cli\\": \\"^2.17.5\\",
     \\"@sentry/nextjs\\": \\"^7.51.0\\",
+    \\"@tanstack/react-query\\": \\"^4.29.5\\",
+    \\"@trpc/client\\": \\"^10.25.0\\",
+    \\"@trpc/next\\": \\"^10.25.0\\",
+    \\"@trpc/react-query\\": \\"^10.25.0\\",
+    \\"@trpc/server\\": \\"^10.25.0\\",
     \\"next\\": \\"^13.4.1\\",
     \\"react\\": \\"^18.2.0\\",
-    \\"react-dom\\": \\"^18.2.0\\"
+    \\"react-dom\\": \\"^18.2.0\\",
+    \\"superjson\\": \\"^1.12.3\\",
+    \\"zod\\": \\"^3.21.4\\"
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.2\\",
