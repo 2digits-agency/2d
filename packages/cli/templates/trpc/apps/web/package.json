@@ -27,10 +27,10 @@
     "@2digits/tsconfig": "^0.1.1",
     "@babel/core": "^7.21.8",
     "@next/bundle-analyzer": "^13.4.1",
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.2.5",
-    "@types/react-dom": "^18.2.3",
-    "eslint": "^8.39.0",
+    "@types/node": "^20.1.0",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "eslint": "^8.40.0",
     "typescript": "^5.0.4"
   }
 }
