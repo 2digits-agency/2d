@@ -14,7 +14,14 @@ import { applyPatch, getTemplatePatches } from '../utils/patch';
 import { renamePlaceholders } from '../utils/rename';
 import { copyTemplate } from '../utils/templates';
 
-export const moduleEnum = z.enum(['web', 'storybook', 'trpc', 'stitches', 'swagger-sdk']);
+export const moduleEnum = z.enum([
+  'web',
+  'storybook',
+  'trpc',
+  'stitches',
+  'swagger-sdk',
+  'gql-codegen',
+]);
 
 const appModule = z.array(moduleEnum);
 
