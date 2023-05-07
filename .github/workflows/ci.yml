@@ -75,9 +75,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: 🛸 Setup PNPM
-        uses: pnpm/action-setup@v2
-
       - name: 🏭 Setup Node
         uses: actions/setup-node@v3
         with:
@@ -91,6 +88,9 @@ jobs:
         with:
           path: ./*
           key: ${{ github.sha }}-${{ github.run_number }}
+
+      - name: 🛸 Setup PNPM
+        run: npm install --global pnpm
 
       - name: 🧪 Run tests and benchmarks
         run: pnpm turbo run test bench
@@ -100,9 +100,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: 🛸 Setup PNPM
-        uses: pnpm/action-setup@v2
-
       - name: 🏭 Setup Node
         uses: actions/setup-node@v3
         with:
@@ -116,6 +113,9 @@ jobs:
         with:
           path: ./*
           key: ${{ github.sha }}-${{ github.run_number }}
+
+      - name: 🛸 Setup PNPM
+        run: npm install --global pnpm
 
       - name: 🩻 Check types
         run: pnpm turbo run types
@@ -125,9 +125,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: 🛸 Setup PNPM
-        uses: pnpm/action-setup@v2
-
       - name: 🏭 Setup Node
         uses: actions/setup-node@v3
         with:
@@ -141,6 +138,9 @@ jobs:
         with:
           path: ./*
           key: ${{ github.sha }}-${{ github.run_number }}
+
+      - name: 🛸 Setup PNPM
+        run: npm install --global pnpm
 
       - name: 🔬 Lint files
         run: pnpm turbo run lint
@@ -168,4 +168,4 @@ jobs:
         run: pnpm install --filter "@2digits/2d"
 
       - name: 🦋 Check changesets
-        run: pnpm changeset status --since=main
+        run: pnpm changeset status
