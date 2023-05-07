@@ -44,7 +44,7 @@ jobs:
         with:
           publish: |
             pnpm install --filter "@2digits/*"
-            turbo run build --force
+            pnpm turbo run build --force
             pnpm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
