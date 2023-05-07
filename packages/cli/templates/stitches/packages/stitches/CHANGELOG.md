@@ -1,5 +1,11 @@
 # @mod/stitches
 
+## 0.0.3
+
+### Patch Changes
+
+- abdaaea: Updated linting configs to newest versions
+
 ## 0.0.2
 
 ### Patch Changes

@@ -1,5 +1,18 @@
 # @2digits/cli
 
+## 0.6.0
+
+### Minor Changes
+
+- 7d794f8: Added gql-codegen module
+
+### Patch Changes
+
+- 9f8bf0b: Fixed some small bugs
+- abdaaea: Updated linting configs to newest versions
+- Updated dependencies [abdaaea]
+  - @2digits/log@0.0.4
+
 ## 0.5.0
 
 ### Minor Changes

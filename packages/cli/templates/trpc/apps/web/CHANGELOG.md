@@ -1,5 +1,14 @@
 # @mod/web-trpc
 
+## 0.1.2
+
+### Patch Changes
+
+- 0e3dc3c: Fixed problems related to patching
+- abdaaea: Updated linting configs to newest versions
+- Updated dependencies [abdaaea]
+  - @mod/trpc@0.0.4
+
 ## 0.1.1
 
 ### Patch Changes

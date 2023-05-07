@@ -1,5 +1,14 @@
 # @mod/web-stitches
 
+## 0.0.3
+
+### Patch Changes
+
+- 0e3dc3c: Fixed problems related to patching
+- abdaaea: Updated linting configs to newest versions
+- Updated dependencies [abdaaea]
+  - @mod/stitches@0.0.3
+
 ## 0.0.2
 
 ### Patch Changes
