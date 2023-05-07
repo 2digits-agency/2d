@@ -32,17 +32,20 @@ jobs:
           node-version: 'lts/*'
           cache: 'pnpm'
 
-      - name: 📦 Install dependencies
-        run: pnpm install
+      - name: 🔧 Configure pnpm for quicker installation
+        run: pnpm config --location=project set dedupe-peer-dependents=false
 
-      - name: 🏗️ Build packages
-        run: pnpm build --force
+      - name: 📦 Install dependencies
+        run: pnpm install --filter "@2digits/2d"
 
       - name: 🪄 Create Release Pull Request or Publish
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm run release
+          publish: |
+            pnpm install --filter "@2digits/*"
+            pnpm turbo run build --force
+            pnpm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
