@@ -58,7 +58,7 @@ public
 exports[`base > should create a base project > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.3\\",
+  \\"version\\": \\"0.0.4\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -252,7 +252,7 @@ export default preview;
 exports[`base > storybook > should create a storybook app > ./test/path/apps/storybook/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/storybook\\",
-  \\"version\\": \\"0.0.1\\",
+  \\"version\\": \\"0.0.2\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -343,7 +343,7 @@ exports[`base > storybook > should create a storybook app > ./test/path/apps/sto
 exports[`base > storybook > should create a storybook app > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.3\\",
+  \\"version\\": \\"0.0.4\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -489,7 +489,7 @@ public
 exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.3\\",
+  \\"version\\": \\"0.0.4\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -667,7 +667,7 @@ export default config;
 exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/packages/swagger-sdk/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/swagger-sdk\\",
-  \\"version\\": \\"0.0.2\\",
+  \\"version\\": \\"0.0.3\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -877,7 +877,7 @@ export default withSentryConfig(
 exports[`base > web > should create a web app > ./test/path/apps/web/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.1.1\\",
+  \\"version\\": \\"0.1.2\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -1008,7 +1008,7 @@ exports[`base > web > should create a web app > ./test/path/apps/web/turbo.json 
 exports[`base > web > should create a web app > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.3\\",
+  \\"version\\": \\"0.0.4\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -1181,7 +1181,7 @@ export default withSentryConfig(
 exports[`base > web > stitches > should add a stitches module > ./test/path/apps/web/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.1.1\\",
+  \\"version\\": \\"0.1.2\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -1338,7 +1338,7 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/apps
 exports[`base > web > stitches > should add a stitches module > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.3\\",
+  \\"version\\": \\"0.0.4\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -1395,7 +1395,7 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/pack
 exports[`base > web > stitches > should add a stitches module > ./test/path/packages/stitches/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/stitches\\",
-  \\"version\\": \\"0.0.2\\",
+  \\"version\\": \\"0.0.3\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -1811,7 +1811,7 @@ export default withSentryConfig(
 exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/apps/web/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.1.1\\",
+  \\"version\\": \\"0.1.2\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -1855,7 +1855,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
 exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/apps/web/package.stitches.json 1`] = `
 "{
   \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.1.1\\",
+  \\"version\\": \\"0.1.2\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -2070,7 +2070,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
 exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.3\\",
+  \\"version\\": \\"0.0.4\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -2127,7 +2127,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
 exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/packages/stitches/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/stitches\\",
-  \\"version\\": \\"0.0.2\\",
+  \\"version\\": \\"0.0.3\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -2427,7 +2427,7 @@ export default defineConfig({
 exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/packages/trpc/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/trpc\\",
-  \\"version\\": \\"0.0.3\\",
+  \\"version\\": \\"0.0.4\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -2688,7 +2688,7 @@ export default withSentryConfig(
 exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/web\\",
-  \\"version\\": \\"0.1.1\\",
+  \\"version\\": \\"0.1.2\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -2878,7 +2878,7 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/tur
 exports[`base > web > trpc > should add a trpc module > ./test/path/package.json 1`] = `
 "{
   \\"name\\": \\"test\\",
-  \\"version\\": \\"0.0.3\\",
+  \\"version\\": \\"0.0.4\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
@@ -2935,7 +2935,7 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/package.json
 exports[`base > web > trpc > should add a trpc module > ./test/path/packages/trpc/package.json 1`] = `
 "{
   \\"name\\": \\"@mod/trpc\\",
-  \\"version\\": \\"0.0.3\\",
+  \\"version\\": \\"0.0.4\\",
   \\"bugs\\": {
     \\"url\\": \\"https://github.com/2digits-agency/2d/issues/new\\"
   },
