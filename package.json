@@ -14,7 +14,7 @@
     "lint:pkg:fix": "manypkg fix",
     "types": "turbo run types",
     "publish": "changeset publish",
-    "release": "turbo run build && changeset publish",
+    "release": "changeset publish",
     "test": "vitest",
     "check": "turbo run format test lint types --color"
   },
