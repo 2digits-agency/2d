@@ -1,5 +1,11 @@
 # @mod/web
 
+## 0.1.2
+
+### Patch Changes
+
+- abdaaea: Updated linting configs to newest versions
+
 ## 0.1.1
 
 ### Patch Changes

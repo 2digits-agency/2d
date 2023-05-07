@@ -1,5 +1,11 @@
 # @mod/base
 
+## 0.0.4
+
+### Patch Changes
+
+- abdaaea: Updated linting configs to newest versions
+
 ## 0.0.3
 
 ### Patch Changes
