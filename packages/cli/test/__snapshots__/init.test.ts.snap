@@ -80,8 +80,8 @@ exports[`base > should create a base project > ./test/path/package.json 1`] = `
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
-    \\"@types/node\\": \\"^20.0.0\\",
-    \\"eslint\\": \\"^8.39.0\\",
+    \\"@types/node\\": \\"^20.1.0\\",
+    \\"eslint\\": \\"^8.40.0\\",
     \\"plop\\": \\"^3.1.2\\",
     \\"prettier\\": \\"^2.8.8\\",
     \\"turbo\\": \\"^1.9.3\\",
@@ -266,22 +266,22 @@ exports[`base > storybook > should create a storybook app > ./test/path/apps/sto
   },
   \\"dependencies\\": {
     \\"@mod/stitches\\": \\"workspace:*\\",
-    \\"next\\": \\"^13.4.0\\",
+    \\"next\\": \\"^13.4.1\\",
     \\"react\\": \\"^18.2.0\\",
     \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
-    \\"@storybook/addon-essentials\\": \\"^7.0.8\\",
-    \\"@storybook/blocks\\": \\"^7.0.8\\",
-    \\"@storybook/nextjs\\": \\"^7.0.8\\",
-    \\"@storybook/react\\": \\"^7.0.8\\",
-    \\"@types/node\\": \\"^20.0.0\\",
-    \\"@types/react\\": \\"^18.2.5\\",
-    \\"@types/react-dom\\": \\"^18.2.3\\",
-    \\"eslint\\": \\"8.39.0\\",
+    \\"@storybook/addon-essentials\\": \\"^7.0.9\\",
+    \\"@storybook/blocks\\": \\"^7.0.9\\",
+    \\"@storybook/nextjs\\": \\"^7.0.9\\",
+    \\"@storybook/react\\": \\"^7.0.9\\",
+    \\"@types/node\\": \\"^20.1.0\\",
+    \\"@types/react\\": \\"^18.2.6\\",
+    \\"@types/react-dom\\": \\"^18.2.4\\",
+    \\"eslint\\": \\"8.40.0\\",
     \\"serve\\": \\"^14.2.0\\",
-    \\"storybook\\": \\"^7.0.8\\",
+    \\"storybook\\": \\"^7.0.9\\",
     \\"typescript\\": \\"^5.0.4\\"
   }
 }
@@ -365,8 +365,8 @@ exports[`base > storybook > should create a storybook app > ./test/path/package.
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
-    \\"@types/node\\": \\"^20.0.0\\",
-    \\"eslint\\": \\"^8.39.0\\",
+    \\"@types/node\\": \\"^20.1.0\\",
+    \\"eslint\\": \\"^8.40.0\\",
     \\"plop\\": \\"^3.1.2\\",
     \\"prettier\\": \\"^2.8.8\\",
     \\"turbo\\": \\"^1.9.3\\",
@@ -511,8 +511,8 @@ exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/p
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
-    \\"@types/node\\": \\"^20.0.0\\",
-    \\"eslint\\": \\"^8.39.0\\",
+    \\"@types/node\\": \\"^20.1.0\\",
+    \\"eslint\\": \\"^8.40.0\\",
     \\"plop\\": \\"^3.1.2\\",
     \\"prettier\\": \\"^2.8.8\\",
     \\"turbo\\": \\"^1.9.3\\",
@@ -702,7 +702,7 @@ exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/p
     \\"@orval/core\\": \\"^6.15.0\\",
     \\"@types/prettier\\": \\"^2.7.2\\",
     \\"consola\\": \\"^3.1.0\\",
-    \\"eslint\\": \\"^8.39.0\\",
+    \\"eslint\\": \\"^8.40.0\\",
     \\"knitwork\\": \\"^1.0.0\\",
     \\"msw\\": \\"^1.2.1\\",
     \\"orval\\": \\"^6.15.0\\",
@@ -892,18 +892,18 @@ exports[`base > web > should create a web app > ./test/path/apps/web/package.jso
   \\"dependencies\\": {
     \\"@sentry/cli\\": \\"^2.17.5\\",
     \\"@sentry/nextjs\\": \\"^7.51.0\\",
-    \\"next\\": \\"^13.4.0\\",
+    \\"next\\": \\"^13.4.1\\",
     \\"react\\": \\"^18.2.0\\",
     \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@babel/core\\": \\"^7.21.8\\",
-    \\"@next/bundle-analyzer\\": \\"^13.4.0\\",
-    \\"@types/node\\": \\"^20.0.0\\",
-    \\"@types/react\\": \\"^18.2.5\\",
-    \\"@types/react-dom\\": \\"^18.2.3\\",
-    \\"eslint\\": \\"^8.39.0\\",
+    \\"@next/bundle-analyzer\\": \\"^13.4.1\\",
+    \\"@types/node\\": \\"^20.1.0\\",
+    \\"@types/react\\": \\"^18.2.6\\",
+    \\"@types/react-dom\\": \\"^18.2.4\\",
+    \\"eslint\\": \\"^8.40.0\\",
     \\"typescript\\": \\"^5.0.4\\"
   }
 }
@@ -1030,8 +1030,8 @@ exports[`base > web > should create a web app > ./test/path/package.json 1`] = `
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
-    \\"@types/node\\": \\"^20.0.0\\",
-    \\"eslint\\": \\"^8.39.0\\",
+    \\"@types/node\\": \\"^20.1.0\\",
+    \\"eslint\\": \\"^8.40.0\\",
     \\"plop\\": \\"^3.1.2\\",
     \\"prettier\\": \\"^2.8.8\\",
     \\"turbo\\": \\"^1.9.3\\",
@@ -1196,18 +1196,18 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/apps
   \\"dependencies\\": {
     \\"@sentry/cli\\": \\"^2.17.5\\",
     \\"@sentry/nextjs\\": \\"^7.51.0\\",
-    \\"next\\": \\"^13.4.0\\",
+    \\"next\\": \\"^13.4.1\\",
     \\"react\\": \\"^18.2.0\\",
     \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@babel/core\\": \\"^7.21.8\\",
-    \\"@next/bundle-analyzer\\": \\"^13.4.0\\",
-    \\"@types/node\\": \\"^20.0.0\\",
-    \\"@types/react\\": \\"^18.2.5\\",
-    \\"@types/react-dom\\": \\"^18.2.3\\",
-    \\"eslint\\": \\"^8.39.0\\",
+    \\"@next/bundle-analyzer\\": \\"^13.4.1\\",
+    \\"@types/node\\": \\"^20.1.0\\",
+    \\"@types/react\\": \\"^18.2.6\\",
+    \\"@types/react-dom\\": \\"^18.2.4\\",
+    \\"eslint\\": \\"^8.40.0\\",
     \\"typescript\\": \\"^5.0.4\\"
   }
 }
@@ -1359,8 +1359,8 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/pack
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
-    \\"@types/node\\": \\"^20.0.0\\",
-    \\"eslint\\": \\"^8.39.0\\",
+    \\"@types/node\\": \\"^20.1.0\\",
+    \\"eslint\\": \\"^8.40.0\\",
     \\"plop\\": \\"^3.1.2\\",
     \\"prettier\\": \\"^2.8.8\\",
     \\"turbo\\": \\"^1.9.3\\",
@@ -1421,15 +1421,15 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/pack
   ],
   \\"dependencies\\": {
     \\"@stitches/react\\": \\"^1.3.1-1\\",
-    \\"@unocss/reset\\": \\"^0.51.8\\",
+    \\"@unocss/reset\\": \\"^0.51.12\\",
     \\"react\\": \\"^18.2.0\\",
     \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
-    \\"@types/react\\": \\"^18.2.5\\",
-    \\"@types/react-dom\\": \\"^18.2.3\\",
-    \\"eslint\\": \\"^8.39.0\\",
+    \\"@types/react\\": \\"^18.2.6\\",
+    \\"@types/react-dom\\": \\"^18.2.4\\",
+    \\"eslint\\": \\"^8.40.0\\",
     \\"tsup\\": \\"^6.7.0\\",
     \\"typescript\\": \\"^5.0.4\\"
   }
@@ -1825,18 +1825,18 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
   \\"dependencies\\": {
     \\"@sentry/cli\\": \\"^2.17.5\\",
     \\"@sentry/nextjs\\": \\"^7.51.0\\",
-    \\"next\\": \\"^13.4.0\\",
+    \\"next\\": \\"^13.4.1\\",
     \\"react\\": \\"^18.2.0\\",
     \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@babel/core\\": \\"^7.21.8\\",
-    \\"@next/bundle-analyzer\\": \\"^13.4.0\\",
-    \\"@types/node\\": \\"^20.0.0\\",
-    \\"@types/react\\": \\"^18.2.5\\",
-    \\"@types/react-dom\\": \\"^18.2.3\\",
-    \\"eslint\\": \\"^8.39.0\\",
+    \\"@next/bundle-analyzer\\": \\"^13.4.1\\",
+    \\"@types/node\\": \\"^20.1.0\\",
+    \\"@types/react\\": \\"^18.2.6\\",
+    \\"@types/react-dom\\": \\"^18.2.4\\",
+    \\"eslint\\": \\"^8.40.0\\",
     \\"typescript\\": \\"^5.0.4\\"
   }
 }
@@ -2050,8 +2050,8 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
-    \\"@types/node\\": \\"^20.0.0\\",
-    \\"eslint\\": \\"^8.39.0\\",
+    \\"@types/node\\": \\"^20.1.0\\",
+    \\"eslint\\": \\"^8.40.0\\",
     \\"plop\\": \\"^3.1.2\\",
     \\"prettier\\": \\"^2.8.8\\",
     \\"turbo\\": \\"^1.9.3\\",
@@ -2112,15 +2112,15 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
   ],
   \\"dependencies\\": {
     \\"@stitches/react\\": \\"^1.3.1-1\\",
-    \\"@unocss/reset\\": \\"^0.51.8\\",
+    \\"@unocss/reset\\": \\"^0.51.12\\",
     \\"react\\": \\"^18.2.0\\",
     \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
-    \\"@types/react\\": \\"^18.2.5\\",
-    \\"@types/react-dom\\": \\"^18.2.3\\",
-    \\"eslint\\": \\"^8.39.0\\",
+    \\"@types/react\\": \\"^18.2.6\\",
+    \\"@types/react-dom\\": \\"^18.2.4\\",
+    \\"eslint\\": \\"^8.40.0\\",
     \\"tsup\\": \\"^6.7.0\\",
     \\"typescript\\": \\"^5.0.4\\"
   }
@@ -2417,13 +2417,13 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
     \\"@trpc/next\\": \\"^10.25.0\\",
     \\"@trpc/react-query\\": \\"^10.25.0\\",
     \\"@trpc/server\\": \\"^10.25.0\\",
-    \\"next\\": \\"^13.4.0\\",
+    \\"next\\": \\"^13.4.1\\",
     \\"superjson\\": \\"^1.12.3\\",
     \\"zod\\": \\"^3.21.4\\"
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
-    \\"eslint\\": \\"^8.39.0\\",
+    \\"eslint\\": \\"^8.40.0\\",
     \\"tsup\\": \\"^6.7.0\\",
     \\"typescript\\": \\"^5.0.4\\"
   }
@@ -2661,18 +2661,18 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/pac
   \\"dependencies\\": {
     \\"@sentry/cli\\": \\"^2.17.5\\",
     \\"@sentry/nextjs\\": \\"^7.51.0\\",
-    \\"next\\": \\"^13.4.0\\",
+    \\"next\\": \\"^13.4.1\\",
     \\"react\\": \\"^18.2.0\\",
     \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@babel/core\\": \\"^7.21.8\\",
-    \\"@next/bundle-analyzer\\": \\"^13.4.0\\",
-    \\"@types/node\\": \\"^20.0.0\\",
-    \\"@types/react\\": \\"^18.2.5\\",
-    \\"@types/react-dom\\": \\"^18.2.3\\",
-    \\"eslint\\": \\"^8.39.0\\",
+    \\"@next/bundle-analyzer\\": \\"^13.4.1\\",
+    \\"@types/node\\": \\"^20.1.0\\",
+    \\"@types/react\\": \\"^18.2.6\\",
+    \\"@types/react-dom\\": \\"^18.2.4\\",
+    \\"eslint\\": \\"^8.40.0\\",
     \\"typescript\\": \\"^5.0.4\\"
   }
 }
@@ -2850,8 +2850,8 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/package.json
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
-    \\"@types/node\\": \\"^20.0.0\\",
-    \\"eslint\\": \\"^8.39.0\\",
+    \\"@types/node\\": \\"^20.1.0\\",
+    \\"eslint\\": \\"^8.40.0\\",
     \\"plop\\": \\"^3.1.2\\",
     \\"prettier\\": \\"^2.8.8\\",
     \\"turbo\\": \\"^1.9.3\\",
@@ -2917,13 +2917,13 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/packages/trp
     \\"@trpc/next\\": \\"^10.25.0\\",
     \\"@trpc/react-query\\": \\"^10.25.0\\",
     \\"@trpc/server\\": \\"^10.25.0\\",
-    \\"next\\": \\"^13.4.0\\",
+    \\"next\\": \\"^13.4.1\\",
     \\"superjson\\": \\"^1.12.3\\",
     \\"zod\\": \\"^3.21.4\\"
   },
   \\"devDependencies\\": {
     \\"@2digits/tsconfig\\": \\"^0.1.1\\",
-    \\"eslint\\": \\"^8.39.0\\",
+    \\"eslint\\": \\"^8.40.0\\",
     \\"tsup\\": \\"^6.7.0\\",
     \\"typescript\\": \\"^5.0.4\\"
   }
