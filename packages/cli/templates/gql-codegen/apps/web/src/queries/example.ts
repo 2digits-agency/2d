@@ -1,30 +1,27 @@
-import { graphql } from '../../../../packages/gql-codegen/src/swapi';
+import { graphql, client } from '../../../../packages/gql-codegen/src';
 
-export const FilmFragment = graphql`
+graphql(`
   fragment FilmItem on Film {
     id
     title
-    releaseDate
     producers
-  }
-`;
-console.log(/* GraphQL */ `
-  fragment FilmItem on Film {
-    id
-    title
     releaseDate
-    producers
   }
 `);
 
-export const allFilmsWithVariablesQueryDocument = graphql(/* GraphQL */ `
-  query allFilmsWithVariablesQuery($first: Int!) {
-    allFilms(first: $first) {
-      edges {
-        node {
-          ...FilmItem
+const b = await client.request(
+  graphql(`
+    query allFilmsWithVariablesQuery($first: Int!) {
+      allFilms(first: $first) {
+        edges {
+          node {
+            ...FilmItem
+          }
         }
       }
     }
-  }
-`);
+  `),
+  { first: 1 },
+);
+
+console.log(b.allFilms?.edges?.at(0)?.node?.__typename);

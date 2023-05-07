@@ -4,8 +4,11 @@
      "dist"
    ],
    "scripts": {
-+    "build": "orval && tsup",
-+    "dev": "orval && tsup --watch",
++    "build": "tsup",
++    "dev": "concurrently -n w: npm:watch:*",
++    "watch:bundle": "tsup --watch",
++    "codegen": "graphql-codegen-esm --config ../../codegen.ts",
++    "watch:codegen": "graphql-codegen-esm --config ../../codegen.ts --watch",
 +    "lint": "eslint --ignore-path ../../.gitignore .",
      "types": "tsc --noEmit"
    },

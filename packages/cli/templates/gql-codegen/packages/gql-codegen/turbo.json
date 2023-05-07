@@ -2,8 +2,16 @@
   "extends": ["//"],
   "pipeline": {
     "build": {
+      "dependsOn": ["codegen"],
+      "inputs": ["./src/"],
+      "outputs": ["./dist/"]
+    },
+    "codegen": {
       "outputs": ["./src/"],
       "inputs": ["../../codegen.ts", "../../apps/web/src/**/*.ts", "../../apps/web/src/**/*.tsx"]
+    },
+    "dev": {
+      "persistent": true
     }
   }
 }

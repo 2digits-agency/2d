@@ -1,0 +1,29 @@
+{
+  "name": "@mod/web-gql-codegen",
+  "version": "0.0.0",
+  "bugs": {
+    "url": "https://github.com/2digits-agency/2d/issues/new"
+  },
+  "private": true,
+  "scripts": {
+    "types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mod/gql-codegen": "workspace:*",
+    "@sentry/cli": "^2.17.5",
+    "@sentry/nextjs": "^7.51.0",
+    "next": "^13.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@2digits/tsconfig": "^0.1.1",
+    "@babel/core": "^7.21.8",
+    "@next/bundle-analyzer": "^13.4.1",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.5",
+    "@types/react-dom": "^18.2.3",
+    "eslint": "^8.39.0",
+    "typescript": "^5.0.4"
+  }
+}

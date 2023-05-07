@@ -21,19 +21,19 @@
     "dist"
   ],
   "scripts": {
-    "types": "tsc --noEmit",
-    "build": "graphql-codegen-esm --config ../../codegen.ts"
+    "types": "tsc --noEmit"
   },
   "dependencies": {
     "@graphql-typed-document-node/core": "3.2.0",
-    "graphql": "16.5.0"
+    "graphql": "16.6.0",
+    "graphql-request": "^6.0.0"
   },
   "devDependencies": {
     "@2digits/tsconfig": "^0.1.1",
-    "eslint": "^8.39.0",
-    "@graphql-codegen/client-preset-swc-plugin": "0.2.0",
-    "@graphql-codegen/client-preset": "^3.0.1",
     "@graphql-codegen/cli": "^3.3.1",
+    "@graphql-codegen/client-preset": "^3.0.1",
+    "concurrently": "^8.0.1",
+    "eslint": "^8.39.0",
     "tsup": "^6.7.0",
     "typescript": "^5.0.4"
   },

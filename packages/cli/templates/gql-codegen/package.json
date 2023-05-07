@@ -1,6 +1,6 @@
 {
   "name": "@mod/base-gql-codegen",
-  "version": "0.0.3",
+  "version": "0.0.0",
   "bugs": {
     "url": "https://github.com/2digits-agency/2d/issues/new"
   },
@@ -10,6 +10,7 @@
     "@2digits/eslint-config": "^0.3.0",
     "@2digits/prettier-config": "^0.3.0",
     "@2digits/tsconfig": "^0.1.1",
+    "@graphql-codegen/cli": "^3.3.1",
     "@manypkg/cli": "^0.20.0",
     "@total-typescript/ts-reset": "^0.4.2",
     "@types/node": "^20.0.0",
@@ -17,10 +18,7 @@
     "plop": "^3.1.2",
     "prettier": "^2.8.8",
     "turbo": "^1.9.3",
-    "typescript": "^5.0.4",
-    "@graphql-codegen/client-preset-swc-plugin": "0.2.0",
-    "@graphql-codegen/client-preset": "^3.0.1",
-    "@graphql-codegen/cli": "^3.3.1"
+    "typescript": "^5.0.4"
   },
   "packageManager": "pnpm@8.4.0",
   "engines": {

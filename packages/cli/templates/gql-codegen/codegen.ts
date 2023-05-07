@@ -10,12 +10,15 @@ const ROOT = dirname(__filename);
 const config = {
   ignoreNoDocuments: true, // for better experience with the watcher
   generates: {
-    './src/swapi/': {
+    './src/gql/': {
       schema: projects.swapi.schema,
       documents: join(ROOT, './apps/web/src/**/*.{gql,ts,tsx,graphql}'),
       preset: 'client-preset',
       config: {
-        documentMode: 'string',
+        defaultScalarType: 'unknown',
+        enumsAsTypes: true,
+        useTypeImports: true,
+        dedupeFragments: true,
       },
     },
   },
@@ -23,7 +26,5 @@ const config = {
     afterAllFileWrite: ['prettier --write'],
   },
 } satisfies CodegenConfig;
-
-console.log(config.generates['./src/swapi/'].documents);
 
 export default config;
