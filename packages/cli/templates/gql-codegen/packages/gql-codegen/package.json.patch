@@ -1,5 +1,5 @@
---- swagger-sdk/packages/swagger-sdk/package.json	2023-05-04 10:28:07
-+++ packages/swagger-sdk/package.swagger-sdk.json	2023-05-04 10:27:56
+--- gql-codegen/packages/gql-codegen/package.json	2023-05-04 10:28:07
++++ packages/gql-codegen/package.gql-codegen.json	2023-05-04 10:27:56
 @@ -18,6 +18,9 @@
      "dist"
    ],
