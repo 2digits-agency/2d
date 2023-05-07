@@ -75,9 +75,9 @@ exports[`base > should create a base project > ./test/path/package.json 1`] = `
     \\"types\\": \\"turbo types && tsc --noEmit\\"
   },
   \\"dependencies\\": {
-    \\"@2digits/eslint-config\\": \\"^0.3.0\\",
-    \\"@2digits/prettier-config\\": \\"^0.3.0\\",
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@2digits/eslint-config\\": \\"^0.3.1\\",
+    \\"@2digits/prettier-config\\": \\"^0.4.0\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.2\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^20.1.0\\",
@@ -271,7 +271,7 @@ exports[`base > storybook > should create a storybook app > ./test/path/apps/sto
     \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.2\\",
     \\"@storybook/addon-essentials\\": \\"^7.0.9\\",
     \\"@storybook/blocks\\": \\"^7.0.9\\",
     \\"@storybook/nextjs\\": \\"^7.0.9\\",
@@ -360,9 +360,9 @@ exports[`base > storybook > should create a storybook app > ./test/path/package.
     \\"types\\": \\"turbo types && tsc --noEmit\\"
   },
   \\"dependencies\\": {
-    \\"@2digits/eslint-config\\": \\"^0.3.0\\",
-    \\"@2digits/prettier-config\\": \\"^0.3.0\\",
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@2digits/eslint-config\\": \\"^0.3.1\\",
+    \\"@2digits/prettier-config\\": \\"^0.4.0\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.2\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^20.1.0\\",
@@ -506,9 +506,9 @@ exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/p
     \\"types\\": \\"turbo types && tsc --noEmit\\"
   },
   \\"dependencies\\": {
-    \\"@2digits/eslint-config\\": \\"^0.3.0\\",
-    \\"@2digits/prettier-config\\": \\"^0.3.0\\",
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@2digits/eslint-config\\": \\"^0.3.1\\",
+    \\"@2digits/prettier-config\\": \\"^0.4.0\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.2\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^20.1.0\\",
@@ -697,7 +697,7 @@ exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/p
     \\"axios\\": \\"^1.4.0\\"
   },
   \\"devDependencies\\": {
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.2\\",
     \\"@faker-js/faker\\": \\"^7.6.0\\",
     \\"@orval/core\\": \\"^6.15.0\\",
     \\"@types/prettier\\": \\"^2.7.2\\",
@@ -897,7 +897,7 @@ exports[`base > web > should create a web app > ./test/path/apps/web/package.jso
     \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.2\\",
     \\"@babel/core\\": \\"^7.21.8\\",
     \\"@next/bundle-analyzer\\": \\"^13.4.1\\",
     \\"@types/node\\": \\"^20.1.0\\",
@@ -1025,9 +1025,9 @@ exports[`base > web > should create a web app > ./test/path/package.json 1`] = `
     \\"types\\": \\"turbo types && tsc --noEmit\\"
   },
   \\"dependencies\\": {
-    \\"@2digits/eslint-config\\": \\"^0.3.0\\",
-    \\"@2digits/prettier-config\\": \\"^0.3.0\\",
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@2digits/eslint-config\\": \\"^0.3.1\\",
+    \\"@2digits/prettier-config\\": \\"^0.4.0\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.2\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^20.1.0\\",
@@ -1201,7 +1201,7 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/apps
     \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.2\\",
     \\"@babel/core\\": \\"^7.21.8\\",
     \\"@next/bundle-analyzer\\": \\"^13.4.1\\",
     \\"@types/node\\": \\"^20.1.0\\",
@@ -1354,9 +1354,9 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/pack
     \\"types\\": \\"turbo types && tsc --noEmit\\"
   },
   \\"dependencies\\": {
-    \\"@2digits/eslint-config\\": \\"^0.3.0\\",
-    \\"@2digits/prettier-config\\": \\"^0.3.0\\",
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@2digits/eslint-config\\": \\"^0.3.1\\",
+    \\"@2digits/prettier-config\\": \\"^0.4.0\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.2\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^20.1.0\\",
@@ -1426,7 +1426,7 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/pack
     \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.2\\",
     \\"@types/react\\": \\"^18.2.6\\",
     \\"@types/react-dom\\": \\"^18.2.4\\",
     \\"eslint\\": \\"^8.40.0\\",
@@ -1830,7 +1830,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
     \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.2\\",
     \\"@babel/core\\": \\"^7.21.8\\",
     \\"@next/bundle-analyzer\\": \\"^13.4.1\\",
     \\"@types/node\\": \\"^20.1.0\\",
@@ -2045,9 +2045,9 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
     \\"types\\": \\"turbo types && tsc --noEmit\\"
   },
   \\"dependencies\\": {
-    \\"@2digits/eslint-config\\": \\"^0.3.0\\",
-    \\"@2digits/prettier-config\\": \\"^0.3.0\\",
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@2digits/eslint-config\\": \\"^0.3.1\\",
+    \\"@2digits/prettier-config\\": \\"^0.4.0\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.2\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^20.1.0\\",
@@ -2117,7 +2117,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
     \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.2\\",
     \\"@types/react\\": \\"^18.2.6\\",
     \\"@types/react-dom\\": \\"^18.2.4\\",
     \\"eslint\\": \\"^8.40.0\\",
@@ -2422,7 +2422,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/p
     \\"zod\\": \\"^3.21.4\\"
   },
   \\"devDependencies\\": {
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.2\\",
     \\"eslint\\": \\"^8.40.0\\",
     \\"tsup\\": \\"^6.7.0\\",
     \\"typescript\\": \\"^5.0.4\\"
@@ -2666,7 +2666,7 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/pac
     \\"react-dom\\": \\"^18.2.0\\"
   },
   \\"devDependencies\\": {
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.2\\",
     \\"@babel/core\\": \\"^7.21.8\\",
     \\"@next/bundle-analyzer\\": \\"^13.4.1\\",
     \\"@types/node\\": \\"^20.1.0\\",
@@ -2845,9 +2845,9 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/package.json
     \\"types\\": \\"turbo types && tsc --noEmit\\"
   },
   \\"dependencies\\": {
-    \\"@2digits/eslint-config\\": \\"^0.3.0\\",
-    \\"@2digits/prettier-config\\": \\"^0.3.0\\",
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@2digits/eslint-config\\": \\"^0.3.1\\",
+    \\"@2digits/prettier-config\\": \\"^0.4.0\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.2\\",
     \\"@manypkg/cli\\": \\"^0.20.0\\",
     \\"@total-typescript/ts-reset\\": \\"^0.4.2\\",
     \\"@types/node\\": \\"^20.1.0\\",
@@ -2922,7 +2922,7 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/packages/trp
     \\"zod\\": \\"^3.21.4\\"
   },
   \\"devDependencies\\": {
-    \\"@2digits/tsconfig\\": \\"^0.1.1\\",
+    \\"@2digits/tsconfig\\": \\"^0.1.2\\",
     \\"eslint\\": \\"^8.40.0\\",
     \\"tsup\\": \\"^6.7.0\\",
     \\"typescript\\": \\"^5.0.4\\"
