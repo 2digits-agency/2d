@@ -3,8 +3,8 @@
     "build": { "dependsOn": ["^build"], "outputs": ["dist"] },
     "types": { "dependsOn": ["^types", "^build"] },
     "dev": { "cache": false },
-    "test": { "dependsOn": ["^build", "^test"] },
     "bench": { "dependsOn": ["^build", "^bench"] },
+    "test": { "dependsOn": ["^build", "^test"] },
 
     "lint": {},
     "//#lint:pkg": { "inputs": ["**/package.json"] },
