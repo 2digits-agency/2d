@@ -87,6 +87,14 @@ jobs:
           node-version: 'lts/*'
           cache: 'pnpm'
 
+      - name: 🗄️ Restore cached build
+        uses: actions/cache@v3
+        timeout-minutes: 5
+        id: restore-build
+        with:
+          path: ./*
+          key: ${{ github.sha }}-${{ github.run_number }}
+
       - name: 📦 Install dependencies
         run: pnpm install --filter "@2digits/*"
 
