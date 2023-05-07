@@ -92,7 +92,7 @@ jobs:
         run: npm install --global pnpm
 
       - name: 🧪 Run tests and benchmarks
-        run: pnpm turbo run test bench
+        run: pnpm turbo run test bench --force
 
   types:
     name: 🩻 Check types
