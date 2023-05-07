@@ -17,7 +17,7 @@
     "@trpc/next": "^10.25.0",
     "@trpc/react-query": "^10.25.0",
     "@trpc/server": "^10.25.0",
-    "next": "^13.4.0",
+    "next": "^13.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "superjson": "^1.12.3",
@@ -26,7 +26,7 @@
   "devDependencies": {
     "@2digits/tsconfig": "^0.1.1",
     "@babel/core": "^7.21.8",
-    "@next/bundle-analyzer": "^13.4.0",
+    "@next/bundle-analyzer": "^13.4.1",
     "@types/node": "^20.0.0",
     "@types/react": "^18.2.5",
     "@types/react-dom": "^18.2.3",
