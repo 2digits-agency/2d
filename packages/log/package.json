@@ -47,7 +47,7 @@
     }
   },
   "devDependencies": {
-    "@2digits/tsconfig": "^0.1.1",
+    "@2digits/tsconfig": "^0.1.2",
     "eslint": "^8.40.0",
     "tsup": "^6.7.0",
     "typescript": "^5.0.4"

@@ -27,7 +27,7 @@
     "axios": "^1.4.0"
   },
   "devDependencies": {
-    "@2digits/tsconfig": "^0.1.1",
+    "@2digits/tsconfig": "^0.1.2",
     "@faker-js/faker": "^7.6.0",
     "@orval/core": "^6.15.0",
     "@types/prettier": "^2.7.2",

@@ -54,7 +54,7 @@
     }
   },
   "devDependencies": {
-    "@2digits/tsconfig": "^0.1.1",
+    "@2digits/tsconfig": "^0.1.2",
     "@types/diff": "^5.0.3",
     "@types/fs-extra": "^11.0.1",
     "@types/mock-fs": "^4.13.1",
