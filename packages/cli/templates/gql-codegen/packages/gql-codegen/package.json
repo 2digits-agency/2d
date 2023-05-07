@@ -38,6 +38,9 @@
     "typescript": "^5.0.4"
   },
   "eslintConfig": {
+    "ignorePatterns": [
+      "src/gql"
+    ],
     "rules": {
       "unicorn/no-abusive-eslint-disable": "off"
     }
