@@ -75,17 +75,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: 🗃️ Checkout repository
-        uses: actions/checkout@v3
-
-      - name: 🛸 Setup PNPM
-        uses: pnpm/action-setup@v2
-
       - name: 🏭 Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
-          cache: 'pnpm'
 
       - name: 🗄️ Restore cached build
         uses: actions/cache@v3
@@ -95,8 +88,8 @@ jobs:
           path: ./*
           key: ${{ github.sha }}-${{ github.run_number }}
 
-      - name: 📦 Install dependencies
-        run: pnpm install --filter "@2digits/*"
+      - name: 🛸 Setup PNPM
+        run: npm install --global pnpm
 
       - name: 🧪 Run tests and benchmarks
         run: pnpm turbo run test bench
