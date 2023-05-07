@@ -68,7 +68,7 @@ jobs:
         run: pnpm install --filter "@2digits/2d"
 
       - name: 🧬 Format files
-        run: turbo run format
+        run: pnpm turbo run format
 
   test:
     name: 🧪 Run tests
@@ -93,7 +93,7 @@ jobs:
           key: ${{ github.sha }}-${{ github.run_number }}
 
       - name: 🧪 Run tests and benchmarks
-        run: turbo run test bench
+        run: pnpm turbo run test bench
 
   types:
     name: 🩻 Check types
@@ -118,7 +118,7 @@ jobs:
           key: ${{ github.sha }}-${{ github.run_number }}
 
       - name: 🩻 Check types
-        run: turbo run types
+        run: pnpm turbo run types
 
   lint:
     name: 🔬 Lint files
@@ -143,7 +143,7 @@ jobs:
           key: ${{ github.sha }}-${{ github.run_number }}
 
       - name: 🔬 Lint files
-        run: turbo run lint
+        run: pnpm turbo run lint
 
   changeset:
     name: 🦋 Check changesets
