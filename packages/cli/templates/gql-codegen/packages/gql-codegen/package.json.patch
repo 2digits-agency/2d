@@ -1,0 +1,15 @@
+--- gql-codegen/packages/gql-codegen/package.json	2023-05-04 10:28:07
++++ packages/gql-codegen/package.gql-codegen.json	2023-05-04 10:27:56
+@@ -18,6 +18,9 @@
+     "dist"
+   ],
+   "scripts": {
++    "build": "tsup",
++    "dev": "concurrently -n w: npm:watch:*",
++    "watch:bundle": "tsup --watch",
++    "codegen": "graphql-codegen-esm --config ../../codegen.ts",
++    "watch:codegen": "graphql-codegen-esm --config ../../codegen.ts --watch",
++    "lint": "eslint --ignore-path ../../.gitignore .",
+     "types": "tsc --noEmit"
+   },
+   "dependencies": {

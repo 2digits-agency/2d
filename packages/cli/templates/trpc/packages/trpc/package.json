@@ -29,13 +29,13 @@
     "@trpc/next": "^10.25.0",
     "@trpc/react-query": "^10.25.0",
     "@trpc/server": "^10.25.0",
-    "next": "^13.3.4",
+    "next": "^13.4.1",
     "superjson": "^1.12.3",
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@2digits/tsconfig": "^0.1.1",
-    "eslint": "^8.39.0",
+    "@2digits/tsconfig": "^0.1.2",
+    "eslint": "^8.40.0",
     "tsup": "^6.7.0",
     "typescript": "^5.0.4"
   }

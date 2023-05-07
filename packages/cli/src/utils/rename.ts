@@ -16,7 +16,7 @@ export async function findPlaceholders(path: string): Promise<string[]> {
 }
 
 export function renameFile(placeholderPath: string): Promise<void> {
-  const newPath = placeholderPath.replace(/_2d_/g, '');
+  const newPath = placeholderPath.replaceAll('_2d_', '');
 
   const renamed = fs.rename(placeholderPath, newPath);
 

@@ -1,6 +1,6 @@
 {
-  "name": "@mod/swagger-sdk",
-  "version": "0.0.2",
+  "name": "@mod/gql-codegen",
+  "version": "0.0.0",
   "bugs": {
     "url": "https://github.com/2digits-agency/2d/issues/new"
   },
@@ -24,21 +24,25 @@
     "types": "tsc --noEmit"
   },
   "dependencies": {
-    "axios": "^1.4.0"
+    "@graphql-typed-document-node/core": "3.2.0",
+    "graphql": "16.6.0",
+    "graphql-request": "^6.0.0"
   },
   "devDependencies": {
     "@2digits/tsconfig": "^0.1.2",
-    "@faker-js/faker": "^7.6.0",
-    "@orval/core": "^6.15.0",
-    "@types/prettier": "^2.7.2",
-    "consola": "^3.1.0",
+    "@graphql-codegen/cli": "^3.3.1",
+    "@graphql-codegen/client-preset": "^3.0.1",
+    "concurrently": "^8.0.1",
     "eslint": "^8.40.0",
-    "knitwork": "^1.0.0",
-    "msw": "^1.2.1",
-    "orval": "^6.15.0",
-    "pathe": "^1.1.0",
-    "prettier": "^2.8.8",
     "tsup": "^6.7.0",
     "typescript": "^5.0.4"
+  },
+  "eslintConfig": {
+    "ignorePatterns": [
+      "src/gql"
+    ],
+    "rules": {
+      "unicorn/no-abusive-eslint-disable": "off"
+    }
   }
 }

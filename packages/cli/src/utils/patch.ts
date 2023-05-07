@@ -51,6 +51,8 @@ export async function applyPatch(template: Template, patch: string, path: string
     p.log.warn(`Could not merge ${relativeTmpTarget} and ${relativeTarget}.`);
 
     try {
+      consola.debug('tmpPatched', tmpPatched);
+
       await fs.writeFile(tmpTarget, tmpPatched);
 
       return;

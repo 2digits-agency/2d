@@ -1,6 +1,6 @@
 {
-  "name": "@mod/web-stitches",
-  "version": "0.0.2",
+  "name": "@mod/web-gql-codegen",
+  "version": "0.0.0",
   "bugs": {
     "url": "https://github.com/2digits-agency/2d/issues/new"
   },
@@ -9,7 +9,7 @@
     "types": "tsc --noEmit"
   },
   "dependencies": {
-    "@mod/stitches": "workspace:*",
+    "@mod/gql-codegen": "workspace:*",
     "@sentry/cli": "^2.17.5",
     "@sentry/nextjs": "^7.51.0",
     "next": "^13.4.1",
