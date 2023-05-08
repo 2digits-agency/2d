@@ -708,6 +708,11 @@ exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/p
     \\"prettier\\": \\"^2.8.8\\",
     \\"tsup\\": \\"^6.7.0\\",
     \\"typescript\\": \\"^5.0.4\\"
+  },
+  \\"eslintConfig\\": {
+    \\"ignorePatterns\\": [
+      \\"src\\"
+    ]
   }
 }
 "
