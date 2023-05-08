@@ -91,6 +91,12 @@ jobs:
       - name: 🛸 Setup PNPM
         run: npm install --global pnpm
 
+      - name: 🔧 Configure pnpm for quicker installation
+        run: pnpm config --location=project set dedupe-peer-dependents=false
+
+      - name: 📦 Install dependencies
+        run: pnpm install --filter "@2digits/*"
+
       - name: 🧪 Run tests and benchmarks
         run: pnpm turbo run test bench
 
