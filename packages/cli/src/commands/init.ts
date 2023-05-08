@@ -13,6 +13,7 @@ import { installDependencies } from '../utils/dependencies';
 import { applyPatch, getTemplatePatches } from '../utils/patch';
 import { renamePlaceholders } from '../utils/rename';
 import { copyTemplate } from '../utils/templates';
+import { initializeRepository } from '../utils/git';
 
 export const moduleEnum = z.enum([
   'web',
@@ -30,6 +31,7 @@ interface InitArguments {
   path: string;
   module: z.infer<typeof appModule>;
   install: boolean;
+  git: boolean;
 }
 
 const appName = z
@@ -91,6 +93,10 @@ export const init = createCommand(['init [path]', 'i'], {
         describe: 'Name of the project',
         alias: 'n',
       })
+      .option('git', {
+        type: 'boolean',
+        describe: 'Initialize a git repository',
+      })
       .strict() satisfies Argv<Partial<InitArguments>>;
   },
   async handler(args) {
@@ -149,6 +155,17 @@ export const init = createCommand(['init [path]', 'i'], {
         }),
     });
 
+    const git = await promptMissingArg({
+      args,
+      argName: 'git',
+      schema: z.boolean(),
+      prompt: () =>
+        p.confirm({
+          message: 'Initialize a git repository',
+          initialValue: true,
+        }),
+    });
+
     p.log.step('Scaffolding project...');
 
     await copyTemplate('base', path);
@@ -174,6 +191,10 @@ export const init = createCommand(['init [path]', 'i'], {
 
     if (install) {
       await installDependencies(path);
+    }
+
+    if (git) {
+      await initializeRepository(path);
     }
 
     p.note(
