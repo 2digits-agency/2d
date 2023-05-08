@@ -7,7 +7,6 @@ import pathe from 'pathe';
 
 import type { Template } from '../constants';
 import { TEMPLATE_DIR } from '../constants';
-import chalk from 'chalk';
 
 export function getTemplatePatches(template: Template) {
   const cwd = pathe.join(TEMPLATE_DIR, template);
@@ -57,7 +56,7 @@ export async function applyPatch(template: Template, patch: string, path: string
       return {
         description: `Merge ${patchResult.newFileName} into ${originalFilename}.`,
         commands: [
-          `nvim -d ${originalFilename} ${patchResult.newFileName}`,
+          `$EDITOR -d ${originalFilename} ${patchResult.newFileName}`,
           `rm ${patchResult.newFileName}`,
         ],
       };
