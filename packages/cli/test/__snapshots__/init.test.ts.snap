@@ -288,8 +288,6 @@ exports[`base > storybook > should create a storybook app > ./test/path/apps/sto
 "
 `;
 
-exports[`base > storybook > should create a storybook app > ./test/path/apps/storybook/stories/.gitkeep 1`] = `""`;
-
 exports[`base > storybook > should create a storybook app > ./test/path/apps/storybook/stories/examples/Button.stories.tsx 1`] = `
 "import type { Meta, StoryObj } from '@storybook/react';
 import type { ReactNode } from 'react';
