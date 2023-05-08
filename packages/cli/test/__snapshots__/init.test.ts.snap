@@ -891,7 +891,7 @@ exports[`base > web > should create a web app > ./test/path/apps/web/package.jso
   },
   \\"dependencies\\": {
     \\"@sentry/cli\\": \\"^2.17.5\\",
-    \\"@sentry/nextjs\\": \\"^7.51.1\\",
+    \\"@sentry/nextjs\\": \\"^7.51.2\\",
     \\"next\\": \\"^13.4.1\\",
     \\"react\\": \\"^18.2.0\\",
     \\"react-dom\\": \\"^18.2.0\\"
@@ -1196,7 +1196,7 @@ exports[`base > web > stitches > should add a stitches module > ./test/path/apps
   \\"dependencies\\": {
     \\"@mod/stitches\\": \\"workspace:*\\",
     \\"@sentry/cli\\": \\"^2.17.5\\",
-    \\"@sentry/nextjs\\": \\"^7.51.1\\",
+    \\"@sentry/nextjs\\": \\"^7.51.2\\",
     \\"next\\": \\"^13.4.1\\",
     \\"react\\": \\"^18.2.0\\",
     \\"react-dom\\": \\"^18.2.0\\"
@@ -1826,7 +1826,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
   \\"dependencies\\": {
     \\"@mod/trpc\\": \\"workspace:*\\",
     \\"@sentry/cli\\": \\"^2.17.5\\",
-    \\"@sentry/nextjs\\": \\"^7.51.1\\",
+    \\"@sentry/nextjs\\": \\"^7.51.2\\",
     \\"@tanstack/react-query\\": \\"^4.29.5\\",
     \\"@trpc/client\\": \\"^10.25.0\\",
     \\"@trpc/next\\": \\"^10.25.0\\",
@@ -1866,7 +1866,7 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
   \\"dependencies\\": {
     \\"@mod/stitches\\": \\"workspace:*\\",
     \\"@sentry/cli\\": \\"^2.17.5\\",
-    \\"@sentry/nextjs\\": \\"^7.51.1\\",
+    \\"@sentry/nextjs\\": \\"^7.51.2\\",
     \\"next\\": \\"^13.4.1\\",
     \\"react\\": \\"^18.2.0\\",
     \\"react-dom\\": \\"^18.2.0\\"
@@ -2703,7 +2703,7 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/pac
   \\"dependencies\\": {
     \\"@mod/trpc\\": \\"workspace:*\\",
     \\"@sentry/cli\\": \\"^2.17.5\\",
-    \\"@sentry/nextjs\\": \\"^7.51.1\\",
+    \\"@sentry/nextjs\\": \\"^7.51.2\\",
     \\"@tanstack/react-query\\": \\"^4.29.5\\",
     \\"@trpc/client\\": \\"^10.25.0\\",
     \\"@trpc/next\\": \\"^10.25.0\\",
