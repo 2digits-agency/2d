@@ -27,7 +27,7 @@ export interface CommandOptions<TCmd> {
 export interface Command<TCmd> extends CommandOptions<TCmd> {
   /** The command name or an array of command names. */
   command: string | readonly string[];
-  handler(args: unknown): void | Promise<void>;
+  handler(args: Partial<ArgumentsCamelCase<Simplify<TCmd>>>): void | Promise<void>;
 }
 
 /**
