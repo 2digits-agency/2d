@@ -5,6 +5,7 @@ import pathe from 'pathe';
 import link from 'terminal-link';
 import type { Argv } from 'yargs';
 import { z } from 'zod';
+import clipboardy from 'clipboardy';
 
 import { bugs } from '../../package.json';
 import type packageJson from '../../templates/base/package.json';
@@ -168,12 +169,11 @@ export const init = createCommand(['init [path]', 'i'], {
 
     p.log.step('Scaffolding project...');
 
-    const pathLink = link(chalk.underline(path), `vscode://file/${path}`, { fallback: false });
-
-    const steps = [
-      ['Change directory to the project root', chalk.bold(`${chalk.dim`$`} cd ${pathLink}`)].join(
-        '\n',
-      ),
+    const steps: { description: string; commands: string[] }[] = [
+      {
+        description: 'Change directory to the project root',
+        commands: [`cd ${path}`],
+      },
     ];
 
     await copyTemplate('base', path);
@@ -192,7 +192,7 @@ export const init = createCommand(['init [path]', 'i'], {
         if (step) {
           steps.push(step);
 
-          if (install && step.includes('package.json')) {
+          if (install && step.description.includes('package.json')) {
             install = false;
             p.log.warn('Skipping dependency installation because of merge conflict');
           }
@@ -208,18 +208,39 @@ export const init = createCommand(['init [path]', 'i'], {
     if (install) {
       await installDependencies(path);
     } else {
-      steps.push(
-        ['Install the dependencies', chalk.bold(`${chalk.dim`$`} pnpm install`)].join('\n'),
-      );
+      steps.push({
+        description: 'Install the dependencies',
+        commands: ['pnpm install'],
+      });
     }
 
     if (git) {
       await initializeRepository(path);
     }
 
-    steps.push(['Start the development server', chalk.bold(`${chalk.dim`$`} pnpm dev`)].join('\n'));
+    steps.push({
+      description: 'Start the development server',
+      commands: ['pnpm dev'],
+    });
 
-    p.note(steps.join('\n\n'), 'Next steps');
+    p.note(
+      steps
+        .map(({ description, commands }) => {
+          const step = [description];
+          for (const command of commands) {
+            step.push(chalk.bold(`${chalk.dim`$`} ${command}`));
+          }
+          return step.join('\n');
+        })
+        .join('\n\n'),
+      'Next steps',
+    );
+
+    const commands = steps.flatMap(({ commands }) => commands).join(' && \\\n');
+
+    await clipboardy.write(commands);
+
+    p.log.info('Copied the abovementioned commands to your clipboard');
 
     p.outro(
       `If you encounter any problems, please open an issue on ${link(

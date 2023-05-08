@@ -54,11 +54,13 @@ export async function applyPatch(template: Template, patch: string, path: string
 
       await fs.writeFile(tmpTarget, tmpPatched);
 
-      return [
-        `Merge ${patchResult.newFileName} into ${originalFilename}.`,
-        chalk.bold(`${chalk.dim`$`} nvim -d ${originalFilename} ${patchResult.newFileName}`),
-        chalk.bold(`${chalk.dim`$`} rm ${patchResult.newFileName}`),
-      ].join('\n');
+      return {
+        description: `Merge ${patchResult.newFileName} into ${originalFilename}.`,
+        commands: [
+          `nvim -d ${originalFilename} ${patchResult.newFileName}`,
+          `rm ${patchResult.newFileName}`,
+        ],
+      };
     } catch {
       p.log.error('Something went wrong while trying to write the patch to the file system.');
     }
