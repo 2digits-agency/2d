@@ -144,7 +144,7 @@ export const init = createCommand(['init [path]', 'i'], {
       },
     });
 
-    const install = await promptMissingArg({
+    let install = await promptMissingArg({
       args,
       argName: 'install',
       schema: z.boolean(),
@@ -168,6 +168,14 @@ export const init = createCommand(['init [path]', 'i'], {
 
     p.log.step('Scaffolding project...');
 
+    const pathLink = link(chalk.underline(path), `vscode://file/${path}`, { fallback: false });
+
+    const steps = [
+      ['Change directory to the project root', chalk.bold(`${chalk.dim`$`} cd ${pathLink}`)].join(
+        '\n',
+      ),
+    ];
+
     await copyTemplate('base', path);
 
     for (const mod of modules) {
@@ -180,7 +188,15 @@ export const init = createCommand(['init [path]', 'i'], {
       const patches = await getTemplatePatches(mod);
 
       for (const patch of patches) {
-        await applyPatch(mod, patch, path);
+        const step = await applyPatch(mod, patch, path);
+        if (step) {
+          steps.push(step);
+
+          if (install && step.includes('package.json')) {
+            install = false;
+            p.log.warn('Skipping dependency installation because of merge conflict');
+          }
+        }
       }
     }
 
@@ -191,18 +207,19 @@ export const init = createCommand(['init [path]', 'i'], {
 
     if (install) {
       await installDependencies(path);
+    } else {
+      steps.push(
+        ['Install the dependencies', chalk.bold(`${chalk.dim`$`} pnpm install`)].join('\n'),
+      );
     }
 
     if (git) {
       await initializeRepository(path);
     }
 
-    p.note(
-      `${chalk.bold(
-        `cd ${link(chalk.underline(path), `vscode://file/${path}`, { fallback: false })}`,
-      )}\n${chalk.bold('pnpm dev')}`,
-      'Next steps',
-    );
+    steps.push(['Start the development server', chalk.bold(`${chalk.dim`$`} pnpm dev`)].join('\n'));
+
+    p.note(steps.join('\n\n'), 'Next steps');
 
     p.outro(
       `If you encounter any problems, please open an issue on ${link(

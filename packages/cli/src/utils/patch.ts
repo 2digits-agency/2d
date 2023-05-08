@@ -7,6 +7,7 @@ import pathe from 'pathe';
 
 import type { Template } from '../constants';
 import { TEMPLATE_DIR } from '../constants';
+import chalk from 'chalk';
 
 export function getTemplatePatches(template: Template) {
   const cwd = pathe.join(TEMPLATE_DIR, template);
@@ -23,7 +24,8 @@ export async function applyPatch(template: Template, patch: string, path: string
 
   if (!patchResult) return;
 
-  const target = pathe.join(path, patch.replace(/\.patch$/, ''));
+  const originalFilename = patch.replace(/\.patch$/, '');
+  const target = pathe.join(path, originalFilename);
 
   const targetContent = await fs.readFile(target, { encoding: 'utf8' });
   consola.debug('targetContent', targetContent);
@@ -45,17 +47,18 @@ export async function applyPatch(template: Template, patch: string, path: string
 
     const tmpTarget = pathe.join(path, patchResult.newFileName);
 
-    const relativeTmpTarget = pathe.relative(path, tmpTarget);
-    const relativeTarget = pathe.relative(path, target);
-
-    p.log.warn(`Could not merge ${relativeTmpTarget} and ${relativeTarget}.`);
+    p.log.warn(`Could not merge ${patchResult.newFileName} and ${originalFilename}.`);
 
     try {
       consola.debug('tmpPatched', tmpPatched);
 
       await fs.writeFile(tmpTarget, tmpPatched);
 
-      return;
+      return [
+        `Merge ${patchResult.newFileName} into ${originalFilename}.`,
+        chalk.bold(`${chalk.dim`$`} nvim -d ${originalFilename} ${patchResult.newFileName}`),
+        chalk.bold(`${chalk.dim`$`} rm ${patchResult.newFileName}`),
+      ].join('\n');
     } catch {
       p.log.error('Something went wrong while trying to write the patch to the file system.');
     }
