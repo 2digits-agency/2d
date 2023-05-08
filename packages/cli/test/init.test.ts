@@ -28,6 +28,7 @@ describe('base', () => {
       module: [],
       install: false,
       name: 'test',
+      git: false,
     });
 
     await snapshotCliOutputFs();
@@ -40,6 +41,7 @@ describe('base', () => {
         module: ['swagger-sdk'],
         install: false,
         name: 'test',
+        git: false,
       });
 
       await snapshotCliOutputFs();
@@ -53,6 +55,7 @@ describe('base', () => {
         module: ['storybook'],
         install: false,
         name: 'test',
+        git: false,
       });
 
       await snapshotCliOutputFs();
@@ -66,6 +69,7 @@ describe('base', () => {
         module: ['web'],
         install: false,
         name: 'test',
+        git: false,
       });
 
       await snapshotCliOutputFs();
@@ -78,6 +82,7 @@ describe('base', () => {
           module: ['web', 'stitches'],
           install: false,
           name: 'test',
+          git: false,
         });
 
         await snapshotCliOutputFs();
@@ -90,6 +95,7 @@ describe('base', () => {
             module: ['web', 'trpc', 'stitches'],
             install: false,
             name: 'test',
+            git: false,
           });
 
           await snapshotCliOutputFs();
@@ -104,6 +110,7 @@ describe('base', () => {
           module: ['web', 'trpc'],
           install: false,
           name: 'test',
+          git: false,
         });
 
         await snapshotCliOutputFs();
