@@ -1,5 +1,11 @@
 # @mod/web-stitches
 
+## 0.0.4
+
+### Patch Changes
+
+- 9d0c326: Updated deps
+
 ## 0.0.3
 
 ### Patch Changes

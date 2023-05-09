@@ -1,5 +1,11 @@
 # @mod/storybook
 
+## 0.0.3
+
+### Patch Changes
+
+- 925df40: Removed random .gitkeep file
+
 ## 0.0.2
 
 ### Patch Changes

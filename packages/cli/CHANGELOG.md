@@ -1,5 +1,17 @@
 # @2digits/cli
 
+## 0.7.0
+
+### Minor Changes
+
+- d24c14c: Added option to initialize a git repo
+- 179641a: Automagically copies "next steps" commands to clipboard
+- 5ed0d94: Added correct "Next steps" to end of command
+
+### Patch Changes
+
+- 9d0c326: Updated deps
+
 ## 0.6.0
 
 ### Minor Changes
