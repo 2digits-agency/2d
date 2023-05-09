@@ -5,6 +5,7 @@ import pathe from 'pathe';
 import link from 'terminal-link';
 import type { Argv } from 'yargs';
 import { z } from 'zod';
+import clipboardy from 'clipboardy';
 
 import { bugs } from '../../package.json';
 import type packageJson from '../../templates/base/package.json';
@@ -14,6 +15,7 @@ import { applyPatch, getTemplatePatches } from '../utils/patch';
 import { renamePlaceholders } from '../utils/rename';
 import { copyTemplate } from '../utils/templates';
 import { initializeRepository } from '../utils/git';
+import { consola } from 'consola';
 
 export const moduleEnum = z.enum([
   'web',
@@ -144,7 +146,7 @@ export const init = createCommand(['init [path]', 'i'], {
       },
     });
 
-    const install = await promptMissingArg({
+    let install = await promptMissingArg({
       args,
       argName: 'install',
       schema: z.boolean(),
@@ -168,6 +170,13 @@ export const init = createCommand(['init [path]', 'i'], {
 
     p.log.step('Scaffolding project...');
 
+    const steps: { description: string; commands: string[] }[] = [
+      {
+        description: 'Change directory to the project root',
+        commands: [`cd ${path}`],
+      },
+    ];
+
     await copyTemplate('base', path);
 
     for (const mod of modules) {
@@ -180,7 +189,15 @@ export const init = createCommand(['init [path]', 'i'], {
       const patches = await getTemplatePatches(mod);
 
       for (const patch of patches) {
-        await applyPatch(mod, patch, path);
+        const step = await applyPatch(mod, patch, path);
+        if (step) {
+          steps.push(step);
+
+          if (install && step.description.includes('package.json')) {
+            install = false;
+            p.log.warn('Skipping dependency installation because of merge conflict');
+          }
+        }
       }
     }
 
@@ -191,18 +208,44 @@ export const init = createCommand(['init [path]', 'i'], {
 
     if (install) {
       await installDependencies(path);
+    } else {
+      steps.push({
+        description: 'Install the dependencies',
+        commands: ['pnpm install'],
+      });
     }
 
     if (git) {
       await initializeRepository(path);
     }
 
+    steps.push({
+      description: 'Start the development server',
+      commands: ['pnpm dev'],
+    });
+
     p.note(
-      `${chalk.bold(
-        `cd ${link(chalk.underline(path), `vscode://file/${path}`, { fallback: false })}`,
-      )}\n${chalk.bold('pnpm dev')}`,
+      steps
+        .map(({ description, commands }) => {
+          const step = [description];
+          for (const command of commands) {
+            step.push(chalk.bold(`${chalk.dim`$`} ${command}`));
+          }
+          return step.join('\n');
+        })
+        .join('\n\n'),
       'Next steps',
     );
+
+    const commands = steps.flatMap(({ commands }) => commands).join(' && \\\n');
+
+    try {
+      await clipboardy.write(commands);
+
+      p.log.info('Copied the abovementioned commands to your clipboard');
+    } catch {
+      consola.debug('Could not copy commands to clipboard');
+    }
 
     p.outro(
       `If you encounter any problems, please open an issue on ${link(
