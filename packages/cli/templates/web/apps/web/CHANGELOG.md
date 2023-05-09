@@ -1,5 +1,11 @@
 # @mod/web
 
+## 0.1.3
+
+### Patch Changes
+
+- 9d0c326: Updated deps
+
 ## 0.1.2
 
 ### Patch Changes
