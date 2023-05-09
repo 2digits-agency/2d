@@ -15,6 +15,7 @@ import { applyPatch, getTemplatePatches } from '../utils/patch';
 import { renamePlaceholders } from '../utils/rename';
 import { copyTemplate } from '../utils/templates';
 import { initializeRepository } from '../utils/git';
+import { consola } from 'consola';
 
 export const moduleEnum = z.enum([
   'web',
@@ -238,9 +239,13 @@ export const init = createCommand(['init [path]', 'i'], {
 
     const commands = steps.flatMap(({ commands }) => commands).join(' && \\\n');
 
-    await clipboardy.write(commands);
+    try {
+      await clipboardy.write(commands);
 
-    p.log.info('Copied the abovementioned commands to your clipboard');
+      p.log.info('Copied the abovementioned commands to your clipboard');
+    } catch {
+      consola.debug('Could not copy commands to clipboard');
+    }
 
     p.outro(
       `If you encounter any problems, please open an issue on ${link(
