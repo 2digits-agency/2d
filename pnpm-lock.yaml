@@ -290,6 +290,21 @@ importers:
         specifier: ^5.0.4
         version: 5.0.4
 
+  packages/cli/templates/module:
+    devDependencies:
+      '@2digits/tsconfig':
+        specifier: ^0.1.2
+        version: 0.1.2(typescript@5.0.4)
+      eslint:
+        specifier: ^8.40.0
+        version: 8.40.0
+      tsup:
+        specifier: ^6.7.0
+        version: 6.7.0(typescript@5.0.4)
+      typescript:
+        specifier: ^5.0.4
+        version: 5.0.4
+
   packages/cli/templates/stitches/apps/web:
     dependencies:
       '@mod/stitches':
