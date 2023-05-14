@@ -55,11 +55,11 @@ export async function checkCancel<TValue>(
   return result as Exclude<TValue, symbol>;
 }
 
-export function onCancel() {
-  p.cancel('Operation cancelled.');
+export function onCancel(message = 'Operation cancelled.', code = 0) {
+  p.cancel(message);
 
   // eslint-disable-next-line unicorn/no-process-exit
-  return process.exit(0);
+  return process.exit(code);
 }
 
 export function validate<TValue>(validator: z.ZodType<TValue>) {

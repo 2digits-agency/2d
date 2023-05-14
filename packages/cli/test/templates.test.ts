@@ -2,11 +2,11 @@ import consola from 'consola';
 import mock from 'mock-fs';
 import { afterEach, beforeEach, describe, expect, expectTypeOf, it, test } from 'vitest';
 
-import { moduleEnum } from '../src/commands/init';
 import type { Template } from '../src/constants';
 import { templates } from '../src/constants';
 import { copyTemplate } from '../src/utils/templates';
 import { getCombinations, getMockFsFiles, getTemplateFiles } from './testUtils';
+import { moduleEnum } from '../src/schemas';
 
 const templateNames = Object.keys(templates) as Template[];
 
