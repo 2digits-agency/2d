@@ -43,7 +43,8 @@ function isEmpty(dirPath: string) {
 
 export const appPath = z.string().nonempty().refine(isEmpty, 'Directory has to be empty');
 
-export const moduleName = appName.refine(
-  (name) => isEmpty(pathe.resolve('packages', name)),
-  'Directory has to be empty',
-);
+export const moduleName = (root: string) =>
+  appName.refine(
+    (name) => isEmpty(pathe.resolve(root, 'packages', name)),
+    'Directory has to be empty',
+  );

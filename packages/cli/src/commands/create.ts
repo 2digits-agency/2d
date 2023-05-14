@@ -14,7 +14,7 @@ import { z } from 'zod';
 import type { PackageJson } from 'pkg-types';
 import { installDependencies } from '../utils/dependencies';
 import clipboardy from 'clipboardy';
-import { checkIsGitRepository } from '../utils/git';
+import { checkIsGitClean, getRepoRoot } from '../utils/git';
 
 export const create = createCommand('create [name]', {
   describe: 'Create a new module',
@@ -34,10 +34,18 @@ export const create = createCommand('create [name]', {
   async handler(args) {
     p.intro(chalk.bgHex('#762BFF').hex('#FFFFFF').bold(' 2d create '));
 
-    const isRoot = await checkIsGitRepository();
+    const root = await getRepoRoot().catch((error) => {
+      consola.debug(error);
 
-    if (!isRoot) {
-      p.log.error('Please run this command from the root of the repository.');
+      p.log.error('Failed to get repository root.');
+
+      return onCancel();
+    });
+
+    const isRepoClean = await checkIsGitClean(root).catch(() => false);
+
+    if (!isRepoClean) {
+      p.log.error('Please commit your changes before creating a new module.');
 
       return onCancel();
     }
@@ -45,11 +53,11 @@ export const create = createCommand('create [name]', {
     const name = await promptMissingArg({
       args,
       argName: 'name',
-      schema: moduleName,
+      schema: moduleName(root),
       prompt() {
         return p.text({
           message: 'What is the name of the module?',
-          validate: validate(moduleName),
+          validate: validate(moduleName(root)),
         });
       },
     });
@@ -65,7 +73,7 @@ export const create = createCommand('create [name]', {
         }),
     });
 
-    const path = pathe.resolve('packages', name);
+    const path = pathe.resolve(root, 'packages', name);
 
     p.log.info(`Creating module ${name}...`);
 

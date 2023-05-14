@@ -17,14 +17,16 @@ export async function initializeRepository(path: string): Promise<void> {
   return spinner.success('Git repository initialized');
 }
 
-export async function checkIsGitRepository(): Promise<boolean> {
+export async function getRepoRoot(): Promise<string> {
   const git = simpleGit();
+  const topLevel = await git.revparse('--show-toplevel');
+  return pathe.resolve(topLevel);
+}
 
-  try {
-    const topLevel = await git.revparse('--show-toplevel');
+export async function checkIsGitClean(root: string): Promise<boolean> {
+  const git = simpleGit(root);
 
-    return pathe.resolve(topLevel) === pathe.resolve(process.cwd());
-  } catch {
-    return false;
-  }
+  const status = await git.status();
+
+  return status.isClean();
 }
