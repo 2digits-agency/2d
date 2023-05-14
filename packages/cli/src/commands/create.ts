@@ -84,7 +84,7 @@ export const create = createCommand('create [name]', {
 
     const pkgJsonPath = pathe.join(path, 'package.json');
     const pkg = (await fs.readJson(pkgJsonPath)) as PackageJson;
-    pkg.name = name;
+    pkg.name = `@mod/${name}`;
     await fs.writeJson(pkgJsonPath, pkg, { spaces: 2 });
 
     if (install) {
@@ -98,27 +98,29 @@ export const create = createCommand('create [name]', {
 
     p.log.info(`Created module ${name}`);
 
-    p.note(
-      steps
-        .map(({ description, commands }) => {
-          const step = [description];
-          for (const command of commands) {
-            step.push(chalk.bold(`${chalk.dim`$`} ${command}`));
-          }
-          return step.join('\n');
-        })
-        .join('\n\n'),
-      'Next steps',
-    );
+    if (steps.length > 0) {
+      p.note(
+        steps
+          .map(({ description, commands }) => {
+            const step = [description];
+            for (const command of commands) {
+              step.push(chalk.bold(`${chalk.dim`$`} ${command}`));
+            }
+            return step.join('\n');
+          })
+          .join('\n\n'),
+        'Next steps',
+      );
 
-    const commands = steps.flatMap(({ commands }) => commands).join(' && \\\n');
+      const commands = steps.flatMap(({ commands }) => commands).join(' && \\\n');
 
-    try {
-      await clipboardy.write(commands);
+      try {
+        await clipboardy.write(commands);
 
-      p.log.info('Copied the abovementioned commands to your clipboard');
-    } catch {
-      consola.debug('Could not copy commands to clipboard');
+        p.log.info('Copied the abovementioned commands to your clipboard');
+      } catch {
+        consola.debug('Could not copy commands to clipboard');
+      }
     }
 
     p.outro(
