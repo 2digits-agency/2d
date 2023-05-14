@@ -2,7 +2,7 @@ import chalk from 'chalk';
 import { bugs } from '../../package.json';
 import link from 'terminal-link';
 import fs from 'fs-extra';
-import { createCommand, promptMissingArg, validate } from '../helpers';
+import { createCommand, onCancel, promptMissingArg, validate } from '../helpers';
 import pathe from 'pathe';
 import * as p from '@clack/prompts';
 import { consola } from 'consola';
@@ -14,6 +14,7 @@ import { z } from 'zod';
 import type { PackageJson } from 'pkg-types';
 import { installDependencies } from '../utils/dependencies';
 import clipboardy from 'clipboardy';
+import { checkIsGitRepository } from '../utils/git';
 
 export const create = createCommand('create [name]', {
   describe: 'Create a new module',
@@ -32,6 +33,14 @@ export const create = createCommand('create [name]', {
   },
   async handler(args) {
     p.intro(chalk.bgHex('#762BFF').hex('#FFFFFF').bold(' 2d create '));
+
+    const isRoot = await checkIsGitRepository();
+
+    if (!isRoot) {
+      p.log.error('Please run this command from the root of the repository.');
+
+      return onCancel();
+    }
 
     const name = await promptMissingArg({
       args,
@@ -123,7 +132,7 @@ export const create = createCommand('create [name]', {
       }
     }
 
-    p.outro(
+    return p.outro(
       `If you encounter any problems, please open an issue on ${link(
         chalk.hex('#762BFF').underline`Github`,
         bugs.url,
