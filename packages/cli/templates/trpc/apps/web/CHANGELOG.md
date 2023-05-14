@@ -1,5 +1,13 @@
 # @mod/web-trpc
 
+## 0.1.4
+
+### Patch Changes
+
+- 4f9118f: Updated dependencies
+- Updated dependencies [4f9118f]
+  - @mod/trpc@0.0.5
+
 ## 0.1.3
 
 ### Patch Changes
