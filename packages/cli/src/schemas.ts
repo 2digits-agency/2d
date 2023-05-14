@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import fs from 'fs-extra';
+import pathe from 'pathe';
 
 export const appName = z
   .string()
@@ -41,3 +42,8 @@ function isEmpty(dirPath: string) {
 }
 
 export const appPath = z.string().nonempty().refine(isEmpty, 'Directory has to be empty');
+
+export const moduleName = appName.refine(
+  (name) => isEmpty(pathe.resolve('packages', name)),
+  'Directory has to be empty',
+);
