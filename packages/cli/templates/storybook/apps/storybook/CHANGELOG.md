@@ -1,5 +1,11 @@
 # @mod/storybook
 
+## 0.0.4
+
+### Patch Changes
+
+- 4f9118f: Updated dependencies
+
 ## 0.0.3
 
 ### Patch Changes

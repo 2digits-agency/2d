@@ -1,5 +1,11 @@
 # @2digits/log
 
+## 0.0.5
+
+### Patch Changes
+
+- 4f9118f: Updated dependencies
+
 ## 0.0.4
 
 ### Patch Changes

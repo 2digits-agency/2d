@@ -1,5 +1,17 @@
 # @2digits/cli
 
+## 0.8.0
+
+### Minor Changes
+
+- ca59aba: Added create command to create a new module
+
+### Patch Changes
+
+- 4f9118f: Updated dependencies
+- Updated dependencies [4f9118f]
+  - @2digits/log@0.0.5
+
 ## 0.7.0
 
 ### Minor Changes
