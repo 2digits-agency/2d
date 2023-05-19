@@ -1,6 +1,7 @@
-import { Spinner } from '@2digits/log';
-import { simpleGit } from 'simple-git';
 import pathe from 'pathe';
+import { simpleGit } from 'simple-git';
+
+import { Spinner } from '@2digits/log';
 
 export async function initializeRepository(path: string): Promise<void> {
   const spinner = new Spinner();

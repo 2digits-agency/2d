@@ -1,20 +1,21 @@
-import chalk from 'chalk';
-import { bugs } from '../../package.json';
-import link from 'terminal-link';
-import fs from 'fs-extra';
-import { createCommand, onCancel, promptMissingArg, validate } from '../helpers';
-import pathe from 'pathe';
 import * as p from '@clack/prompts';
+import chalk from 'chalk';
+import clipboardy from 'clipboardy';
 import { consola } from 'consola';
+import fs from 'fs-extra';
+import pathe from 'pathe';
+import type { PackageJson } from 'pkg-types';
+import link from 'terminal-link';
+import { z } from 'zod';
+
+import { bugs } from '../../package.json';
+import { createCommand, onCancel, promptMissingArg, validate } from '../helpers';
 import { moduleName } from '../schemas';
-import { copyTemplate } from '../utils/templates';
+import { installDependencies } from '../utils/dependencies';
+import { checkIsGitClean, getRepoRoot } from '../utils/git';
 import { applyPatch, getTemplatePatches } from '../utils/patch';
 import { renamePlaceholders } from '../utils/rename';
-import { z } from 'zod';
-import type { PackageJson } from 'pkg-types';
-import { installDependencies } from '../utils/dependencies';
-import clipboardy from 'clipboardy';
-import { checkIsGitClean, getRepoRoot } from '../utils/git';
+import { copyTemplate } from '../utils/templates';
 
 export const create = createCommand('create [name]', {
   describe: 'Create a new module',
