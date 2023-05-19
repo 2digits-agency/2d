@@ -13,17 +13,9 @@ export function getMockFsFiles() {
 export async function snapshotCliOutputFs() {
   const files = await getMockFsFiles();
 
-  const fileContents = {} as Record<string, string>;
-
-  for (const file of files) {
-    fileContents[file] = await fs.readFile(file, { encoding: 'utf8' });
-  }
-
   mock.restore();
 
-  for (const file of files) {
-    expect(fileContents[file]).toMatchSnapshot(file);
-  }
+  expect(files).toMatchSnapshot();
 }
 
 export async function getTemplateFiles() {
