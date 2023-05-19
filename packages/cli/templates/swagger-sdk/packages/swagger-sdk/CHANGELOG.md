@@ -1,5 +1,11 @@
 # @mod/swagger-sdk
 
+## 0.0.6
+
+### Patch Changes
+
+- d21902d: Updated CICD to fix snapshots
+
 ## 0.0.5
 
 ### Patch Changes

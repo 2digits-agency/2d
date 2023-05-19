@@ -1,5 +1,11 @@
 # @mod/web
 
+## 0.1.6
+
+### Patch Changes
+
+- d21902d: Updated CICD to fix snapshots
+
 ## 0.1.5
 
 ### Patch Changes
