@@ -1,6 +1,6 @@
-import { z } from 'zod';
 import fs from 'fs-extra';
 import pathe from 'pathe';
+import { z } from 'zod';
 
 export const appName = z
   .string()

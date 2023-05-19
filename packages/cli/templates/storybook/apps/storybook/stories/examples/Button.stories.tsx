@@ -1,5 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
 import type { ReactNode } from 'react';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   component: Button,

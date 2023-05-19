@@ -1,8 +1,8 @@
 import type { CodegenConfig } from '@graphql-codegen/cli';
 import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'pathe';
 
 import { projects } from './.graphqlrc.json';
-import { dirname, join } from 'pathe';
 
 const __filename = fileURLToPath(import.meta.url);
 const ROOT = dirname(__filename);

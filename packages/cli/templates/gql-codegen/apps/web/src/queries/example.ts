@@ -1,4 +1,4 @@
-import { graphql, client } from '@mod/gql-codegen';
+import { client, graphql } from '@mod/gql-codegen';
 
 graphql(`
   fragment FilmItem on Film {

@@ -1,4 +1,5 @@
 import type { ConfigExternal } from '@orval/core';
+
 import { generateExports } from './generateExports';
 
 const config = {

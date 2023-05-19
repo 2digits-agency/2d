@@ -1,8 +1,8 @@
+import consola from 'consola';
 import { genExport } from 'knitwork';
 import { readdir, writeFile } from 'node:fs/promises';
 import path from 'pathe';
 import Prettier from 'prettier';
-import consola from 'consola';
 
 const logger = consola.withTag('orval');
 
