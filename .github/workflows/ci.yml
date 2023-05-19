@@ -112,7 +112,7 @@ jobs:
         run: pnpm turbo run build --force
 
       - name: 🧪 Run tests and benchmarks
-        run: pnpm turbo run test bench
+        run: pnpm turbo run test bench -- --reporter=verbose
 
   types:
     name: 🩻 Check types
@@ -219,7 +219,6 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          version: 'pnpm run version'
           publish: pnpm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

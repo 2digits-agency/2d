@@ -13,7 +13,6 @@
     "lint:pkg": "manypkg check",
     "lint:pkg:fix": "manypkg fix",
     "types": "turbo run types",
-    "version": "changeset version && pnpm turbo run build && pnpm test -- run --update",
     "publish": "changeset publish",
     "release": "pnpm turbo run build --force && changeset publish",
     "test": "vitest",
