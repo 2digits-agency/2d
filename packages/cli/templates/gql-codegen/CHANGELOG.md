@@ -1,5 +1,11 @@
 # @mod/base-gql-codegen
 
+## 0.0.4
+
+### Patch Changes
+
+- d21902d: Updated CICD to fix snapshots
+
 ## 0.0.3
 
 ### Patch Changes
