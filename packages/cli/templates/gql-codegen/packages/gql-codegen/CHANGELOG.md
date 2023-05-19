@@ -1,5 +1,11 @@
 # @mod/gql-codegen
 
+## 0.0.2
+
+### Patch Changes
+
+- 76fc7a5: Fixed formatting with new prettier config
+
 ## 0.0.1
 
 ### Patch Changes

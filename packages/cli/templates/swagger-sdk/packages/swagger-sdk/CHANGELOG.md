@@ -1,5 +1,12 @@
 # @mod/swagger-sdk
 
+## 0.0.5
+
+### Patch Changes
+
+- cbc595f: Updated dependencies
+- 76fc7a5: Fixed formatting with new prettier config
+
 ## 0.0.4
 
 ### Patch Changes

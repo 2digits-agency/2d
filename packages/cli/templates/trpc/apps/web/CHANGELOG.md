@@ -1,5 +1,14 @@
 # @mod/web-trpc
 
+## 0.1.5
+
+### Patch Changes
+
+- cbc595f: Updated dependencies
+- 76fc7a5: Fixed formatting with new prettier config
+- Updated dependencies [cbc595f]
+  - @mod/trpc@0.0.6
+
 ## 0.1.4
 
 ### Patch Changes

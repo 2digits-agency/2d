@@ -1,5 +1,14 @@
 # @mod/web-gql-codegen
 
+## 0.0.4
+
+### Patch Changes
+
+- cbc595f: Updated dependencies
+- 76fc7a5: Fixed formatting with new prettier config
+- Updated dependencies [76fc7a5]
+  - @mod/gql-codegen@0.0.2
+
 ## 0.0.3
 
 ### Patch Changes

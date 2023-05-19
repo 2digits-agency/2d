@@ -1,5 +1,11 @@
 # @mod/stitches
 
+## 0.0.4
+
+### Patch Changes
+
+- cbc595f: Updated dependencies
+
 ## 0.0.3
 
 ### Patch Changes

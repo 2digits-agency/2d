@@ -1,5 +1,15 @@
 # @2digits/cli
 
+## 0.8.1
+
+### Patch Changes
+
+- cd335ae: Removed import assertions
+- cbc595f: Updated dependencies
+- 76fc7a5: Fixed formatting with new prettier config
+- Updated dependencies [cbc595f]
+  - @2digits/log@0.0.6
+
 ## 0.8.0
 
 ### Minor Changes
