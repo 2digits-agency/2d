@@ -14,35 +14,46 @@ on:
       - '**'
 
 jobs:
-  build:
-    name: ⚗️ Build packages
+  format:
+    name: 🧬 Format files
     runs-on: ubuntu-latest
-    timeout-minutes: 15
     steps:
       - name: 🗃️ Checkout repository
         uses: actions/checkout@v3
+
+      - name: 🛸 Setup PNPM
+        uses: pnpm/action-setup@v2
 
       - name: 🏭 Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
+          cache: 'pnpm'
+
+      - name: 🔧 Configure pnpm for quicker installation
+        run: pnpm config --location=project set dedupe-peer-dependents=false
+
+      - name: 📦 Install dependencies
+        run: pnpm install --filter "@2digits/2d"
+
+      - name: 🧬 Format files
+        run: pnpm turbo run format
+
+  test:
+    name: 🧪 Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🗃️ Checkout repository
+        uses: actions/checkout@v3
 
       - name: 🛸 Setup PNPM
-        id: pnpm
-        run: |
-          npm install --global pnpm
-          echo STORE_PATH="$(pnpm store path)" >> "$GITHUB_OUTPUT"
+        uses: pnpm/action-setup@v2
 
-      - name: ⏬ Download pnpm cache
-        uses: actions/cache@v3
-        timeout-minutes: 5
-        id: cache-pnpm-store
+      - name: 🏭 Setup Node
+        uses: actions/setup-node@v3
         with:
-          path: ${{ steps.pnpm.outputs.STORE_PATH }}
-          key: pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
-          restore-keys: |
-            pnpm-store-
-            pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
+          node-version: 'lts/*'
+          cache: 'pnpm'
 
       - name: 🔧 Configure pnpm for quicker installation
         run: pnpm config --location=project set dedupe-peer-dependents=false
@@ -52,88 +63,32 @@ jobs:
           pnpm install --filter "@2digits/*"
           pnpm install --ignore-scripts
 
-      - name: 🏗️ Build all packages
-        run: pnpm turbo run build
-
-      - name: 🗄️ Cache build outputs
-        uses: actions/cache@v3
-        timeout-minutes: 5
-        id: cache-build
-        with:
-          path: ./*
-          key: ${{ github.sha }}-${{ github.run_number }}
-
-  format:
-    name: 🧬 Format files
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: 🏭 Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 'lts/*'
-
-      - name: 🗄️ Restore cached build
-        uses: actions/cache@v3
-        timeout-minutes: 5
-        id: restore-build
-        with:
-          path: ./*
-          key: ${{ github.sha }}-${{ github.run_number }}
-
-      - name: 🛸 Setup PNPM
-        run: npm install --global pnpm
-
-      - name: 🧬 Format files
-        run: pnpm turbo run format
-
-  test:
-    name: 🧪 Run tests
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: 🏭 Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 'lts/*'
-
-      - name: 🗄️ Restore cached build
-        uses: actions/cache@v3
-        timeout-minutes: 5
-        id: restore-build
-        with:
-          path: ./*
-          key: ${{ github.sha }}-${{ github.run_number }}
-
-      - name: 🛸 Setup PNPM
-        run: npm install --global pnpm
-
-      - name: 🏗️ Build all packages
-        run: pnpm turbo run build --force
-
       - name: 🧪 Run tests and benchmarks
-        run: pnpm turbo run test bench
+        run: pnpm turbo run test bench -- --reporter=verbose
 
   types:
     name: 🩻 Check types
     runs-on: ubuntu-latest
-    needs: build
     steps:
+      - name: 🗃️ Checkout repository
+        uses: actions/checkout@v3
+
+      - name: 🛸 Setup PNPM
+        uses: pnpm/action-setup@v2
+
       - name: 🏭 Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
+          cache: 'pnpm'
 
-      - name: 🗄️ Restore cached build
-        uses: actions/cache@v3
-        timeout-minutes: 5
-        id: restore-build
-        with:
-          path: ./*
-          key: ${{ github.sha }}-${{ github.run_number }}
+      - name: 🔧 Configure pnpm for quicker installation
+        run: pnpm config --location=project set dedupe-peer-dependents=false
 
-      - name: 🛸 Setup PNPM
-        run: npm install --global pnpm
+      - name: 📦 Install dependencies
+        run: |
+          pnpm install --filter "@2digits/*"
+          pnpm install --ignore-scripts
 
       - name: 🩻 Check types
         run: pnpm turbo run types
@@ -141,23 +96,26 @@ jobs:
   lint:
     name: 🔬 Lint files
     runs-on: ubuntu-latest
-    needs: build
     steps:
+      - name: 🗃️ Checkout repository
+        uses: actions/checkout@v3
+
+      - name: 🛸 Setup PNPM
+        uses: pnpm/action-setup@v2
+
       - name: 🏭 Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
+          cache: 'pnpm'
 
-      - name: 🗄️ Restore cached build
-        uses: actions/cache@v3
-        timeout-minutes: 5
-        id: restore-build
-        with:
-          path: ./*
-          key: ${{ github.sha }}-${{ github.run_number }}
+      - name: 🔧 Configure pnpm for quicker installation
+        run: pnpm config --location=project set dedupe-peer-dependents=false
 
-      - name: 🛸 Setup PNPM
-        run: npm install --global pnpm
+      - name: 📦 Install dependencies
+        run: |
+          pnpm install --filter "@2digits/*"
+          pnpm install --ignore-scripts
 
       - name: 🔬 Lint files
         run: pnpm turbo run lint
@@ -219,7 +177,6 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          version: 'pnpm run version'
           publish: pnpm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
