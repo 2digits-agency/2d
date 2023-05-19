@@ -1,5 +1,12 @@
 # @mod/base-gql-codegen
 
+## 0.0.3
+
+### Patch Changes
+
+- cbc595f: Updated dependencies
+- 76fc7a5: Fixed formatting with new prettier config
+
 ## 0.0.2
 
 ### Patch Changes

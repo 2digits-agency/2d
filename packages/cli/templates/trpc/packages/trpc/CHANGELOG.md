@@ -1,5 +1,11 @@
 # @mod/trpc
 
+## 0.0.6
+
+### Patch Changes
+
+- cbc595f: Updated dependencies
+
 ## 0.0.5
 
 ### Patch Changes
