@@ -289,8 +289,9 @@ exports[`base > storybook > should create a storybook app > ./test/path/apps/sto
 `;
 
 exports[`base > storybook > should create a storybook app > ./test/path/apps/storybook/stories/examples/Button.stories.tsx 1`] = `
-"import type { Meta, StoryObj } from '@storybook/react';
-import type { ReactNode } from 'react';
+"import type { ReactNode } from 'react';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   component: Button,
@@ -542,11 +543,11 @@ exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/p
 `;
 
 exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/packages/swagger-sdk/generateExports.ts 1`] = `
-"import { genExport } from 'knitwork';
+"import consola from 'consola';
+import { genExport } from 'knitwork';
 import { readdir, writeFile } from 'node:fs/promises';
 import path from 'pathe';
 import Prettier from 'prettier';
-import consola from 'consola';
 
 const logger = consola.withTag('orval');
 
@@ -631,6 +632,7 @@ export async function generateExports() {
 
 exports[`base > swagger-sdk > should create a swagger-sdk module > ./test/path/packages/swagger-sdk/orval.config.ts 1`] = `
 "import type { ConfigExternal } from '@orval/core';
+
 import { generateExports } from './generateExports';
 
 const config = {
@@ -1975,8 +1977,9 @@ export default function Document() {
 `;
 
 exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/apps/web/src/pages/api/trpc/[trpc].ts 1`] = `
-"import { appRouter } from '@mod/trpc';
-import { createNextApiHandler } from '@trpc/server/adapters/next';
+"import { createNextApiHandler } from '@trpc/server/adapters/next';
+
+import { appRouter } from '@mod/trpc';
 
 export default createNextApiHandler({
   router: appRouter,
@@ -1999,10 +2002,11 @@ exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/a
 `;
 
 exports[`base > web > stitches > trpc > should add a trpc module > ./test/path/apps/web/src/utils/trpc.ts 1`] = `
-"import type { AppRouter } from '@mod/trpc';
-import { httpBatchLink, loggerLink } from '@trpc/client';
+"import { httpBatchLink, loggerLink } from '@trpc/client';
 import { createTRPCNext } from '@trpc/next';
 import superjson from 'superjson';
+
+import type { AppRouter } from '@mod/trpc';
 
 const getBaseUrl = () => {
   if (typeof window !== 'undefined') return ''; // browser should use relative url
@@ -2783,8 +2787,9 @@ export default trpc.withTRPC(App);
 `;
 
 exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/src/pages/api/trpc/[trpc].ts 1`] = `
-"import { appRouter } from '@mod/trpc';
-import { createNextApiHandler } from '@trpc/server/adapters/next';
+"import { createNextApiHandler } from '@trpc/server/adapters/next';
+
+import { appRouter } from '@mod/trpc';
 
 export default createNextApiHandler({
   router: appRouter,
@@ -2807,10 +2812,11 @@ exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/src
 `;
 
 exports[`base > web > trpc > should add a trpc module > ./test/path/apps/web/src/utils/trpc.ts 1`] = `
-"import type { AppRouter } from '@mod/trpc';
-import { httpBatchLink, loggerLink } from '@trpc/client';
+"import { httpBatchLink, loggerLink } from '@trpc/client';
 import { createTRPCNext } from '@trpc/next';
 import superjson from 'superjson';
+
+import type { AppRouter } from '@mod/trpc';
 
 const getBaseUrl = () => {
   if (typeof window !== 'undefined') return ''; // browser should use relative url
