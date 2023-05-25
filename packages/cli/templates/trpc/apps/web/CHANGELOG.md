@@ -1,5 +1,13 @@
 # @mod/web-trpc
 
+## 0.1.6
+
+### Patch Changes
+
+- d21902d: Updated CICD to fix snapshots
+- Updated dependencies [d21902d]
+  - @mod/trpc@0.0.7
+
 ## 0.1.5
 
 ### Patch Changes

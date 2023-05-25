@@ -1,5 +1,13 @@
 # @mod/storybook
 
+## 0.0.6
+
+### Patch Changes
+
+- d21902d: Updated CICD to fix snapshots
+- Updated dependencies [d21902d]
+  - @mod/stitches@0.0.5
+
 ## 0.0.5
 
 ### Patch Changes

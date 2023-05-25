@@ -1,5 +1,13 @@
 # @mod/web-gql-codegen
 
+## 0.0.5
+
+### Patch Changes
+
+- d21902d: Updated CICD to fix snapshots
+- Updated dependencies [d21902d]
+  - @mod/gql-codegen@0.0.3
+
 ## 0.0.4
 
 ### Patch Changes
