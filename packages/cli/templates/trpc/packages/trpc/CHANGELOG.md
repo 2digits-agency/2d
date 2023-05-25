@@ -1,5 +1,11 @@
 # @mod/trpc
 
+## 0.0.8
+
+### Patch Changes
+
+- edf3350: Updated dependencies
+
 ## 0.0.7
 
 ### Patch Changes
