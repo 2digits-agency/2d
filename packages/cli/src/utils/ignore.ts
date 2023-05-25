@@ -1,7 +1,6 @@
 import consola from 'consola';
 import fs from 'fs-extra';
-import type { Ignore } from 'ignore';
-import ignore from 'ignore';
+import ignore, { type Ignore } from 'ignore';
 
 export async function readIgnoreFile(ignoreFilePath: string): Promise<string[] | undefined> {
   if (!(await fs.pathExists(ignoreFilePath))) return;

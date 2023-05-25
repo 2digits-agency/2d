@@ -5,8 +5,7 @@ import fs from 'fs-extra';
 import { globby } from 'globby';
 import pathe from 'pathe';
 
-import type { Template } from '../constants';
-import { TEMPLATE_DIR } from '../constants';
+import { TEMPLATE_DIR, type Template } from '../constants';
 
 export function getTemplatePatches(template: Template) {
   const cwd = pathe.join(TEMPLATE_DIR, template);

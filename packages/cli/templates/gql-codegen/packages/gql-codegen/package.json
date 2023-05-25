@@ -26,14 +26,14 @@
   "dependencies": {
     "@graphql-typed-document-node/core": "3.2.0",
     "graphql": "16.6.0",
-    "graphql-request": "^6.0.0"
+    "graphql-request": "^6.1.0"
   },
   "devDependencies": {
     "@2digits/tsconfig": "^0.1.2",
-    "@graphql-codegen/cli": "^3.3.1",
-    "@graphql-codegen/client-preset": "^3.0.1",
+    "@graphql-codegen/cli": "^4.0.0",
+    "@graphql-codegen/client-preset": "^4.0.0",
     "concurrently": "^8.0.1",
-    "eslint": "^8.40.0",
+    "eslint": "^8.41.0",
     "tsup": "^6.7.0",
     "typescript": "^5.0.4"
   },

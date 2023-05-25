@@ -2,8 +2,7 @@ import consola from 'consola';
 import mock from 'mock-fs';
 import { afterEach, beforeEach, describe, expectTypeOf, it, test } from 'vitest';
 
-import type { Template } from '../src/constants';
-import { templates } from '../src/constants';
+import { templates, type Template } from '../src/constants';
 import { moduleEnum } from '../src/schemas';
 import { copyTemplate } from '../src/utils/templates';
 import { getCombinations, getTemplateFiles, snapshotCliOutputFs } from './testUtils';

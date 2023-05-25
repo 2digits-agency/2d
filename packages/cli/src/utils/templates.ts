@@ -5,8 +5,7 @@ import pathe from 'pathe';
 
 import { Spinner } from '@2digits/log';
 
-import type { Template } from '../constants';
-import { TEMPLATE_DIR } from '../constants';
+import { TEMPLATE_DIR, type Template } from '../constants';
 import { onCancel } from '../helpers';
 import { createIgnoreFilter } from './ignore';
 

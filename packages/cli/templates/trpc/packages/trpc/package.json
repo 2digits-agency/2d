@@ -25,17 +25,17 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^4.29.7",
-    "@trpc/client": "^10.26.0",
-    "@trpc/next": "^10.26.0",
-    "@trpc/react-query": "^10.26.0",
-    "@trpc/server": "^10.26.0",
+    "@trpc/client": "^10.27.3",
+    "@trpc/next": "^10.27.3",
+    "@trpc/react-query": "^10.27.3",
+    "@trpc/server": "^10.27.3",
     "next": "^13.4.3",
     "superjson": "^1.12.3",
     "zod": "^3.21.4"
   },
   "devDependencies": {
     "@2digits/tsconfig": "^0.1.2",
-    "eslint": "^8.40.0",
+    "eslint": "^8.41.0",
     "tsup": "^6.7.0",
     "typescript": "^5.0.4"
   }
