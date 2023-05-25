@@ -1,5 +1,12 @@
 # @2digits/log
 
+## 0.0.7
+
+### Patch Changes
+
+- edf3350: Updated dependencies
+- eb202b1: Formatted code using new prettier config
+
 ## 0.0.6
 
 ### Patch Changes

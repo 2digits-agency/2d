@@ -1,5 +1,11 @@
 # @mod/swagger-sdk
 
+## 0.0.7
+
+### Patch Changes
+
+- edf3350: Updated dependencies
+
 ## 0.0.6
 
 ### Patch Changes

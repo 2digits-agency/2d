@@ -1,5 +1,13 @@
 # @mod/web-gql-codegen
 
+## 0.0.6
+
+### Patch Changes
+
+- edf3350: Updated dependencies
+- Updated dependencies [edf3350]
+  - @mod/gql-codegen@0.0.4
+
 ## 0.0.5
 
 ### Patch Changes

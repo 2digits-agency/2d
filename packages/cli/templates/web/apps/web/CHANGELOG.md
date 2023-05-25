@@ -1,5 +1,11 @@
 # @mod/web
 
+## 0.1.7
+
+### Patch Changes
+
+- edf3350: Updated dependencies
+
 ## 0.1.6
 
 ### Patch Changes

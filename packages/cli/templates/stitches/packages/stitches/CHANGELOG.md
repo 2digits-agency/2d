@@ -1,5 +1,11 @@
 # @mod/stitches
 
+## 0.0.6
+
+### Patch Changes
+
+- edf3350: Updated dependencies
+
 ## 0.0.5
 
 ### Patch Changes

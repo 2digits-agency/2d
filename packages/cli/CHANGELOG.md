@@ -1,5 +1,15 @@
 # @2digits/cli
 
+## 0.8.2
+
+### Patch Changes
+
+- edf3350: Updated dependencies
+- eb202b1: Formatted code using new prettier config
+- Updated dependencies [edf3350]
+- Updated dependencies [eb202b1]
+  - @2digits/log@0.0.7
+
 ## 0.8.1
 
 ### Patch Changes
