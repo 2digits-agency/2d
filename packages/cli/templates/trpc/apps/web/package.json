@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@mod/trpc": "workspace:*",
-    "@sentry/cli": "^2.17.5",
-    "@sentry/nextjs": "^7.52.1",
+    "@sentry/cli": "^2.18.1",
+    "@sentry/nextjs": "^7.53.1",
     "@tanstack/react-query": "^4.29.7",
     "@trpc/client": "^10.27.3",
     "@trpc/next": "^10.27.3",
@@ -27,10 +27,10 @@
     "@2digits/tsconfig": "^0.1.2",
     "@babel/core": "^7.21.8",
     "@next/bundle-analyzer": "^13.4.3",
-    "@types/node": "^20.2.1",
-    "@types/react": "^18.2.6",
+    "@types/node": "^20.2.3",
+    "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
-    "eslint": "^8.40.0",
+    "eslint": "^8.41.0",
     "typescript": "^5.0.4"
   }
 }

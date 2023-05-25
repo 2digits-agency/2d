@@ -33,7 +33,7 @@
     "@graphql-codegen/cli": "^4.0.0",
     "@graphql-codegen/client-preset": "^4.0.0",
     "concurrently": "^8.0.1",
-    "eslint": "^8.40.0",
+    "eslint": "^8.41.0",
     "tsup": "^6.7.0",
     "typescript": "^5.0.4"
   },
