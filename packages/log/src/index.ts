@@ -1,8 +1,7 @@
 import type { State } from '@clack/core';
 import chalk from 'chalk';
 import isUnicodeSupported from 'is-unicode-supported';
-import type { Options, Ora } from 'ora';
-import ora from 'ora';
+import ora, { type Options, type Ora } from 'ora';
 
 const unicode = isUnicodeSupported();
 

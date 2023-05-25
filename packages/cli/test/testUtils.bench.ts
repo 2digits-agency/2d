@@ -1,7 +1,6 @@
 import { bench, describe } from 'vitest';
 
-import type { Template } from '../src/constants';
-import { templates } from '../src/constants';
+import { templates, type Template } from '../src/constants';
 import { getCombinations, getTemplateFiles } from './testUtils';
 
 const templateNames = Object.keys(templates) as Template[];
