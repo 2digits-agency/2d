@@ -70,6 +70,19 @@ export function validate<TValue>(validator: z.ZodType<TValue>) {
   };
 }
 
+interface PromptMissingArgOptions<
+  TArgs,
+  TArgname extends keyof TArgs & string,
+  TArg extends TArgs[TArgname],
+  TPrompt extends TArg,
+  TSchema extends z.ZodType<TArg>,
+> {
+  args: Arguments<TArgs>;
+  argName: TArgname;
+  schema: TSchema;
+  prompt(): Promise<TPrompt | symbol>;
+}
+
 export async function promptMissingArg<
   TArgs,
   TArgname extends keyof TArgs & string,
@@ -81,12 +94,7 @@ export async function promptMissingArg<
   prompt,
   argName,
   args,
-}: {
-  args: Arguments<TArgs>;
-  argName: TArgname;
-  schema: TSchema;
-  prompt(): Promise<TPrompt | symbol>;
-}): Promise<z.infer<TSchema>> {
+}: PromptMissingArgOptions<TArgs, TArgname, TArg, TPrompt, TSchema>): Promise<z.infer<TSchema>> {
   const result = await schema.spa(args[argName]);
 
   if (result.success) {
@@ -106,5 +114,6 @@ export async function promptMissingArg<
   if (promptResult.success) return promptResult.data;
 
   p.log.error(promptResult.error.flatten().formErrors.join('\n'));
+
   return promptMissingArg({ argName, args, schema, prompt });
 }
