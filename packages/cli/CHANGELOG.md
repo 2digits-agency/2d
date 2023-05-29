@@ -1,5 +1,16 @@
 # @2digits/cli
 
+## 0.8.3
+
+### Patch Changes
+
+- f10dbd9: Updated tsconfigs
+- fa3ee1a: Updated deps
+- cdc719b: Extracted PromptMissingArgOptions interface
+- 8b3e57d: Refactored imports
+- Updated dependencies [fa3ee1a]
+  - @2digits/log@0.0.8
+
 ## 0.8.2
 
 ### Patch Changes

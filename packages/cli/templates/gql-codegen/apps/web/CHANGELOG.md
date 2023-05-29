@@ -1,5 +1,15 @@
 # @mod/web-gql-codegen
 
+## 0.0.7
+
+### Patch Changes
+
+- d382b38: Added tsconfig to template
+- fa3ee1a: Updated deps
+- Updated dependencies [fa3ee1a]
+- Updated dependencies [8b3e57d]
+  - @mod/gql-codegen@0.0.5
+
 ## 0.0.6
 
 ### Patch Changes

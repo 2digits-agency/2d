@@ -1,5 +1,13 @@
 # @mod/stitches
 
+## 0.0.7
+
+### Patch Changes
+
+- f10dbd9: Updated tsconfigs
+- fa3ee1a: Updated deps
+- 9d3a971: Updated tsconfigs
+
 ## 0.0.6
 
 ### Patch Changes

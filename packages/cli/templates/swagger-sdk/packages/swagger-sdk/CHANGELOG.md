@@ -1,5 +1,14 @@
 # @mod/swagger-sdk
 
+## 0.0.8
+
+### Patch Changes
+
+- f10dbd9: Updated tsconfigs
+- fa3ee1a: Updated deps
+- 8b3e57d: Refactored imports
+- 9d3a971: Updated tsconfigs
+
 ## 0.0.7
 
 ### Patch Changes
