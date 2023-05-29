@@ -21,7 +21,7 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "packageManager": "pnpm@8.5.1",
+  "packageManager": "pnpm@8.6.0",
   "manypkg": {
     "ignoredRules": [
       "INTERNAL_MISMATCH"
@@ -32,13 +32,13 @@
   },
   "prettier": "@2digits/prettier-config",
   "dependencies": {
-    "@2digits/eslint-config": "^0.3.3",
-    "@2digits/prettier-config": "^0.6.0",
-    "@2digits/tsconfig": "^0.1.2",
+    "@2digits/eslint-config": "^0.3.4",
+    "@2digits/prettier-config": "^0.6.1",
+    "@2digits/tsconfig": "^0.1.3",
     "@changesets/cli": "^2.26.1",
     "@manypkg/cli": "^0.20.0",
     "@total-typescript/ts-reset": "^0.4.2",
-    "@types/node": "^20.2.3",
+    "@types/node": "^20.2.5",
     "@vitest/ui": "^0.31.1",
     "eslint": "^8.41.0",
     "prettier": "^2.8.8",

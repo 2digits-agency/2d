@@ -7,4 +7,4 @@
 +    "@mod/gql-codegen": "workspace:*",
      "@sentry/cli": "^2.18.1",
      "@sentry/nextjs": "^7.53.1",
-     "next": "^13.4.3",
+     "next": "^13.4.4",
