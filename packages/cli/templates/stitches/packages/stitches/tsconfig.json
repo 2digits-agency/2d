@@ -2,6 +2,7 @@
   "extends": "@2digits/tsconfig/tsconfig.json",
   "include": ["**/*.ts", "**/*.tsx"],
   "compilerOptions": {
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "resolvePackageJsonExports": false
   }
 }
