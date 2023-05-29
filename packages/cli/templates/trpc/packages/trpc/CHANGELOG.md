@@ -1,5 +1,12 @@
 # @mod/trpc
 
+## 0.0.9
+
+### Patch Changes
+
+- fa3ee1a: Updated deps
+- 8b3e57d: Refactored imports
+
 ## 0.0.8
 
 ### Patch Changes

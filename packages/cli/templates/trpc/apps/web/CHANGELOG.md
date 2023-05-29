@@ -1,5 +1,16 @@
 # @mod/web-trpc
 
+## 0.1.8
+
+### Patch Changes
+
+- d382b38: Added tsconfig to template
+- fa3ee1a: Updated deps
+- 8b3e57d: Refactored imports
+- Updated dependencies [fa3ee1a]
+- Updated dependencies [8b3e57d]
+  - @mod/trpc@0.0.9
+
 ## 0.1.7
 
 ### Patch Changes

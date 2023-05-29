@@ -1,5 +1,12 @@
 # @mod/module
 
+## 0.0.4
+
+### Patch Changes
+
+- d382b38: Added tsconfig to template
+- fa3ee1a: Updated deps
+
 ## 0.0.3
 
 ### Patch Changes

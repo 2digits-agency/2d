@@ -1,5 +1,12 @@
 # @mod/gql-codegen
 
+## 0.0.5
+
+### Patch Changes
+
+- fa3ee1a: Updated deps
+- 8b3e57d: Refactored imports
+
 ## 0.0.4
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @2digits/log
 
+## 0.0.8
+
+### Patch Changes
+
+- fa3ee1a: Updated deps
+
 ## 0.0.7
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @mod/web-stitches
 
+## 0.0.9
+
+### Patch Changes
+
+- d382b38: Added tsconfig to template
+- fa3ee1a: Updated deps
+- Updated dependencies [f10dbd9]
+- Updated dependencies [fa3ee1a]
+- Updated dependencies [9d3a971]
+  - @mod/stitches@0.0.7
+
 ## 0.0.8
 
 ### Patch Changes
