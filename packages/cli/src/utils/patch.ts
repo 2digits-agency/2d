@@ -1,6 +1,6 @@
 import * as p from '@clack/prompts';
-import * as Diff from 'diff';
 import { consola } from 'consola';
+import * as Diff from 'diff';
 import fs from 'fs-extra';
 import { globby } from 'globby';
 import pathe from 'pathe';

@@ -1,4 +1,5 @@
 import { fileURLToPath } from 'node:url';
+
 import pathe from 'pathe';
 
 import base from '../templates/base/package.json';

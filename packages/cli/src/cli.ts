@@ -2,6 +2,7 @@ import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 
 import pkg from '../package.json';
+
 import { create } from './commands/create';
 import { init } from './commands/init';
 
