@@ -10,6 +10,7 @@ import { z } from 'zod';
 
 import { bugs } from '../../package.json';
 import type packageJson from '../../templates/base/package.json';
+
 import { createCommand, promptMissingArg, validate } from '../helpers';
 import { appName, appPath, moduleEnum } from '../schemas';
 import { installDependencies } from '../utils/dependencies';

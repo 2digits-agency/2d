@@ -1,7 +1,8 @@
-import * as p from '@clack/prompts';
-import chalk from 'chalk';
 import process from 'node:process';
 import { formatWithOptions } from 'node:util';
+
+import * as p from '@clack/prompts';
+import chalk from 'chalk';
 import type { Arguments, ArgumentsCamelCase, Argv, CommandModule } from 'yargs';
 import type { z } from 'zod';
 

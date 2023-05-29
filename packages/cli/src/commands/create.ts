@@ -9,6 +9,7 @@ import link from 'terminal-link';
 import { z } from 'zod';
 
 import { bugs } from '../../package.json';
+
 import { createCommand, onCancel, promptMissingArg, validate } from '../helpers';
 import { moduleName } from '../schemas';
 import { installDependencies } from '../utils/dependencies';

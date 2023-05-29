@@ -1,5 +1,6 @@
-import type { CodegenConfig } from '@graphql-codegen/cli';
 import { fileURLToPath } from 'node:url';
+
+import type { CodegenConfig } from '@graphql-codegen/cli';
 import { dirname, join } from 'pathe';
 
 import { projects } from './.graphqlrc.json';

@@ -1,6 +1,7 @@
+import { readdir, writeFile } from 'node:fs/promises';
+
 import consola from 'consola';
 import { genExport } from 'knitwork';
-import { readdir, writeFile } from 'node:fs/promises';
 import path from 'pathe';
 import Prettier from 'prettier';
 
