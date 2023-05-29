@@ -3,7 +3,6 @@
   "include": ["**/*.ts", "**/*.tsx", "../../reset.d.ts"],
   "exclude": ["dist"],
   "compilerOptions": {
-    "moduleResolution": "node",
-    "resolvePackageJsonExports": false
+    "moduleResolution": "node"
   }
 }
