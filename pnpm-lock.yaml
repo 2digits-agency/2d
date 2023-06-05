@@ -312,91 +312,8 @@ importers:
         specifier: ^5.1.3
         version: 5.1.3
 
-  packages/cli/templates/stitches/apps/web:
-    dependencies:
-      '@mod/stitches':
-        specifier: workspace:*
-        version: link:../../packages/stitches
-      '@sentry/cli':
-        specifier: ^2.18.1
-        version: 2.18.1
-      '@sentry/nextjs':
-        specifier: ^7.54.0
-        version: 7.54.0(next@13.4.4)(react@18.2.0)
-      next:
-        specifier: ^13.4.4
-        version: 13.4.4(@babel/core@7.22.1)(react-dom@18.2.0)(react@18.2.0)
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-    devDependencies:
-      '@2digits/tsconfig':
-        specifier: ^0.1.4
-        version: 0.1.4(typescript@5.1.3)
-      '@babel/core':
-        specifier: ^7.22.1
-        version: 7.22.1
-      '@next/bundle-analyzer':
-        specifier: ^13.4.4
-        version: 13.4.4
-      '@types/node':
-        specifier: ^20.2.5
-        version: 20.2.5
-      '@types/react':
-        specifier: ^18.2.8
-        version: 18.2.8
-      '@types/react-dom':
-        specifier: ^18.2.4
-        version: 18.2.4
-      eslint:
-        specifier: ^8.42.0
-        version: 8.42.0
-      typescript:
-        specifier: ^5.1.3
-        version: 5.1.3
-
-  packages/cli/templates/stitches/packages/stitches:
-    dependencies:
-      '@stitches/react':
-        specifier: ^1.3.1-1
-        version: 1.3.1-1(react@18.2.0)
-      '@unocss/reset':
-        specifier: ^0.53.0
-        version: 0.53.0
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-    devDependencies:
-      '@2digits/tsconfig':
-        specifier: ^0.1.4
-        version: 0.1.4(typescript@5.1.3)
-      '@types/react':
-        specifier: ^18.2.8
-        version: 18.2.8
-      '@types/react-dom':
-        specifier: ^18.2.4
-        version: 18.2.4
-      eslint:
-        specifier: ^8.42.0
-        version: 8.42.0
-      tsup:
-        specifier: ^6.7.0
-        version: 6.7.0(typescript@5.1.3)
-      typescript:
-        specifier: ^5.1.3
-        version: 5.1.3
-
   packages/cli/templates/storybook/apps/storybook:
     dependencies:
-      '@mod/stitches':
-        specifier: workspace:*
-        version: link:../../../stitches/packages/stitches
       next:
         specifier: ^13.4.4
         version: 13.4.4(@babel/core@7.22.1)(react-dom@18.2.0)(react@18.2.0)
@@ -5184,14 +5101,6 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
-  /@stitches/react@1.3.1-1(react@18.2.0):
-    resolution: {integrity: sha512-ErptbQehV25Da6LtZuM/51kGNK/UvlRY2da9IhhfXQ9h4bmf2f+lYFiJQ9j43O1kwYr6iYJIBRM47FEbsUWffw==}
-    peerDependencies:
-      react: '>= 16.3.0'
-    dependencies:
-      react: 18.2.0
-    dev: false
-
   /@stoplight/better-ajv-errors@1.0.3(ajv@8.12.0):
     resolution: {integrity: sha512-0p9uXkuB22qGdNfy3VeEhxkU5uwvp/KrBTAbrLBURv6ilxIVwanKwjMc41lQfIVgPGcOkmLbTolfFrSsueu7zA==}
     engines: {node: ^12.20 || >= 14.13}
@@ -7138,10 +7047,6 @@ packages:
     dependencies:
       '@typescript-eslint/types': 5.59.8
       eslint-visitor-keys: 3.4.1
-
-  /@unocss/reset@0.53.0:
-    resolution: {integrity: sha512-4XJkEtVxUGYp+WX2aRTrZLNp6MEwulBvhhpkAjwfkS+wVdo9lMma0O93TCqJaFeYx7lU8W92APB4n918rz9scA==}
-    dev: false
 
   /@vitest/expect@0.31.4:
     resolution: {integrity: sha512-tibyx8o7GUyGHZGyPgzwiaPaLDQ9MMuCOrc03BYT0nryUuhLbL7NV2r/q98iv5STlwMgaKuFJkgBW/8iPKwlSg==}

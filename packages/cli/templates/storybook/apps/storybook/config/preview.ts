@@ -1,7 +1,5 @@
 import type { Preview } from '@storybook/react';
 
-import '@mod/stitches/reset';
-
 const preview = {
   parameters: {
     backgrounds: {

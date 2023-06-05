@@ -5,7 +5,6 @@ import pathe from 'pathe';
 import base from '../templates/base/package.json';
 import gqlCodegen from '../templates/gql-codegen/packages/gql-codegen/package.json';
 import module from '../templates/module/package.json';
-import stitches from '../templates/stitches/packages/stitches/package.json';
 import storybook from '../templates/storybook/apps/storybook/package.json';
 import swaggerSdk from '../templates/swagger-sdk/packages/swagger-sdk/package.json';
 import trpc from '../templates/trpc/packages/trpc/package.json';
@@ -25,7 +24,6 @@ export const templates = {
   base,
   web,
   trpc,
-  stitches,
   ['swagger-sdk']: swaggerSdk,
   storybook,
   ['gql-codegen']: gqlCodegen,
