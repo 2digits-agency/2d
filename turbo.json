@@ -3,7 +3,6 @@
     "build": { "dependsOn": ["^build"], "outputs": ["dist"] },
     "types": { "dependsOn": ["^types", "^build"] },
     "dev": { "cache": false },
-    "bench": { "dependsOn": ["^build", "^bench"] },
     "test": { "dependsOn": ["^build", "^test"] },
 
     "lint": {},
