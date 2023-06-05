@@ -1,0 +1,12 @@
+--- tailwind/package.json	2023-04-28 13:49:30
++++ packages/tailwind/package.tailwind.json	2023-04-28 13:56:48
+@@ -22,6 +22,9 @@
+     "dist"
+   ],
+   "scripts": {
++    "build": "tsup",
++    "dev": "tsup --watch",
++    "lint": "eslint --ignore-path ../../.gitignore .",
+     "types": "tsc --noEmit"
+   },
+   "devDependencies": {
