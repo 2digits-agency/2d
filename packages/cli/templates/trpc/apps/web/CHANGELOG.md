@@ -1,5 +1,13 @@
 # @mod/web-trpc
 
+## 0.1.9
+
+### Patch Changes
+
+- 5500217: Updated deps
+- Updated dependencies [5500217]
+  - @mod/trpc@0.0.10
+
 ## 0.1.8
 
 ### Patch Changes

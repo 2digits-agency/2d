@@ -1,5 +1,13 @@
 # @mod/web-gql-codegen
 
+## 0.0.8
+
+### Patch Changes
+
+- 5500217: Updated deps
+- Updated dependencies [5500217]
+  - @mod/gql-codegen@0.0.6
+
 ## 0.0.7
 
 ### Patch Changes
