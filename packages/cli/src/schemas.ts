@@ -9,14 +9,7 @@ export const appName = z
     message: 'Please check https://docs.npmjs.com/cli/v9/configuring-npm/package-json#name',
   });
 
-export const moduleEnum = z.enum([
-  'web',
-  'storybook',
-  'trpc',
-  'stitches',
-  'swagger-sdk',
-  'gql-codegen',
-]);
+export const moduleEnum = z.enum(['web', 'storybook', 'trpc', 'swagger-sdk', 'gql-codegen']);
 
 const VALID_PROJECT_DIRECTORY_SAFE_LIST = new Set([
   '.DS_Store',
