@@ -1,5 +1,19 @@
 # @2digits/cli
 
+## 0.9.0
+
+### Minor Changes
+
+- d80d4a9: Added tailwind module
+- 98c8d02: Removed stitches module
+
+### Patch Changes
+
+- c7036bc: Removed benchmarks from vitest
+- 5500217: Updated deps
+- Updated dependencies [5500217]
+  - @2digits/log@0.0.9
+
 ## 0.8.3
 
 ### Patch Changes

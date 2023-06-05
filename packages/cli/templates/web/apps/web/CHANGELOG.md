@@ -1,5 +1,12 @@
 # @mod/web
 
+## 0.1.9
+
+### Patch Changes
+
+- 75a9ba9: Updated tsconfig to better reflect nextjs requirements
+- 5500217: Updated deps
+
 ## 0.1.8
 
 ### Patch Changes

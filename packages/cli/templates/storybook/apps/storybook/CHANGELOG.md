@@ -1,5 +1,12 @@
 # @mod/storybook
 
+## 0.0.9
+
+### Patch Changes
+
+- 5500217: Updated deps
+- 98c8d02: Removed stitches module
+
 ## 0.0.8
 
 ### Patch Changes
