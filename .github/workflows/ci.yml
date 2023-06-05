@@ -64,8 +64,8 @@ jobs:
       - name: 🏗️ Force build
         run: pnpm turbo run build --force
 
-      - name: 🧪 Run tests and benchmarks
-        run: pnpm turbo run test bench -- --reporter=verbose
+      - name: 🧪 Run tests
+        run: pnpm turbo run test -- --reporter=verbose
 
   types:
     name: 🩻 Check types
