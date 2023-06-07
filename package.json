@@ -32,7 +32,7 @@
   },
   "prettier": "@2digits/prettier-config",
   "dependencies": {
-    "@2digits/eslint-config": "^0.4.0",
+    "@2digits/eslint-config": "^0.5.0",
     "@2digits/prettier-config": "^0.7.0",
     "@2digits/tsconfig": "^0.1.4",
     "@changesets/cli": "^2.26.1",
