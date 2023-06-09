@@ -1,5 +1,15 @@
 # @mod/trpc
 
+## 0.1.0
+
+### Minor Changes
+
+- 758f332: Removed web-trpc while waiting for app-dir support
+
+### Patch Changes
+
+- be8d397: Updated deps
+
 ## 0.0.10
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @mod/base
 
+## 0.0.11
+
+### Patch Changes
+
+- be8d397: Updated deps
+
 ## 0.0.10
 
 ### Patch Changes
