@@ -24,11 +24,11 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@2digits/tsconfig": "^0.1.4",
-    "@babel/core": "^7.22.1",
+    "@2digits/tsconfig": "^0.2.0",
+    "@babel/core": "^7.22.5",
     "@next/bundle-analyzer": "^13.4.4",
     "@types/node": "^20.2.5",
-    "@types/react": "^18.2.8",
+    "@types/react": "^18.2.9",
     "@types/react-dom": "^18.2.4",
     "eslint": "^8.42.0",
     "typescript": "^5.1.3"
