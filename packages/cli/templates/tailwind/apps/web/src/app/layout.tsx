@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import '@mod/tailwind/stlyes.css';
+import '@mod/tailwind/styles.css';
 
 interface RootLayoutProps {
   children: ReactNode;
