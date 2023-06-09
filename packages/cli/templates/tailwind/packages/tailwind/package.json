@@ -25,8 +25,8 @@
     "types": "tsc --noEmit"
   },
   "devDependencies": {
-    "@2digits/eslint-config": "^0.4.0",
-    "@2digits/tsconfig": "^0.1.4",
+    "@2digits/eslint-config": "^0.5.0",
+    "@2digits/tsconfig": "^0.2.0",
     "eslint": "^8.42.0",
     "postcss-load-config": "^4.0.1",
     "tsup": "^6.7.0",
