@@ -1,0 +1,10 @@
+--- web/apps/web/src/app/layout.tsx	2023-04-28 11:46:04
++++ apps/web/src/app/layout.tailwind.tsx	2023-04-28 14:16:15
+@@ -1,5 +1,7 @@
+ import type { ReactNode } from 'react';
+ 
++import '@mod/tailwind/stlyes.css';
++
+ interface RootLayoutProps {
+   children: ReactNode;
+ }

@@ -1,0 +1,11 @@
+--- web/apps/web/src/app/page.tsx	2023-04-28 11:46:04
++++ apps/web/src/app/page.tailwind.tsx	2023-04-28 14:16:15
+@@ -1,7 +1,7 @@
+ export default function Home() {
+   return (
+     <div>
+-      <h1>Hello, world!</h1>
++      <h1 className="text-3xl font-bold underline">Hello, world!</h1>
+     </div>
+   );
+ }
