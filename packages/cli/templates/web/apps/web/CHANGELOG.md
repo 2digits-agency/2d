@@ -1,5 +1,17 @@
 # @mod/web
 
+## 0.2.0
+
+### Minor Changes
+
+- f934b51: Removed bad implementation of sentry
+- 978329e: Moved to next.js app-dir
+- 230dc6a: Removed next-bundle-analyzer
+
+### Patch Changes
+
+- be8d397: Updated deps
+
 ## 0.1.9
 
 ### Patch Changes
