@@ -10,8 +10,6 @@
   },
   "dependencies": {
     "@mod/tailwind": "workspace:*",
-    "@sentry/cli": "^2.18.1",
-    "@sentry/nextjs": "^7.54.0",
     "next": "^13.4.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -19,7 +17,6 @@
   "devDependencies": {
     "@2digits/tsconfig": "^0.2.0",
     "@babel/core": "^7.22.5",
-    "@next/bundle-analyzer": "^13.4.4",
     "@types/node": "^20.2.5",
     "@types/react": "^18.2.9",
     "@types/react-dom": "^18.2.4",
