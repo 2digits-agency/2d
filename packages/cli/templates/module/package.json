@@ -1,6 +1,6 @@
 {
   "name": "@mod/module",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "bugs": {
     "url": "https://github.com/2digits-agency/2d/issues/new"
   },
@@ -24,7 +24,7 @@
     "types": "tsc --noEmit"
   },
   "devDependencies": {
-    "@2digits/tsconfig": "^0.1.4",
+    "@2digits/tsconfig": "^0.2.0",
     "eslint": "^8.42.0",
     "tsup": "^6.7.0",
     "typescript": "^5.1.3"

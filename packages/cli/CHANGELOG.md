@@ -1,5 +1,14 @@
 # @2digits/cli
 
+## 0.9.1
+
+### Patch Changes
+
+- 758f332: Removed web-trpc while waiting for app-dir support
+- be8d397: Updated deps
+- Updated dependencies [be8d397]
+  - @2digits/log@0.0.10
+
 ## 0.9.0
 
 ### Minor Changes

@@ -63,10 +63,6 @@ exports[`base > trpc > should add a trpc module 1`] = `
   "./test/path/turbo.json",
   "./test/path/apps/web/next.config.mjs",
   "./test/path/apps/web/package.json",
-  "./test/path/apps/web/sentry.client.config.ts",
-  "./test/path/apps/web/sentry.config.ts",
-  "./test/path/apps/web/sentry.edge.config.ts",
-  "./test/path/apps/web/sentry.server.config.ts",
   "./test/path/apps/web/tsconfig.json",
   "./test/path/apps/web/turbo.json",
   "./test/path/packages/trpc/package.json",
@@ -74,12 +70,10 @@ exports[`base > trpc > should add a trpc module 1`] = `
   "./test/path/packages/trpc/tsup.config.ts",
   "./test/path/packages/trpc/src/index.ts",
   "./test/path/packages/trpc/src/trpc.ts",
-  "./test/path/apps/web/src/pages/_app.tsx",
-  "./test/path/apps/web/src/pages/index.tsx",
-  "./test/path/apps/web/src/utils/trpc.ts",
+  "./test/path/apps/web/src/app/layout.tsx",
+  "./test/path/apps/web/src/app/page.tsx",
   "./test/path/packages/trpc/src/router/index.ts",
   "./test/path/packages/trpc/src/router/example/hello.ts",
-  "./test/path/apps/web/src/pages/api/trpc/[trpc].ts",
 ]
 `;
 
@@ -95,13 +89,9 @@ exports[`base > web > should create a web app 1`] = `
   "./test/path/turbo.json",
   "./test/path/apps/web/next.config.mjs",
   "./test/path/apps/web/package.json",
-  "./test/path/apps/web/sentry.client.config.ts",
-  "./test/path/apps/web/sentry.config.ts",
-  "./test/path/apps/web/sentry.edge.config.ts",
-  "./test/path/apps/web/sentry.server.config.ts",
   "./test/path/apps/web/tsconfig.json",
   "./test/path/apps/web/turbo.json",
-  "./test/path/apps/web/src/pages/_app.tsx",
-  "./test/path/apps/web/src/pages/index.tsx",
+  "./test/path/apps/web/src/app/layout.tsx",
+  "./test/path/apps/web/src/app/page.tsx",
 ]
 `;

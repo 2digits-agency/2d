@@ -1,5 +1,11 @@
 # @mod/module
 
+## 0.0.6
+
+### Patch Changes
+
+- be8d397: Updated deps
+
 ## 0.0.5
 
 ### Patch Changes
