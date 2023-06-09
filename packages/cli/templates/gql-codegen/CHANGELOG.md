@@ -1,5 +1,11 @@
 # @mod/base-gql-codegen
 
+## 0.0.8
+
+### Patch Changes
+
+- be8d397: Updated deps
+
 ## 0.0.7
 
 ### Patch Changes
