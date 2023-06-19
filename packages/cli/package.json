@@ -4,7 +4,7 @@
   "description": "",
   "license": "MIT",
   "public": true,
-  "packageManager": "pnpm@8.6.2",
+  "packageManager": "pnpm@8.6.3",
   "repository": {
     "url": "https://github.com/2digits-agency/2d",
     "directory": "packages/cli"
@@ -53,7 +53,7 @@
     }
   },
   "devDependencies": {
-    "@2digits/eslint-config": "^0.5.0",
+    "@2digits/eslint-config": "^0.6.0",
     "@2digits/tsconfig": "^0.2.0",
     "@types/diff": "^5.0.3",
     "@types/fs-extra": "^11.0.1",

@@ -1,10 +1,10 @@
 --- base/package.json	2023-05-07 14:14:57
-+++ package.gql-codegen.json	2023-05-07 14:26:55
-@@ -10,6 +10,7 @@
-     "@2digits/eslint-config": "^0.6.0",
++++ package.tailwind.json	2023-05-07 14:26:55
+@@ -11,6 +11,7 @@
      "@2digits/prettier-config": "^0.9.0",
      "@2digits/tsconfig": "^0.2.0",
-+    "@graphql-codegen/cli": "^4.0.1",
      "@manypkg/cli": "^0.21.0",
++    "@mod/tailwind": "workspace:*",
      "@total-typescript/ts-reset": "^0.4.2",
      "@types/node": "^20.3.1",
+     "eslint": "^8.43.0",

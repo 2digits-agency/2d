@@ -1,6 +1,6 @@
 {
-  "name": "@mod/base",
-  "version": "0.0.11",
+  "name": "@mod/base-tailwind",
+  "version": "0.0.0",
   "bugs": {
     "url": "https://github.com/2digits-agency/2d/issues/new"
   },
@@ -11,6 +11,7 @@
     "@2digits/prettier-config": "^0.9.0",
     "@2digits/tsconfig": "^0.2.0",
     "@manypkg/cli": "^0.21.0",
+    "@mod/tailwind": "workspace:*",
     "@total-typescript/ts-reset": "^0.4.2",
     "@types/node": "^20.3.1",
     "eslint": "^8.43.0",
