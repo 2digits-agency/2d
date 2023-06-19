@@ -1,1 +1,1 @@
-export { tailwindConfig as default } from '@mod/tailwind';
+export { tailwindConfig as default } from './packages/tailwind/src/index';
