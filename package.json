@@ -32,8 +32,8 @@
   },
   "prettier": "@2digits/prettier-config",
   "dependencies": {
-    "@2digits/eslint-config": "^0.5.0",
-    "@2digits/prettier-config": "^0.8.0",
+    "@2digits/eslint-config": "^0.5.1",
+    "@2digits/prettier-config": "^0.8.1",
     "@2digits/tsconfig": "^0.2.0",
     "@changesets/cli": "^2.26.1",
     "@manypkg/cli": "^0.21.0",

@@ -7,8 +7,8 @@
   "private": true,
   "scripts": {},
   "dependencies": {
-    "@2digits/eslint-config": "^0.5.0",
-    "@2digits/prettier-config": "^0.8.0",
+    "@2digits/eslint-config": "^0.5.1",
+    "@2digits/prettier-config": "^0.8.1",
     "@2digits/tsconfig": "^0.2.0",
     "@manypkg/cli": "^0.21.0",
     "@total-typescript/ts-reset": "^0.4.2",
