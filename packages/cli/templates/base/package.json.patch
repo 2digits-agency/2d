@@ -1,6 +1,6 @@
 --- base/package.json	2023-04-28 11:51:44
 +++ package.base.json	2023-04-28 14:24:07
-@@ -2,7 +2,17 @@
+@@ -2,7 +2,18 @@
      "url": "https://github.com/2digits-agency/2d/issues/new"
    },
    "private": true,
@@ -8,7 +8,8 @@
 +  "scripts": {
 +    "build": "turbo run build",
 +    "clean": "find . -name node_modules -o -name .turbo -o -name .next -o -name dist -type d -prune | xargs rm -rf",
-+    "dev": "turbo run dev",
++    "dev": "turbo run dev --filter=!storybook",
++    "storybook": "turbo run dev --filter=storybook...",
 +    "format": "bash -c 'prettier \"**/*\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --check'",
 +    "format:fix": "bash -c 'prettier \"**/*\" --ignore-unknown --ignore-path <(cat .gitignore .prettierignore) --write'",
 +    "lint": "turbo lint && manypkg check",
