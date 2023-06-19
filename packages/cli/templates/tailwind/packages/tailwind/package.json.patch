@@ -1,6 +1,23 @@
 --- tailwind/package.json	2023-04-28 13:49:30
 +++ packages/tailwind/package.tailwind.json	2023-04-28 13:56:48
-@@ -22,6 +22,9 @@
+@@ -9,19 +9,22 @@
+   "exports": {
+     "./package.json": "./package.json",
+     ".": {
+-      "import": "./src/index.ts",
+-      "require": "./src/index.ts",
++      "import": "./dist/index.mjs",
++      "require": "./dist/index.js",
+       "types": "./src/index.ts"
+     },
+     "./styles.css": "./src/styles.css"
+   },
+-  "main": "./src/index.ts",
+-  "module": "./src/index.ts",
++  "main": "./dist/index.js",
++  "module": "./dist/index.mjs",
+   "types": "./src/index.ts",
+   "files": [
      "dist"
    ],
    "scripts": {
