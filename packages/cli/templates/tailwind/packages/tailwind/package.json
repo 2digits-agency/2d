@@ -9,14 +9,14 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "import": "./src/index.ts",
-      "require": "./src/index.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
       "types": "./src/index.ts"
     },
     "./styles.css": "./src/styles.css"
   },
-  "main": "./src/index.ts",
-  "module": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "types": "./src/index.ts",
   "files": [
     "dist"
