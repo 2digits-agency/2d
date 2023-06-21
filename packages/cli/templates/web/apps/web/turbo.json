@@ -2,7 +2,8 @@
   "extends": ["//"],
   "pipeline": {
     "build": {
-      "env": ["SENTRY_DSN", "NEXT_PUBLIC_SENTRY_DSN", "ANALYZE", "NODE_ENV", "VERCEL_URL"],
+      "dotEnv": ["./.env"],
+      "env": [],
       "outputs": [".next/**", "!.next/cache/**"]
     }
   }
