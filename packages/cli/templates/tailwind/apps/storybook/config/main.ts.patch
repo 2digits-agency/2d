@@ -1,0 +1,11 @@
+--- storybook/apps/storybook/config/main.ts	2023-04-28 11:46:04
++++ apps/storybook/config/main.tailwind.ts	2023-04-28 14:16:15
+@@ -2,7 +2,7 @@
+ 
+ const config = {
+   stories: ['../stories/**/*.stories.@(ts|tsx)'],
+-  addons: ['@storybook/addon-essentials'],
++  addons: ['@storybook/addon-essentials', '@storybook/addon-styling'],
+   framework: {
+     name: '@storybook/nextjs',
+     options: {
