@@ -4,10 +4,10 @@
    },
    "private": true,
    "scripts": {
-+    "build": "storybook build --quiet -c config -o public",
++    "build": "storybook build --quiet -c config",
 +    "dev": "storybook dev -p 6006 --no-open --quiet -c config",
 +    "lint": "eslint --ignore-path ../../.gitignore .",
-+    "start": "serve public",
++    "start": "serve storybook-static",
      "types": "tsc --noEmit"
    },
    "dependencies": {
