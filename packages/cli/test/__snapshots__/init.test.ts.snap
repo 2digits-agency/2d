@@ -29,7 +29,7 @@ exports[`base > storybook > should create a storybook app 1`] = `
   "./test/path/apps/storybook/tsconfig.json",
   "./test/path/apps/storybook/turbo.json",
   "./test/path/apps/storybook/config/main.ts",
-  "./test/path/apps/storybook/config/preview.ts",
+  "./test/path/apps/storybook/config/preview.tsx",
   "./test/path/apps/storybook/stories/examples/Button.stories.tsx",
 ]
 `;
