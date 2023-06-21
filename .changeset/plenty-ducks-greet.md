@@ -1,5 +1,5 @@
 ---
-'@mod/tailwind-storybook': patch
+'@mod/storybook-tailwind': patch
 ---
 
 Added storybook tailwind integration
