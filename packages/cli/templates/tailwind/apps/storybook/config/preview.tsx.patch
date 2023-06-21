@@ -1,0 +1,10 @@
+--- storybook/apps/storybook/config/preview.tsx	2023-04-28 11:46:04
++++ apps/storybook/config/preview.tailwind.tsx	2023-04-28 14:16:15
+@@ -1,5 +1,7 @@
+ import type { Preview } from '@storybook/react';
+ 
++import '@mod/tailwind/styles.css';
++
+ const preview = {
+   parameters: {
+     backgrounds: {

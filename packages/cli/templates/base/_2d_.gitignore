@@ -33,3 +33,6 @@ yarn-error.log*
 out/
 build
 next-env.d.ts
+
+# storybook
+storybook-static
