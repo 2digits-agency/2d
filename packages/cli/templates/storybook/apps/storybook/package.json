@@ -16,7 +16,7 @@
   "devDependencies": {
     "@2digits/tsconfig": "^0.2.0",
     "@storybook/addon-essentials": "^7.0.22",
-    "@storybook/blocks": "^7.0.22",
+    "@storybook/blocks": "^7.0.23",
     "@storybook/nextjs": "^7.0.22",
     "@storybook/react": "^7.0.22",
     "@types/node": "^20.3.1",
