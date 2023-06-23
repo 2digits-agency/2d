@@ -1,5 +1,13 @@
 # @mod/web
 
+## 0.2.1
+
+### Patch Changes
+
+- 006189a: Updated dependencies
+- 25ec833: Added env file to web module by default
+- 6a83fbc: Updated dependencies
+
 ## 0.2.0
 
 ### Minor Changes

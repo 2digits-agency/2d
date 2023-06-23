@@ -1,5 +1,13 @@
 # @2digits/log
 
+## 0.0.11
+
+### Patch Changes
+
+- 006189a: Updated dependencies
+- 6a83fbc: Updated dependencies
+- 13c9d6a: Updated eslint config
+
 ## 0.0.10
 
 ### Patch Changes

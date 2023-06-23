@@ -1,5 +1,18 @@
 # @mod/web-tailwind
 
+## 0.1.1
+
+### Patch Changes
+
+- 006189a: Updated dependencies
+- 6a83fbc: Updated dependencies
+- Updated dependencies [006189a]
+- Updated dependencies [483aeea]
+- Updated dependencies [20b5ca2]
+- Updated dependencies [6a83fbc]
+- Updated dependencies [13c9d6a]
+  - @mod/tailwind@0.0.3
+
 ## 0.1.0
 
 ### Minor Changes

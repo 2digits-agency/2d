@@ -1,5 +1,11 @@
 # @mod/swagger-sdk
 
+## 0.0.11
+
+### Patch Changes
+
+- 006189a: Updated dependencies
+
 ## 0.0.10
 
 ### Patch Changes
