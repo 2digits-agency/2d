@@ -47,7 +47,7 @@
     }
   },
   "devDependencies": {
-    "@2digits/eslint-config": "^0.6.1",
+    "@2digits/eslint-config": "^0.6.2",
     "@2digits/tsconfig": "^0.2.0",
     "eslint": "^8.43.0",
     "tsup": "^7.0.0",
