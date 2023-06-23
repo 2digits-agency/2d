@@ -1,5 +1,18 @@
 # @2digits/cli
 
+## 0.9.2
+
+### Patch Changes
+
+- 006189a: Updated dependencies
+- 23d244d: Updated turbo build env
+- 6a83fbc: Updated dependencies
+- 13c9d6a: Updated eslint config
+- Updated dependencies [006189a]
+- Updated dependencies [6a83fbc]
+- Updated dependencies [13c9d6a]
+  - @2digits/log@0.0.11
+
 ## 0.9.1
 
 ### Patch Changes

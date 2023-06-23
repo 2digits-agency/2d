@@ -1,5 +1,14 @@
 # @mod/base-gql-codegen
 
+## 0.0.9
+
+### Patch Changes
+
+- 1c1c0ff: Updated prettier config
+- 006189a: Updated dependencies
+- 6a83fbc: Updated dependencies
+- 13c9d6a: Updated eslint config
+
 ## 0.0.8
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@mod/tailwind",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "bugs": {
     "url": "https://github.com/2digits-agency/2d/issues/new"
   },
@@ -25,7 +25,7 @@
     "types": "tsc --noEmit"
   },
   "devDependencies": {
-    "@2digits/eslint-config": "^0.6.1",
+    "@2digits/eslint-config": "^0.6.2",
     "@2digits/tsconfig": "^0.2.0",
     "eslint": "^8.43.0",
     "postcss-load-config": "^4.0.1",

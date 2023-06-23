@@ -1,6 +1,6 @@
 {
   "name": "@2digits/cli",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "",
   "license": "MIT",
   "public": true,
@@ -53,7 +53,7 @@
     }
   },
   "devDependencies": {
-    "@2digits/eslint-config": "^0.6.1",
+    "@2digits/eslint-config": "^0.6.2",
     "@2digits/tsconfig": "^0.2.0",
     "@types/diff": "^5.0.3",
     "@types/fs-extra": "^11.0.1",

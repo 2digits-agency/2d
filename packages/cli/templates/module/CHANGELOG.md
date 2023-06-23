@@ -1,5 +1,12 @@
 # @mod/module
 
+## 0.0.7
+
+### Patch Changes
+
+- 683212f: Removed publishConfig
+- 006189a: Updated dependencies
+
 ## 0.0.6
 
 ### Patch Changes
