@@ -1,5 +1,14 @@
 # @mod/storybook
 
+## 0.0.11
+
+### Patch Changes
+
+- 006189a: Updated dependencies
+- 9ad9fac: Changed storybook output directory
+- 6a83fbc: Updated dependencies
+- e9165c9: Moved storybook preview.ts to preview.tsx
+
 ## 0.0.10
 
 ### Patch Changes

@@ -1,5 +1,19 @@
 # @mod/base
 
+## 0.0.12
+
+### Patch Changes
+
+- 2d1acaa: Added a storybook script separate from dev
+- 1c1c0ff: Updated prettier config
+- 006189a: Updated dependencies
+- 6a83fbc: Updated dependencies
+- 13c9d6a: Updated eslint config
+- f583714: Updated tsconfig to include all root ts files
+- 66c1351: Updated gitignore to exclude proper storybook output
+- b0869d0: Added vscode settings to use workspace typescript version
+- c2c9fb6: Added vscode settings to recognize tailwind-variants functions as classNames
+
 ## 0.0.11
 
 ### Patch Changes
