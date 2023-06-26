@@ -12,8 +12,8 @@ importers:
         specifier: ^0.6.2
         version: 0.6.2(eslint@8.43.0)(tailwindcss@3.3.2)(typescript@5.1.3)
       '@2digits/prettier-config':
-        specifier: ^0.9.0
-        version: 0.9.0(prettier@2.8.8)
+        specifier: ^0.9.1
+        version: 0.9.1(prettier@2.8.8)
       '@2digits/tsconfig':
         specifier: ^0.2.0
         version: 0.2.0(typescript@5.1.3)
@@ -148,8 +148,8 @@ importers:
         specifier: ^0.6.2
         version: 0.6.2(eslint@8.43.0)(tailwindcss@3.3.2)(typescript@5.1.3)
       '@2digits/prettier-config':
-        specifier: ^0.9.0
-        version: 0.9.0(prettier@2.8.8)
+        specifier: ^0.9.1
+        version: 0.9.1(prettier@2.8.8)
       '@2digits/tsconfig':
         specifier: ^0.2.0
         version: 0.2.0(typescript@5.1.3)
@@ -184,8 +184,8 @@ importers:
         specifier: ^0.6.2
         version: 0.6.2(eslint@8.43.0)(tailwindcss@3.3.2)(typescript@5.1.3)
       '@2digits/prettier-config':
-        specifier: ^0.9.0
-        version: 0.9.0(prettier@2.8.8)
+        specifier: ^0.9.1
+        version: 0.9.1(prettier@2.8.8)
       '@2digits/tsconfig':
         specifier: ^0.2.0
         version: 0.2.0(typescript@5.1.3)
@@ -404,8 +404,8 @@ importers:
         specifier: ^0.6.2
         version: 0.6.2(eslint@8.43.0)(tailwindcss@3.3.2)(typescript@5.1.3)
       '@2digits/prettier-config':
-        specifier: ^0.9.0
-        version: 0.9.0(prettier@2.8.8)
+        specifier: ^0.9.1
+        version: 0.9.1(prettier@2.8.8)
       '@2digits/tsconfig':
         specifier: ^0.2.0
         version: 0.2.0(typescript@5.1.3)
@@ -591,7 +591,7 @@ importers:
         version: 10.32.0
       next:
         specifier: ^13.4.7
-        version: 13.4.7(@babel/core@7.22.5)(react-dom@18.2.0)(react@18.2.0)
+        version: 13.4.7(react-dom@18.2.0)(react@18.2.0)
       superjson:
         specifier: ^1.12.3
         version: 1.12.3
@@ -719,8 +719,8 @@ packages:
       - supports-color
       - tailwindcss
 
-  /@2digits/prettier-config@0.9.0(prettier@2.8.8):
-    resolution: {integrity: sha512-CkNIt/5GyiVawIu3rrV20ognxWQE6Q7KnmAh/ZVL/AjwB2K1uQnRPfQbLBT5G9jm+9J/qvHJvJpx4rwYrrf9Dg==}
+  /@2digits/prettier-config@0.9.1(prettier@2.8.8):
+    resolution: {integrity: sha512-3UI5PeP2lqw73a8aSmvlGXu+CQTg9oqPK5oj0Fkg0tXTgTDeOH+YflD0Vbw+0bmTXrcWarSrv8+gkW8ZhLjkeA==}
     peerDependencies:
       prettier: '>=2.8.0'
     dependencies:
@@ -6679,7 +6679,7 @@ packages:
       '@trpc/client': 10.32.0(@trpc/server@10.32.0)
       '@trpc/react-query': 10.32.0(@tanstack/react-query@4.29.15)(@trpc/client@10.32.0)(@trpc/server@10.32.0)(react-dom@18.2.0)(react@18.2.0)
       '@trpc/server': 10.32.0
-      next: 13.4.7(@babel/core@7.22.5)(react-dom@18.2.0)(react@18.2.0)
+      next: 13.4.7(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-ssr-prepass: 1.5.0(react@18.2.0)
@@ -13167,6 +13167,49 @@ packages:
       - '@babel/core'
       - babel-plugin-macros
 
+  /next@13.4.7(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-M8z3k9VmG51SRT6v5uDKdJXcAqLzP3C+vaKfLIAM0Mhx1um1G7MDnO63+m52qPdZfrTFzMZNzfsgvm3ghuVHIQ==}
+    engines: {node: '>=16.8.0'}
+    hasBin: true
+    peerDependencies:
+      '@opentelemetry/api': ^1.1.0
+      fibers: '>= 3.1.0'
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      sass: ^1.3.0
+    peerDependenciesMeta:
+      '@opentelemetry/api':
+        optional: true
+      fibers:
+        optional: true
+      sass:
+        optional: true
+    dependencies:
+      '@next/env': 13.4.7
+      '@swc/helpers': 0.5.1
+      busboy: 1.6.0
+      caniuse-lite: 1.0.30001504
+      postcss: 8.4.14
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      styled-jsx: 5.1.1(react@18.2.0)
+      watchpack: 2.4.0
+      zod: 3.21.4
+    optionalDependencies:
+      '@next/swc-darwin-arm64': 13.4.7
+      '@next/swc-darwin-x64': 13.4.7
+      '@next/swc-linux-arm64-gnu': 13.4.7
+      '@next/swc-linux-arm64-musl': 13.4.7
+      '@next/swc-linux-x64-gnu': 13.4.7
+      '@next/swc-linux-x64-musl': 13.4.7
+      '@next/swc-win32-arm64-msvc': 13.4.7
+      '@next/swc-win32-ia32-msvc': 13.4.7
+      '@next/swc-win32-x64-msvc': 13.4.7
+    transitivePeerDependencies:
+      - '@babel/core'
+      - babel-plugin-macros
+    dev: false
+
   /nimma@0.2.2:
     resolution: {integrity: sha512-V52MLl7BU+tH2Np9tDrIXK8bql3MVUadnMIl/0/oZSGC9keuro0O9UUv9QKp0aMvtN8HRew4G7byY7H4eWsxaQ==}
     engines: {node: ^12.20 || >=14.13}
@@ -15861,6 +15904,23 @@ packages:
       '@babel/core': 7.22.5
       client-only: 0.0.1
       react: 18.2.0
+
+  /styled-jsx@5.1.1(react@18.2.0):
+    resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}
+    engines: {node: '>= 12.0.0'}
+    peerDependencies:
+      '@babel/core': '*'
+      babel-plugin-macros: '*'
+      react: '>= 16.8.0 || 17.x.x || ^18.0.0-0'
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
+      babel-plugin-macros:
+        optional: true
+    dependencies:
+      client-only: 0.0.1
+      react: 18.2.0
+    dev: false
 
   /sucrase@3.32.0:
     resolution: {integrity: sha512-ydQOU34rpSyj2TGyz4D2p8rbktIOZ8QY9s+DGLvFU1i5pWJE8vkpruCjGCMHsdXwnD7JDcS+noSwM/a7zyNFDQ==}
