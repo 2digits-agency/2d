@@ -4,7 +4,7 @@
   "description": "",
   "license": "MIT",
   "public": true,
-  "packageManager": "pnpm@8.6.3",
+  "packageManager": "pnpm@8.6.5",
   "repository": {
     "url": "https://github.com/2digits-agency/2d",
     "directory": "packages/log"
@@ -47,16 +47,16 @@
     }
   },
   "devDependencies": {
-    "@2digits/eslint-config": "^0.6.2",
+    "@2digits/eslint-config": "^0.7.1",
     "@2digits/tsconfig": "^0.2.0",
     "eslint": "^8.43.0",
-    "tsup": "^7.0.0",
-    "typescript": "^5.1.3"
+    "tsup": "^7.1.0",
+    "typescript": "^5.1.5"
   },
   "dependencies": {
     "@clack/core": "^0.3.2",
     "chalk": "^5.2.0",
-    "consola": "^3.1.0",
+    "consola": "^3.2.2",
     "is-unicode-supported": "^1.3.0",
     "ora": "^6.3.1",
     "pathe": "^1.1.1",
