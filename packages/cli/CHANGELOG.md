@@ -1,5 +1,17 @@
 # @2digits/cli
 
+## 0.10.0
+
+### Minor Changes
+
+- 3e4b355: Added "add" subcommand to add a module to an existing project. Closes #87
+
+### Patch Changes
+
+- 86d88cf: Updated dependencies
+- Updated dependencies [86d88cf]
+  - @2digits/log@0.0.12
+
 ## 0.9.2
 
 ### Patch Changes

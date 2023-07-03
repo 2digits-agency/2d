@@ -1,5 +1,12 @@
 # @mod/base
 
+## 0.0.13
+
+### Patch Changes
+
+- dfc23d1: Removed enablePromptUseWorkspaceTsdk from .vscode
+- 86d88cf: Updated dependencies
+
 ## 0.0.12
 
 ### Patch Changes

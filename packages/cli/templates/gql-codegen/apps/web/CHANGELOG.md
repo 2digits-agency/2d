@@ -1,5 +1,13 @@
 # @mod/web-gql-codegen
 
+## 0.1.2
+
+### Patch Changes
+
+- 86d88cf: Updated dependencies
+- Updated dependencies [86d88cf]
+  - @mod/gql-codegen@0.0.9
+
 ## 0.1.1
 
 ### Patch Changes

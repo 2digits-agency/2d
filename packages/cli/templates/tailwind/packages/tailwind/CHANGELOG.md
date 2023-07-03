@@ -1,5 +1,11 @@
 # @mod/tailwind
 
+## 0.0.4
+
+### Patch Changes
+
+- 86d88cf: Updated dependencies
+
 ## 0.0.3
 
 ### Patch Changes

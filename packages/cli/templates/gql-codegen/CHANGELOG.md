@@ -1,5 +1,12 @@
 # @mod/base-gql-codegen
 
+## 0.0.10
+
+### Patch Changes
+
+- 5c8f69b: Added missing pathe dependency
+- 86d88cf: Updated dependencies
+
 ## 0.0.9
 
 ### Patch Changes

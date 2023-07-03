@@ -1,5 +1,11 @@
 # @mod/trpc
 
+## 0.1.2
+
+### Patch Changes
+
+- 86d88cf: Updated dependencies
+
 ## 0.1.1
 
 ### Patch Changes
