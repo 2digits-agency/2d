@@ -1,4 +1,4 @@
-name: 🛂 CI/CD
+name: 🔬 E2E
 
 env:
   FORCE_COLOR: 1
@@ -36,4 +36,7 @@ jobs:
         run: pnpm turbo run build
 
       - name: 🏁 Init new project
-        run: ./packages/cli/dist/bin.mjs init ./e2e --name e2e --git --install -m web -m tailwind -m storybook
+        run: ./packages/cli/dist/bin.mjs init ./e2e --name e2e --git --install -m web -m storybook -m tailwind
+
+      - name: 🧪 Check created project
+        run: cd ./e2e && pnpm run build
