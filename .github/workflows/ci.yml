@@ -32,8 +32,5 @@ jobs:
       - name: 📦 Install dependencies
         run: pnpm install
 
-      - name: 🦋 Check changesets
-        run: pnpm changeset status
-
       - name: 🧪 Test, lint, format, build, and type-check
         run: pnpm turbo run build test lint types format
