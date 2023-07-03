@@ -1,0 +1,39 @@
+name: 🛂 CI/CD
+
+env:
+  FORCE_COLOR: 1
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+  TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+
+on:
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  check:
+    name: 🩻 E2E testing
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: 🗃️ Checkout repository
+        uses: actions/checkout@v3
+
+      - name: 🛸 Setup PNPM
+        uses: pnpm/action-setup@v2
+
+      - name: 🏭 Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+          cache: 'pnpm'
+
+      - name: 📦 Install dependencies
+        run: pnpm install
+
+      - name: 🏗️ Build packages
+        run: pnpm turbo run build
+
+      - name: 🏁 Init new project
+        run: ./packages/cli/dist/bin.mjs init ./e2e --name e2e --git --install -m web -m tailwind
