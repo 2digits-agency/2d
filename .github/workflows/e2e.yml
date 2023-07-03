@@ -39,4 +39,9 @@ jobs:
         run: ./packages/cli/dist/bin.mjs init ./e2e --name e2e --git --install -m web -m storybook -m tailwind
 
       - name: 🧪 Check created project
-        run: cd ./e2e && pnpm run build
+        run: |
+          cd ./e2e
+          git add --all
+          git commit -m "init"
+          pnpm turbo build lint types
+          pnpm run format
