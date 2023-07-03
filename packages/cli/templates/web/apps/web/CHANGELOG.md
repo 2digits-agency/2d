@@ -1,5 +1,11 @@
 # @mod/web
 
+## 0.2.2
+
+### Patch Changes
+
+- 86d88cf: Updated dependencies
+
 ## 0.2.1
 
 ### Patch Changes

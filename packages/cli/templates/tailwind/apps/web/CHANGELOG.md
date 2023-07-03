@@ -1,5 +1,13 @@
 # @mod/web-tailwind
 
+## 0.1.2
+
+### Patch Changes
+
+- 86d88cf: Updated dependencies
+- Updated dependencies [86d88cf]
+  - @mod/tailwind@0.0.4
+
 ## 0.1.1
 
 ### Patch Changes

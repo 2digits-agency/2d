@@ -1,5 +1,11 @@
 # @mod/module
 
+## 0.0.8
+
+### Patch Changes
+
+- 86d88cf: Updated dependencies
+
 ## 0.0.7
 
 ### Patch Changes
