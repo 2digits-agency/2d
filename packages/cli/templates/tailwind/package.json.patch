@@ -1,10 +1,10 @@
 --- base/package.json	2023-05-07 14:14:57
 +++ package.tailwind.json	2023-05-07 14:26:55
 @@ -11,6 +11,7 @@
-     "@2digits/prettier-config": "^0.9.2",
-     "@2digits/tsconfig": "^0.2.0",
+     "@2digits/prettier-config": "^0.9.3",
+     "@2digits/tsconfig": "^0.2.1",
      "@manypkg/cli": "^0.21.0",
 +    "@mod/tailwind": "workspace:*",
      "@total-typescript/ts-reset": "^0.4.2",
-     "@types/node": "^20.3.2",
-     "eslint": "^8.43.0",
+     "@types/node": "^20.3.3",
+     "eslint": "^8.44.0",
