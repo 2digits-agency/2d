@@ -1,0 +1,46 @@
+name: 💠 Publish
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  publish:
+    name: 🦋 Changesets
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      FORCE_COLOR: 1
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+
+    steps:
+      - name: 🗃️ Checkout repository
+        uses: actions/checkout@v3
+
+      - name: 🛸 Setup PNPM
+        uses: pnpm/action-setup@v2
+
+      - name: 🏭 Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+          cache: 'pnpm'
+
+      - name: 📦 Install dependencies
+        run: pnpm install
+
+      - name: 🧪 Test, lint, format, build, and type-check
+        run: pnpm turbo run build test lint types format
+
+      - name: 🪄 Create Release Pull Request or Publish
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
