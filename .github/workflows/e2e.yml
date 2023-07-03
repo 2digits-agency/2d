@@ -36,4 +36,4 @@ jobs:
         run: pnpm turbo run build
 
       - name: 🏁 Init new project
-        run: ./packages/cli/dist/bin.mjs init ./e2e --name e2e --git --install -m web -m tailwind
+        run: ./packages/cli/dist/bin.mjs init ./e2e --name e2e --git --install -m web -m tailwind -m storybook
