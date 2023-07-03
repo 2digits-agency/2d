@@ -1,20 +1,21 @@
-name: 🛂 CI/CD
+name: 💠 Publish
 
-env:
-  FORCE_COLOR: 1
-  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-  TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 on:
-  pull_request:
+  push:
     branches:
-      - '**'
+      - 'main'
 
 jobs:
-  check:
-    name: ⚗️ Lint, typecheck and format
+  publish:
+    name: 🦋 Changesets
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      FORCE_COLOR: 1
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ vars.TURBO_TEAM }}
 
     steps:
       - name: 🗃️ Checkout repository
@@ -32,8 +33,14 @@ jobs:
       - name: 📦 Install dependencies
         run: pnpm install
 
-      - name: 🦋 Check changesets
-        run: pnpm changeset status
-
       - name: 🧪 Test, lint, format, build, and type-check
         run: pnpm turbo run build test lint types format
+
+      - name: 🪄 Create Release Pull Request or Publish
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
