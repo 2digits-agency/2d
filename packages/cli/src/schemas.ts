@@ -17,6 +17,7 @@ export const moduleEnum = z.enum([
   'swagger-sdk',
   'gql-codegen',
 ]);
+export type Module = z.infer<typeof moduleEnum>;
 
 const VALID_PROJECT_DIRECTORY_SAFE_LIST = new Set([
   '.DS_Store',

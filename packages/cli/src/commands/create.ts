@@ -24,13 +24,13 @@ export const create = createCommand('create [name]', {
     return args
       .positional('name', {
         type: 'string',
-        describe: 'Name of the project',
+        describe: 'Name of the module',
         normalize: true,
       })
       .option('install', {
         alias: 'i',
         type: 'boolean',
-        describe: 'Install dependencies after creating the project',
+        describe: 'Install dependencies after creating the module',
       });
   },
   async handler(args) {
