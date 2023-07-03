@@ -41,7 +41,5 @@ jobs:
       - name: 🧪 Check created project
         run: |
           cd ./e2e
-          git add --all
-          git commit -m "init"
           pnpm turbo build lint types
           pnpm run format
