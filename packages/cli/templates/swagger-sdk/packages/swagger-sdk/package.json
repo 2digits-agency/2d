@@ -32,7 +32,7 @@
     "@orval/core": "^6.16.0",
     "@types/prettier": "^2.7.3",
     "consola": "^3.2.2",
-    "eslint": "^8.43.0",
+    "eslint": "^8.44.0",
     "knitwork": "^1.0.0",
     "msw": "^1.2.2",
     "orval": "^6.16.0",
