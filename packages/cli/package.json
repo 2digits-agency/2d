@@ -63,7 +63,7 @@
     "mock-fs": "^5.2.0",
     "tsup": "^7.1.0",
     "typescript": "^5.1.6",
-    "vitest": "^0.32.3"
+    "vitest": "^0.32.4"
   },
   "dependencies": {
     "@2digits/log": "workspace:*",
