@@ -30,8 +30,8 @@ importers:
         specifier: ^20.3.3
         version: 20.3.3
       '@vitest/ui':
-        specifier: ^0.32.3
-        version: 0.32.3(vitest@0.32.3)
+        specifier: ^0.32.4
+        version: 0.32.4(vitest@0.32.3)
       eslint:
         specifier: ^8.44.0
         version: 8.44.0
@@ -46,7 +46,7 @@ importers:
         version: 5.1.6
       vitest:
         specifier: ^0.32.3
-        version: 0.32.3(@vitest/ui@0.32.3)
+        version: 0.32.3(@vitest/ui@0.32.4)
 
   packages/cli:
     dependencies:
@@ -7076,6 +7076,22 @@ packages:
       picocolors: 1.0.0
       sirv: 2.0.3
       vitest: 0.32.3(@vitest/ui@0.32.3)
+    dev: true
+
+  /@vitest/ui@0.32.4(vitest@0.32.3):
+    resolution: {integrity: sha512-92y7bkjf55L08nomvHHYQkDWQEIkb36dJkgi+F/zpO5cFbrmk1pv/dYiaZKQ772uP96fAWinmux6sXNMNUh16w==}
+    peerDependencies:
+      vitest: '>=0.30.1 <1'
+    dependencies:
+      '@vitest/utils': 0.32.4
+      fast-glob: 3.3.0
+      fflate: 0.8.0
+      flatted: 3.2.7
+      pathe: 1.1.1
+      picocolors: 1.0.0
+      sirv: 2.0.3
+      vitest: 0.32.3(@vitest/ui@0.32.4)
+    dev: false
 
   /@vitest/utils@0.32.3:
     resolution: {integrity: sha512-vZ0u4xuEfc2t61V9hV57klOklbKsohmzzXf3DERMkEbJ0YYgdoNwIvwLirul34L2MiRcsB3ewYx8c9oMuM2Zhg==}
@@ -7083,6 +7099,14 @@ packages:
       diff-sequences: 29.4.3
       loupe: 2.3.6
       pretty-format: 29.5.0
+
+  /@vitest/utils@0.32.4:
+    resolution: {integrity: sha512-Gwnl8dhd1uJ+HXrYyV0eRqfmk9ek1ASE/LWfTCuWMw+d07ogHqp4hEAV28NiecimK6UY9DpSEPh+pXBA5gtTBg==}
+    dependencies:
+      diff-sequences: 29.4.3
+      loupe: 2.3.6
+      pretty-format: 29.5.0
+    dev: false
 
   /@webassemblyjs/ast@1.11.6:
     resolution: {integrity: sha512-IN1xI7PwOvLPgjcf180gC1bqn3q/QaOCwYUahIOhbYUu8KA/3tw2RT/T0Gidi1l7Hhj5D/INhJxiICObqpMu4Q==}
@@ -16840,6 +16864,72 @@ packages:
       - sugarss
       - supports-color
       - terser
+    dev: true
+
+  /vitest@0.32.3(@vitest/ui@0.32.4):
+    resolution: {integrity: sha512-QD8sbH9DZ2lmUSnViWVxzkassJbV3Hu2mJuveSbWYt4gZYEvQSPos/HFbjX22dkGIqdwIXJRxe5fZPlfzM1yUw==}
+    engines: {node: '>=v14.18.0'}
+    hasBin: true
+    peerDependencies:
+      '@edge-runtime/vm': '*'
+      '@vitest/browser': '*'
+      '@vitest/ui': '*'
+      happy-dom: '*'
+      jsdom: '*'
+      playwright: '*'
+      safaridriver: '*'
+      webdriverio: '*'
+    peerDependenciesMeta:
+      '@edge-runtime/vm':
+        optional: true
+      '@vitest/browser':
+        optional: true
+      '@vitest/ui':
+        optional: true
+      happy-dom:
+        optional: true
+      jsdom:
+        optional: true
+      playwright:
+        optional: true
+      safaridriver:
+        optional: true
+      webdriverio:
+        optional: true
+    dependencies:
+      '@types/chai': 4.3.5
+      '@types/chai-subset': 1.3.3
+      '@types/node': 20.3.3
+      '@vitest/expect': 0.32.3
+      '@vitest/runner': 0.32.3
+      '@vitest/snapshot': 0.32.3
+      '@vitest/spy': 0.32.3
+      '@vitest/ui': 0.32.4(vitest@0.32.3)
+      '@vitest/utils': 0.32.3
+      acorn: 8.9.0
+      acorn-walk: 8.2.0
+      cac: 6.7.14
+      chai: 4.3.7
+      debug: 4.3.4
+      local-pkg: 0.4.3
+      magic-string: 0.30.0
+      pathe: 1.1.1
+      picocolors: 1.0.0
+      std-env: 3.3.3
+      strip-literal: 1.0.1
+      tinybench: 2.5.0
+      tinypool: 0.5.0
+      vite: 4.3.1(@types/node@20.3.3)
+      vite-node: 0.32.3(@types/node@20.3.3)
+      why-is-node-running: 2.2.2
+    transitivePeerDependencies:
+      - less
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+    dev: false
 
   /vm-browserify@1.1.2:
     resolution: {integrity: sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==}
